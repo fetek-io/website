@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 import headerDefaultConfig from "~data/headerDefaultConfig";
 export const headerDefault = headerDefaultConfig;
 const GlobalHeaderContext = React.createContext();
 
-const GlobalHeaderProvider = ({children}) =>{
-  const [header , setHeader] = React.useState(headerDefault);
+const GlobalHeaderProvider = ({ children }) => {
+  const [header, setHeader] = React.useState(headerDefault);
 
   const changeHeader = (headerConfig = headerDefault) => {
     setHeader({
@@ -12,11 +12,12 @@ const GlobalHeaderProvider = ({children}) =>{
       ...headerConfig,
     });
   };
-  return (<GlobalHeaderContext.Provider value={{header,changeHeader}}>
-    {children}
-  </GlobalHeaderContext.Provider>)
-}
-
+  return (
+    <GlobalHeaderContext.Provider value={{ header, changeHeader }}>
+      {children}
+    </GlobalHeaderContext.Provider>
+  );
+};
 
 export default GlobalHeaderContext;
 export { GlobalHeaderProvider };

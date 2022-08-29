@@ -6,24 +6,24 @@ import SiteNav from "./SiteNav";
 import SiteHeader from "./style";
 
 const Header = () => {
-  const [showScrolling, setShowScrolling] = useState(false)
-  const [showReveal, setShowReveal] = useState(false)
+  const [showScrolling, setShowScrolling] = useState(false);
+  const [showReveal, setShowReveal] = useState(false);
   const [hasMounted, setHasMounted] = React.useState(false);
   const headerContext = useContext(GlobalHeaderContext);
-  const header = headerContext.header
+  const header = headerContext.header;
 
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
-      setShowScrolling(true)
+      setShowScrolling(true);
     } else {
-      setShowScrolling(false)
+      setShowScrolling(false);
     }
     if (currPos.y < -300) {
-      setShowReveal(true)
+      setShowReveal(true);
     } else {
-      setShowReveal(false)
+      setShowReveal(false);
     }
-  })
+  });
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
@@ -38,13 +38,14 @@ const Header = () => {
     >
       <Container fluid={header.containerFluid ? true : false}>
         <SiteNav
-          defaultLogo = {header.defaultLogo}
+          defaultLogo={header.defaultLogo}
           customLogo={header.customLogo}
           darkLogo={header.darkLogo}
           buttonBlock={header.buttonBlock}
+          isTextLogo={header.isTextLogo}
         />
       </Container>
     </SiteHeader>
-  )
-}
-export default Header
+  );
+};
+export default Header;
