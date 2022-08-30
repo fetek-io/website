@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import siteBrandDark from "~image/logo/logo-black.png";
 import siteBrandLight from "~image/logo/logo-white.png";
+import favicon from "~image/mixed/favicon.png";
 import Menu from "./Menu";
 const SiteNavbar = ({
   buttonBlock,
@@ -21,7 +22,10 @@ const SiteNavbar = ({
       >
         <Navbar.Brand href="/">
           {isTextLogo ? (
-            <span style={{ color: darkLogo ? "black" : "white" }}>FETEK</span>
+            <span style={{ color: darkLogo ? "black" : "white" }}>
+              <img src={favicon} />
+              FETEK
+            </span>
           ) : defaultLogo ? (
             <img src={defaultLogo} alt="site-brand" />
           ) : customLogo ? (
