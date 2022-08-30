@@ -18,7 +18,7 @@ const header = {
   buttonBlock: (
     <HeaderButton
       className="ms-auto d-none d-xs-inline-flex"
-      btnText="Purchase"
+      btnText="Contact us"
       mr="15px"
       mrLG="0"
     />
