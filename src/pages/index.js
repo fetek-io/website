@@ -19,6 +19,7 @@ const header = {
   containerFluid: false,
   buttonBlock: (
     <HeaderButton
+      btnLink="innerpage/contact/contact-1"
       className="ms-auto d-none d-xs-inline-flex"
       btnText="Contact us"
       mr="15px"

@@ -12,17 +12,17 @@ export const menuItems = [
     ],
   },
   {
-    name: "",
+    name: "innerpage/about-us",
     label: "About",
     isExternal: false,
   },
   {
-    name: "",
+    name: "blog/blogs-right-sidebar",
     label: "Blog",
     isExternal: false,
   },
   {
-    name: "",
+    name: "innerpage/contact/contact-1",
     label: "Contact",
     isExternal: false,
   },
