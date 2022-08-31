@@ -6,8 +6,8 @@ import { PageWrapper } from "~components/Core";
 export default function blogsLeftSidebar() {
   return (
     <PageWrapper innerPage={true}>
-        <BlogSidebarTwo/>
-        <FooterSection/>
+      <BlogSidebarTwo />
+      <FooterSection />
     </PageWrapper>
-  )
+  );
 }

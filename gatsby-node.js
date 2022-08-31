@@ -10,7 +10,9 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "~sections": path.resolve(__dirname, "./src/sections"),
         "~data": path.resolve(__dirname, "./src/data"),
         "~styled": path.resolve(__dirname, "./src/styles"),
-      }
-    }
+        "~util": path.resolve(__dirname, "./src/util"),
+        "~services": path.resolve(__dirname, "./src/services"),
+      },
+    },
   });
 };

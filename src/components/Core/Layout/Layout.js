@@ -2,15 +2,19 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import favicon from "~image/mixed/favicon.png";
 import Header from "../Header";
+import { QueryClient, QueryClientProvider } from "react-query";
+
 export default function Layout({ children }) {
+  const queryClient = new QueryClient();
+
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Helmet>
         <title>FETEK</title>
         <link rel="icon" type="image/png" href={favicon} />
       </Helmet>
       <Header />
       {children}
-    </>
+    </QueryClientProvider>
   );
 }
