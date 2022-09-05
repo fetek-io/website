@@ -2,7 +2,15 @@ import React from "react";
 import { StaticImage as Img } from "gatsby-plugin-image";
 import SideBar from "./style";
 import { Link } from "~components";
-export default function SideBarSection() {
+import { debounce } from "lodash";
+import { useQuery } from "react-query";
+import { findBlogs } from "~services/blogServices";
+
+export default function SideBarSection({ handleSearchBlog }) {
+  const { data, isLoading: loading } = useQuery(["findBlogs"], () =>
+    findBlogs({ limit: 3, offset: 0 })
+  );
+
   return (
     <SideBar>
       {/* Single Widgets */}
@@ -11,7 +19,13 @@ export default function SideBarSection() {
         <SideBar.Search>
           <form action="./">
             <i className="fa fa-search" />
-            <input type="text" placeholder="Type to search" />
+            <input
+              type="text"
+              placeholder="Type to search"
+              onChange={debounce((e) => {
+                handleSearchBlog(e.target.value);
+              }, 500)}
+            />
           </form>
         </SideBar.Search>
       </SideBar.Widgets>
@@ -20,41 +34,22 @@ export default function SideBarSection() {
       <SideBar.Widgets>
         <SideBar.Title>Recent Posts</SideBar.Title>
         <SideBar.RecentPost>
-          <SideBar.RecentPostList>
-            <Link to="#">
-              <SideBar.RecentPostTitle>
-                How To Blow Through Capital At An Incredible Rate
-              </SideBar.RecentPostTitle>
-              <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-            </Link>
-          </SideBar.RecentPostList>
-          <SideBar.RecentPostList>
-            <Link to="#">
-              <SideBar.RecentPostTitle>
-                Design Studios That Everyone Should Know About?
-              </SideBar.RecentPostTitle>
-              <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-            </Link>
-          </SideBar.RecentPostList>
-          <SideBar.RecentPostList>
-            <Link to="#">
-              <SideBar.RecentPostTitle>
-                How did we get 1M+ visitors in 30 days without anything!
-              </SideBar.RecentPostTitle>
-              <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-            </Link>
-          </SideBar.RecentPostList>
+          {data?.data?.items?.map(({ fields, sys }, index) => {
+            return (
+              <SideBar.RecentPostList key={index}>
+                <Link to="#">
+                  <SideBar.RecentPostTitle>
+                    {fields?.title}
+                  </SideBar.RecentPostTitle>
+                  <SideBar.RecentPostDate>
+                    {new Date(sys?.createdAt).toDateString()}
+                  </SideBar.RecentPostDate>
+                </Link>
+              </SideBar.RecentPostList>
+            );
+          })}
         </SideBar.RecentPost>
       </SideBar.Widgets>
-      {/*/ .Single Widgets */}
-      {/* Single Widgets */}
-      {/*/ .Single Widgets */}
-      {/* Single Widgets */}
-
-      {/*/ .Single Widgets */}
-      {/* Single Widgets */}
-
-      {/*/ .Single Widgets */}
     </SideBar>
   );
 }

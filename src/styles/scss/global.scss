@@ -16,17 +16,15 @@ a {
 }
 body {
   > div {
-  overflow: hidden;
-}
+    overflow: hidden;
+  }
 }
 
-.btn{
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
-
 
 /* Animations Sonar */
 .sonar-emitter {
@@ -92,31 +90,79 @@ body {
   }
 }
 
-
-.btn-rest{
+.btn-rest {
   box-shadow: none;
-  border:0px;
-  background:transparent;
-  &:focus{
+  border: 0px;
+  background: transparent;
+  &:focus {
     outline: none;
   }
 }
 
-
-
-.card{
-  &-title{
+.card {
+  &-title {
     font-size: 18px;
-    color:red;
+    color: red;
   }
-  &-text{
-    color:green;
+  &-text {
+    color: green;
     font-size: 14px;
   }
-  &.card-active{
-    background:pink
+  &.card-active {
+    background: pink;
   }
-  &.text-center{
+  &.text-center {
     text-align: center;
+  }
+}
+
+.fancybox-loading {
+  background: transparent;
+  border: 4px solid #888;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  z-index: 99999;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.active {
+  color: #5034fc;
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

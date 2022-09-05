@@ -3,11 +3,11 @@ import BlogDetails from "~sections/Blog/BlogDetails";
 import { PageWrapper } from "~components/Core";
 import FooterSection from "~sections/Blog/Footer";
 
-export default function blogsDetails() {
+export default function blogsDetails({ params }) {
   return (
     <PageWrapper innerPage={true}>
-        <BlogDetails/>
-        <FooterSection/>
+      <BlogDetails params={params} />
+      <FooterSection />
     </PageWrapper>
-  )
+  );
 }

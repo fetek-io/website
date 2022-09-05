@@ -8,6 +8,7 @@ export default function BlogCard({
   user,
   badge,
   image,
+  keyword,
   ...rest
 }) {
   return (
@@ -18,16 +19,16 @@ export default function BlogCard({
       <Card.OvaerlayBlock>
         <Card.Top mb="20px">
           <Card.Badge backgroundColor="#ff5722">{badge}</Card.Badge>
-          <Card.Date to="/blog/blog-details">
+          <Card.Date to={"/blog/" + keyword}>
             {new Date(date).toDateString()}
           </Card.Date>
         </Card.Top>
-        <Card.Title to="/blog/blog-details">
+        <Card.Title to={"/blog/" + keyword}>
           {" "}
           <SuperTag value={title} />
         </Card.Title>
         <Card.Bottom>
-          <Card.User to="/blog/blog-details">
+          <Card.User to={"/blog/" + keyword}>
             <i className="far fa-user"></i>
             <SuperTag value={user} />
           </Card.User>

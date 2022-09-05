@@ -17,7 +17,7 @@ export const menuItems = [
     isExternal: false,
   },
   {
-    name: "blog/blogs-right-sidebar",
+    name: "blog",
     label: "Blog",
     isExternal: false,
   },

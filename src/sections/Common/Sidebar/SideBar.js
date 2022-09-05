@@ -1,121 +1,160 @@
-import React from 'react'
-import { StaticImage as Img } from 'gatsby-plugin-image'
-import SideBar from "./style"
-import { Link } from '~components'
-export default function SideBarSection(){
-return(
-<SideBar>
-  {/* Single Widgets */}
-  <SideBar.Widgets>
-    <SideBar.Title>Search</SideBar.Title>
-    <SideBar.Search>
-      <form action="./">
-        <i className="fa fa-search" />
-        <input type="text" placeholder="Type to search" />
-      </form>
-    </SideBar.Search>
-  </SideBar.Widgets>
-  {/*/ .Single Widgets */}
-    {/* Single Widgets */}
-    <SideBar.Widgets>
-    <SideBar.Title>Recent Posts</SideBar.Title>
-    <SideBar.RecentPost>
-      <SideBar.RecentPostList>
-        <Link to="#">
-          <SideBar.RecentPostTitle>How To Blow Through Capital At An Incredible Rate</SideBar.RecentPostTitle>
-          <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-        </Link>
-      </SideBar.RecentPostList>
-      <SideBar.RecentPostList>
-        <Link to="#">
-          <SideBar.RecentPostTitle>Design Studios That Everyone Should Know About?</SideBar.RecentPostTitle>
-          <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-        </Link>
-      </SideBar.RecentPostList>
-      <SideBar.RecentPostList>
-        <Link to="#">
-          <SideBar.RecentPostTitle>How did we get 1M+ visitors in 30 days without anything!</SideBar.RecentPostTitle>
-          <SideBar.RecentPostDate>Jan 14, 2020</SideBar.RecentPostDate>
-        </Link>
-      </SideBar.RecentPostList>
-    </SideBar.RecentPost>
-  </SideBar.Widgets>
-  {/*/ .Single Widgets */}
-    {/* Single Widgets */}
-    <SideBar.Widgets>
-    <SideBar.Title>Recent Tweets</SideBar.Title>
-    <SideBar.Twitter>
-      <SideBar.TwitterList>
-        <Link to="#">
-          <SideBar.TwitterUser as="span">@Smith,</SideBar.TwitterUser> the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-        </Link>
-      </SideBar.TwitterList>
-      <SideBar.TwitterList>
-        <Link to="#">
-          <SideBar.TwitterUser as="span">@Maurice,</SideBar.TwitterUser> the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-        </Link>
-      </SideBar.TwitterList>
-      <SideBar.TwitterList>
-        <Link to="#">
-          <SideBar.TwitterUser as="span">@Stella,</SideBar.TwitterUser> the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-        </Link>
-      </SideBar.TwitterList>
-      <SideBar.TwitterList>
-        <Link to="#">
-          <SideBar.TwitterUser as="span">@Howard,</SideBar.TwitterUser> the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-        </Link>
-      </SideBar.TwitterList>
-    </SideBar.Twitter>
-  </SideBar.Widgets>
-  {/*/ .Single Widgets */}
-  {/* Single Widgets */}
-  <SideBar.Widgets>
-    <SideBar.Title>Categories</SideBar.Title>
-      <SideBar.CateGory>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Technology:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">20 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Freelancing:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">07 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Writing:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">16 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Marketing:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">11 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Business:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">35 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-        <SideBar.CateGorySingle>
-          <Link to="#">
-            <SideBar.CateGoryTitle>Education:</SideBar.CateGoryTitle>
-            <SideBar.CateGoryCount as="span">14 posts</SideBar.CateGoryCount>
-          </Link>
-        </SideBar.CateGorySingle>
-      </SideBar.CateGory>
-  </SideBar.Widgets>
-  {/*/ .Single Widgets */}
-    {/* Single Widgets */}
-    <SideBar.Ads>
-    <Link to="#"><Img className="w-100" src="../../../assets/image/mixed/ads-img.png" alt="app" layout="fullWidth" placeholder="blurred"/></Link>
-  </SideBar.Ads>
-    {/*/ .Single Widgets */}
-  </SideBar>
-)
+import React, { useState } from "react";
+import SideBar from "./style";
+import { Link } from "~components";
+import styled from "styled-components";
+import { findBlogs } from "~services/blogServices";
+import { useQuery } from "react-query";
+import { navigate } from "gatsby";
+
+const SuggestionSearch = styled(SideBar.Search)`
+  border: 1px solid rgba(62, 73, 243, 0.1);
+`;
+
+const SuggestionForm = styled.form`
+  border: none !important;
+`;
+
+const SuggestionDivide = styled.div`
+  width: 100%;
+  height: 0px;
+  border-bottom: 1px solid rgba(62, 73, 243, 0.1) !important;
+`;
+
+const DivideContainer = styled.div`
+  padding: 0 20px;
+  margin-bottom: 16px;
+`;
+
+const SuggestionResult = styled.div``;
+
+const SuggestionList = styled.ul`
+  list-style-type: none;
+`;
+
+const SuggestionContent = styled.span`
+  margin-left: 20px;
+  margin-right: 5px;
+`;
+
+const SuggestionItem = styled.li`
+  margin-top: 8px;
+  margin-bottom: 8px;
+`;
+
+export default function SideBarSection() {
+  const [keyword, setKeyword] = useState("");
+
+  const { data } = useQuery(
+    ["findBlogs", keyword],
+    () => findBlogs({ blogName: keyword, limit: 3, offset: 0 }),
+    {
+      // ⬇️ disabled as long as the keyword is empty
+      enabled: !!keyword,
+    }
+  );
+
+  const { data: recentPosts } = useQuery(["findBlogs"], () =>
+    findBlogs({ limit: 3, offset: 0 })
+  );
+
+  return (
+    <SideBar>
+      {/* Single Widgets */}
+      <SideBar.Widgets>
+        <SideBar.Title>Search</SideBar.Title>
+        <SuggestionSearch>
+          <SuggestionForm action="./">
+            <i className="fa fa-search" />
+            <input
+              type="text"
+              placeholder="Type to search"
+              value={keyword}
+              onChange={(e) => {
+                setKeyword(e.target.value);
+              }}
+            />
+            {keyword && keyword.length > 0 && (
+              <span
+                className="pointer"
+                onClick={() => {
+                  setKeyword("");
+                }}
+              >
+                <i className="fa fa-times" />
+              </span>
+            )}
+          </SuggestionForm>
+          {data?.data?.items && data?.data?.items.length > 0 && (
+            <>
+              <DivideContainer>
+                <SuggestionDivide></SuggestionDivide>
+              </DivideContainer>
+              <SuggestionResult>
+                <SuggestionList>
+                  {data?.data?.items?.map(({ fields, sys }, index) => {
+                    return (
+                      <SuggestionItem
+                        key={index}
+                        className="flex-left pointer"
+                        onClick={() => {
+                          navigate("/blog/" + fields?.keyword);
+                        }}
+                      >
+                        <i
+                          className="fa fa-search"
+                          style={{ color: "#3e49f3" }}
+                        />
+                        <SuggestionContent>{fields?.title}</SuggestionContent>
+                      </SuggestionItem>
+                    );
+                  })}
+                </SuggestionList>
+              </SuggestionResult>
+            </>
+          )}
+          {data?.data?.items && data?.data?.items.length === 0 && (
+            <>
+              <DivideContainer>
+                <SuggestionDivide></SuggestionDivide>
+              </DivideContainer>
+              <SuggestionResult>
+                <SuggestionList>
+                  <SuggestionItem className="flex-left">
+                    <i className="fa fa-search" style={{ color: "#3e49f3" }} />
+                    <SuggestionContent>No results</SuggestionContent>
+                  </SuggestionItem>
+                </SuggestionList>
+              </SuggestionResult>
+            </>
+          )}
+        </SuggestionSearch>
+      </SideBar.Widgets>
+      {/*/ .Single Widgets */}
+      {/* Single Widgets */}
+      <SideBar.Widgets>
+        <SideBar.Title>Recent Posts</SideBar.Title>
+        <SideBar.RecentPost>
+          {recentPosts?.data?.items?.map(({ fields, sys }, index) => {
+            return (
+              <SideBar.RecentPostList
+                key={index}
+                onClick={() => {
+                  navigate("/blog/" + fields?.keyword);
+                }}
+              >
+                <Link to="#">
+                  <SideBar.RecentPostTitle>
+                    {fields?.title}
+                  </SideBar.RecentPostTitle>
+                  <SideBar.RecentPostDate>
+                    {new Date(sys?.createdAt).toDateString()}
+                  </SideBar.RecentPostDate>
+                </Link>
+              </SideBar.RecentPostList>
+            );
+          })}
+        </SideBar.RecentPost>
+      </SideBar.Widgets>
+    </SideBar>
+  );
 }

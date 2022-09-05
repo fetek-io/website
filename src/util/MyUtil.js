@@ -1,5 +1,5 @@
-export function getPage(total) {
-  if (total < 10) {
+export function getPage(total, limit) {
+  if (total < limit) {
     return 1;
   } else {
     return (total % 10) + 1;
