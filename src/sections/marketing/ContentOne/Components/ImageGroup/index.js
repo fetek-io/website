@@ -1,9 +1,9 @@
-import { StaticImage as Img } from "gatsby-plugin-image"
-import React from "react"
-import ImageCard from "../ImageCard"
-import Images from "./style"
+import { StaticImage as Img } from "gatsby-plugin-image";
+import React from "react";
+import ImageCard from "../ImageCard";
+import Images from "./style";
 
-export default function ImageGroup({...rest}) {
+export default function ImageGroup({ ...rest }) {
   return (
     <>
       <Images {...rest}>
@@ -43,11 +43,9 @@ export default function ImageGroup({...rest}) {
         </Images.Three>
         {/* Content Image */}
         <Images.Four>
-          <ImageCard backgroundColor="#ff5722"/>
+          <ImageCard backgroundColor="#60E1CB" />
         </Images.Four>
       </Images>
     </>
-  )
+  );
 }
-
-

@@ -1,32 +1,25 @@
-import styled from 'styled-components/macro';
-import {
-    Box,
-    Heading,
-    Button,
-    Paragraph
-} from '~styled';
+import styled from "styled-components/macro";
+import { Box, Heading, Button, Paragraph } from "~styled";
 
-const Contact = styled(Box)
-`
-    padding-top: 50px;
-    padding-bottom: 36px;
-    border-top: 1px solid rgba(38, 39, 41, 0.1);
-    @media (min-width:768px) {
-        padding-top: 70px;
-        padding-bottom: 55px;
-    }
+const Contact = styled(Box)`
+  padding-top: 50px;
+  padding-bottom: 36px;
+  border-top: 1px solid rgba(38, 39, 41, 0.1);
+  @media (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 55px;
+  }
 
-    @media (min-width:992px) {
-        padding-top: 110px;
-        padding-bottom: 100px;
-    }
-
-`
+  @media (min-width: 992px) {
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+`;
 Contact.From = styled(Box)`
-    margin-bottom: 40px;
-    @media (min-width: 992px){
-        margin-bottom: 0;
-    }
+  margin-bottom: 40px;
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
   .form-floating {
     label {
       padding-left: 25px;
@@ -40,13 +33,13 @@ Contact.From = styled(Box)`
     textarea {
       min-height: 175px;
 
-      &~label {
+      & ~ label {
         margin-top: 20px;
       }
     }
 
     input {
-      &~label {
+      & ~ label {
         display: flex;
         align-items: center;
       }
@@ -77,7 +70,8 @@ Contact.From = styled(Box)`
     min-height: 175px;
     border-radius: 15px;
     border: 1px solid rgba(38, 39, 41, 0.1);
-    &~label {}
+    & ~ label {
+    }
   }
 
   .form-check {
@@ -90,7 +84,7 @@ Contact.From = styled(Box)`
       border: 0;
 
       &:checked[type="checkbox"] {
-        background-color: #5034fc !important;
+        background-color: #7bc0e3 !important;
         box-shadow: none;
       }
 
@@ -104,107 +98,104 @@ Contact.From = styled(Box)`
       font-size: 13px;
     }
   }
-`
+`;
 Contact.WidgetsBox = styled(Box)`
-    padding: 30px 30px 15px;
-    background-color: #5034fc;
-    border-radius: 15px;
+  padding: 30px 30px 15px;
+  background-color: #7bc0e3;
+  border-radius: 15px;
 
-    @media (min-width: 575px) {
-        padding: 40px 50px 15px;
-        }
-    @media (min-width: 992px) {
-        margin-left: 30px;
-    }
+  @media (min-width: 575px) {
+    padding: 40px 50px 15px;
+  }
+  @media (min-width: 992px) {
+    margin-left: 30px;
+  }
 
-    @@media (min-width: 1200px) {
-        margin-left: 95px;
-        margin-right: 0;
-    }
+  @@media (min-width: 1200px) {
+    margin-left: 95px;
+    margin-right: 0;
+  }
 
-    @media (min-width: 1400px) {
-        margin-left: 100px;
-        margin-right: 80px;
-    }
-
-`
+  @media (min-width: 1400px) {
+    margin-left: 100px;
+    margin-right: 80px;
+  }
+`;
 Contact.Widgets = styled(Box)`
-    display: flex;
-    margin-bottom: 20px;
-`
+  display: flex;
+  margin-bottom: 20px;
+`;
 Contact.WidgetsBoxTitle = styled(Heading)`
-    color: #ffffff;
-    font-family: "Rubik", sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 42px;
-    text-align: left;
-`
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 42px;
+  text-align: left;
+`;
 Contact.WidgetsBoxText = styled(Paragraph)`
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 28px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 30px;
-    margin-bottom: 35px;
-`
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 28px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 30px;
+  margin-bottom: 35px;
+`;
 Contact.WidgetsIcon = styled(Paragraph)`
-    min-width: 55px;
-    min-height: 55px;
-    max-width: 55px;
-    max-height: 55px;
-    margin-right: 30px;
-    background-color: rgba(38, 39, 41, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-    color: #fff;
-    border-radius: 50%;
-    &.active{
-        color: #5034fc;
-        background-color: #fff;
-    }
-`
+  min-width: 55px;
+  min-height: 55px;
+  max-width: 55px;
+  max-height: 55px;
+  margin-right: 30px;
+  background-color: rgba(38, 39, 41, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  color: #fff;
+  border-radius: 50%;
+  &.active {
+    color: #7bc0e3;
+    background-color: #fff;
+  }
+`;
 Contact.WidgetsTitle = styled(Heading)`
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 26px;
-    text-align: left;
-    margin-bottom: 5px;
-`
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 5px;
+`;
 Contact.WidgetsText = styled(Paragraph)`
-    opacity: 0.7;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-    margin-bottom: 10px;
-`
-Contact.WidgetsBoxBody = styled(Box)`
-`
+  opacity: 0.7;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 10px;
+`;
+Contact.WidgetsBoxBody = styled(Box)``;
 Contact.Button = styled(Button)`
-    min-width: 180px;
-    height: 56px;
-    background-color: #ff5722;
-    box-shadow: 0 4px 4px rgba(253, 100, 52, 0.3);
-    border-radius: 55px;
+  min-width: 180px;
+  height: 56px;
+  background-color: #60e1cb;
+  box-shadow: 0 4px 4px rgba(253, 100, 52, 0.3);
+  border-radius: 55px;
+  color: #fff;
+  &:hover {
     color: #fff;
-    &:hover{
-        color: #fff;
-        background-color: rgba(255,87,34, 0.7);
-    }
-`
-Contact.Box = styled(Box)`
-`
+    background-color: rgba(255, 87, 34, 0.7);
+  }
+`;
+Contact.Box = styled(Box)``;
 export default Contact;

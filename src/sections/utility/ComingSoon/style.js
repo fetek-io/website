@@ -1,55 +1,56 @@
-import styled from "styled-components/macro"
-import { Box, Heading, Button, Paragraph } from "~styled"
+import styled from "styled-components/macro";
+import { Box, Heading, Button, Paragraph } from "~styled";
 
 const Countdown = styled(Box)`
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #262729;
-`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #262729;
+`;
 Countdown.Image = styled.div`
-  height:100%;
-  width:100%;
-  left:0;
-  top:0;
-  position:absolute;
-  @media (min-width:992px){
-    width:40%;
-    background-image:${ p => p.backgroundImage ? `url(${p.backgroundImage})` : null};
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  @media (min-width: 992px) {
+    width: 40%;
+    background-image: ${(p) =>
+      p.backgroundImage ? `url(${p.backgroundImage})` : null};
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  @media (min-width:1200px){
-    width:43%;
+  @media (min-width: 1200px) {
+    width: 43%;
   }
-  @media (min-width:1400px){
-    width:45%;
+  @media (min-width: 1400px) {
+    width: 45%;
   }
-  &:before{
-    background:#000;
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    right:0;
+  &:before {
+    background: #000;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0;
-    @media (min-width:992px){
-      opacity:0
+    @media (min-width: 992px) {
+      opacity: 0;
     }
   }
-`
+`;
 Countdown.Title = styled(Heading)`
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.2;
   font-size: 30px;
-  color:inherit;
+  color: inherit;
   margin-bottom: 33px;
 
   @media (min-width: 768px) {
@@ -59,16 +60,16 @@ Countdown.Title = styled(Heading)`
   @media (min-width: 992px) {
     font-size: 45px;
   }
-`
+`;
 Countdown.Text = styled(Paragraph)`
   font-size: 18px;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 32px;
   margin-bottom: 90px;
-  opacity:.7;
-  color:inherit;
-`
+  opacity: 0.7;
+  color: inherit;
+`;
 Countdown.FromSection = styled(Box)`
   form {
     @media (min-width: 992px) {
@@ -141,7 +142,7 @@ Countdown.FromSection = styled(Box)`
         border: 0;
 
         &:checked[type="checkbox"] {
-          background-color: #5034fc !important;
+          background-color: #7bc0e3 !important;
           box-shadow: none;
         }
 
@@ -153,11 +154,11 @@ Countdown.FromSection = styled(Box)`
       .form-check-label {
         margin-left: 8px;
         font-size: 13px;
-        color:inherit;
+        color: inherit;
       }
     }
   }
-`
+`;
 Countdown.FormButton = styled(Button)`
   min-width: 180px;
   height: 56px;
@@ -167,7 +168,7 @@ Countdown.FormButton = styled(Button)`
   &:hover {
     color: #fff;
   }
-`
+`;
 Countdown.FormText = styled(Box)`
   font-size: 18px;
   font-weight: 400;
@@ -176,66 +177,66 @@ Countdown.FormText = styled(Box)`
   color: rgba(37, 55, 63, 0.7);
   margin-bottom: 16px;
   a {
-    color: #5034fc;
+    color: #7bc0e3;
     margin-left: 11px;
   }
-`
+`;
 
 Countdown.Form = styled(Box)`
-border-radius: 75px;
+  border-radius: 75px;
   @media (min-width: 480px) {
     background-color: #fff;
   }
-` 
+`;
 Countdown.InputBox = styled(Box)`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 75px;
-` 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 75px;
+`;
 Countdown.FormInput = styled(Box)`
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid rgba(128, 138, 142, 0.2);
-    color: rgba(37, 55, 63, 0.7);
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 28px;
-    padding: 5px 25px;
-    margin-bottom: 10px;
-    border-radius: 500px;
-    height: 70px;
-    margin-left: 5px;
-    &:focus {
-      background-color: transparent !important;
-      outline: none;
-      box-shadow: none;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(128, 138, 142, 0.2);
+  color: rgba(37, 55, 63, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 28px;
+  padding: 5px 25px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  height: 70px;
+  margin-left: 5px;
+  &:focus {
+    background-color: transparent !important;
+    outline: none;
+    box-shadow: none;
 
-      &::placeholder {
-        color: #000;
-      }
+    &::placeholder {
+      color: #000;
     }
-    @media (min-width: 480px) {
-      border: none;
-      background-color: transparent;
-      
-  margin-right: 7px;
-  margin-bottom: 0;
-    }
-` 
+  }
+  @media (min-width: 480px) {
+    border: none;
+    background-color: transparent;
+
+    margin-right: 7px;
+    margin-bottom: 0;
+  }
+`;
 Countdown.Button = styled(Button)`
-    height: 50px;
-    min-width: 137px;
-    border-radius: 500px;
-    box-shadow: 0 4px 4px rgb(253 100 52 / 30%);
-    @media (min-width: 480px) {
-      margin-right: 10px;
-    }
-` 
+  height: 50px;
+  min-width: 137px;
+  border-radius: 500px;
+  box-shadow: 0 4px 4px rgb(253 100 52 / 30%);
+  @media (min-width: 480px) {
+    margin-right: 10px;
+  }
+`;
 
 Countdown.Box = styled(Box)`
   /* height:100vh; */
-` 
+`;
 
-export default Countdown
+export default Countdown;

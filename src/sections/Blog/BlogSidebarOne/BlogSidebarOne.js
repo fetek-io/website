@@ -12,7 +12,7 @@ export default function BlogRegular() {
         <Row className="justify-content-center">
           <Col className="col-xl-8 text-center">
             <Blog.Box mb="63px">
-              <Blog.Subtitle as="h6" fontColor="#5034fc">
+              <Blog.Subtitle as="h6" fontColor="#7BC0E3">
                 Blog
               </Blog.Subtitle>
               <Blog.Title as="h2">Blog left Sidebar</Blog.Title>

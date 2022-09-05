@@ -23,7 +23,7 @@ Card.Title = styled(Link)`
   display: block;
   transition: 0.4s;
   &:hover {
-    color: #ff5722;
+    color: #60e1cb;
   }
 `;
 Card.Badge = styled(Button)`
@@ -50,7 +50,7 @@ Card.Date = styled(Link)`
   color: #fff;
   transition: 0.4s;
   &:hover {
-    color: #ff5722;
+    color: #60e1cb;
   }
 `;
 Card.User = styled(Link)`
@@ -66,7 +66,7 @@ Card.User = styled(Link)`
   i {
     font-weight: 500;
     margin-right: 7px;
-    color: #ff5722;
+    color: #60e1cb;
   }
   &:before {
     content: "";
@@ -80,7 +80,7 @@ Card.User = styled(Link)`
   }
 
   &:hover {
-    color: #ff5722;
+    color: #60e1cb;
   }
   @media (min-width: 576px) {
     font-size: 15px;
@@ -99,7 +99,7 @@ Card.Like = styled(Link)`
   i {
     font-weight: 500;
     margin-right: 7px;
-    color: #ff5722;
+    color: #60e1cb;
   }
   &:before {
     content: "";
@@ -112,7 +112,7 @@ Card.Like = styled(Link)`
     transform: translateY(-50%);
   }
   &:hover {
-    color: #ff5722;
+    color: #60e1cb;
   }
   @media (min-width: 576px) {
     font-size: 15px;
@@ -129,10 +129,10 @@ Card.Comment = styled(Link)`
   i {
     font-weight: 500;
     margin-right: 7px;
-    color: #ff5722;
+    color: #60e1cb;
   }
   &:hover {
-    color: #ff5722;
+    color: #60e1cb;
   }
   @media (min-width: 576px) {
     font-size: 15px;

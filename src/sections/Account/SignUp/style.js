@@ -1,54 +1,54 @@
-import styled from "styled-components/macro"
-import { Box, Heading, Button, Paragraph } from "~styled"
+import styled from "styled-components/macro";
+import { Box, Heading, Button, Paragraph } from "~styled";
 
 const SignUpForm = styled(Box)`
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #fff;
-    @media (min-width:992px){
-      color: #262729;
-    }
-`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #fff;
+  @media (min-width: 992px) {
+    color: #262729;
+  }
+`;
 SignUpForm.Image = styled(Box)`
-  height:100%;
-  width:100%;
-  left:0;
-  top:0;
-  position:absolute;
-  @media (min-width:992px){
-    width:40%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  @media (min-width: 992px) {
+    width: 40%;
   }
-  @media (min-width:1200px){
-    width:43%;
+  @media (min-width: 1200px) {
+    width: 43%;
   }
-  @media (min-width:1400px){
-    width:45%;
+  @media (min-width: 1400px) {
+    width: 45%;
   }
-  &:before{
-    background:#000;
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    right:0;
-    opacity:.6;
-    @media (min-width:992px){
-      opacity:0
+  &:before {
+    background: #000;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    @media (min-width: 992px) {
+      opacity: 0;
     }
   }
-`
+`;
 SignUpForm.Title = styled(Heading)`
   font-size: 32px;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.38095;
-  color:inherit;
+  color: inherit;
   margin-bottom: 18px;
 
   @media (min-width: 768px) {
@@ -58,16 +58,16 @@ SignUpForm.Title = styled(Heading)`
   @media (min-width: 992px) {
     font-size: 42px;
   }
-`
+`;
 SignUpForm.Text = styled(Paragraph)`
   font-size: 18px;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.77777;
   margin-bottom: 50px;
-  opacity:.7;
-  color:inherit;
-`
+  opacity: 0.7;
+  color: inherit;
+`;
 SignUpForm.FromSection = styled(Box)`
   form {
     @media (min-width: 992px) {
@@ -140,7 +140,7 @@ SignUpForm.FromSection = styled(Box)`
         border: 0;
 
         &:checked[type="checkbox"] {
-          background-color: #5034fc !important;
+          background-color: #7bc0e3 !important;
           box-shadow: none;
         }
 
@@ -152,11 +152,11 @@ SignUpForm.FromSection = styled(Box)`
       .form-check-label {
         margin-left: 8px;
         font-size: 13px;
-        color:inherit;
+        color: inherit;
       }
     }
   }
-`
+`;
 SignUpForm.FormButton = styled(Button)`
   min-width: 180px;
   height: 56px;
@@ -166,21 +166,21 @@ SignUpForm.FormButton = styled(Button)`
   &:hover {
     color: #fff;
   }
-`
+`;
 SignUpForm.FormText = styled(Box)`
   font-size: 18px;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 32px;
-  color:inherit;
+  color: inherit;
   a {
-    color: #5034fc;
+    color: #7bc0e3;
     margin-left: 11px;
   }
-`
+`;
 
 SignUpForm.Box = styled(Box)`
   /* height:100vh; */
-` 
+`;
 
-export default SignUpForm
+export default SignUpForm;

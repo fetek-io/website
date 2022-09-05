@@ -18,7 +18,7 @@ export default function BlogCard({
       </Card.Image>
       <Card.OvaerlayBlock>
         <Card.Top mb="20px">
-          <Card.Badge backgroundColor="#ff5722">{badge}</Card.Badge>
+          <Card.Badge backgroundColor="#60E1CB">{badge}</Card.Badge>
           <Card.Date to={"/blog/" + keyword}>
             {new Date(date).toDateString()}
           </Card.Date>

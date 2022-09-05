@@ -1,13 +1,13 @@
-import styled from "styled-components/macro"
-import { Box, Heading, Button, Paragraph } from "~styled"
+import styled from "styled-components/macro";
+import { Box, Heading, Button, Paragraph } from "~styled";
 
 const Cta = styled(Box)`
   padding-top: 60px;
   padding-bottom: 20px;
   background-position: center;
-background-size: cover;
-background-repeat:no-repeat;
-z-index:1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
   @media (min-width: 768px) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -29,7 +29,7 @@ z-index:1;
     top: 0;
     z-index: -1;
   }
-`
+`;
 Cta.Title = styled(Heading)`
   font-size: 32px;
   font-weight: 500;
@@ -43,18 +43,18 @@ Cta.Title = styled(Heading)`
   @media (min-width: 992px) {
     font-size: 48px;
   }
-`
+`;
 Cta.Text = styled(Paragraph)`
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: normal;
-    line-height: 1.75;
-`
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.75;
+`;
 
 Cta.Button = styled(Button)`
   color: #fff !important;
-  background-color: #ff5722;
-    border-color: #ff5722;
+  background-color: #60e1cb;
+  border-color: #60e1cb;
   box-shadow: -12px 12px 50px rgb(253 52 110 / 30%);
   border-radius: 500px;
 
@@ -62,7 +62,7 @@ Cta.Button = styled(Button)`
     box-shadow: 0 20px 20px rgb(255 75 96 / 0%);
     color: #fff !important;
   }
-`
-Cta.Box = styled(Box)``
+`;
+Cta.Box = styled(Box)``;
 
-export default Cta
+export default Cta;

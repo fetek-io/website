@@ -1,10 +1,10 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import SectionTitle from './Components/SectionTitle'
-import { StaticImage as Img } from "gatsby-plugin-image"
-import Protfolio from "./style"
-import { Link } from "~components"
-import Slider from "react-slick"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import SectionTitle from "./Components/SectionTitle";
+import { StaticImage as Img } from "gatsby-plugin-image";
+import Protfolio from "./style";
+import { Link } from "~components";
+import Slider from "react-slick";
 
 const Slide = ({
   image,
@@ -41,7 +41,10 @@ const Slide = ({
                   ? "0" + Number(currentItemCount)
                   : Number(currentItemCount)}
               </span>
-              / {Number(totalItem) < 10 ? "0" + Number(totalItem) : Number(totalItem)}
+              /{" "}
+              {Number(totalItem) < 10
+                ? "0" + Number(totalItem)
+                : Number(totalItem)}
             </Protfolio.SubTitle>
             <Protfolio.Title as="h2">{title}</Protfolio.Title>
 
@@ -56,11 +59,11 @@ const Slide = ({
         </Protfolio.Content>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
 export default function ProtfolioSection() {
-  const elSlider = React.useRef()
+  const elSlider = React.useRef();
 
   const sliderConfig1 = {
     dots: false,
@@ -72,7 +75,7 @@ export default function ProtfolioSection() {
     centerPadding: false,
     autoplay: true,
     fade: true,
-  }
+  };
   return (
     <Protfolio>
       <Container>
@@ -82,8 +85,8 @@ export default function ProtfolioSection() {
             <SectionTitle
               subTitle="Portfolio"
               title="The Works We Are Proud Of"
-              titleProps={{ mb:"40px", mbLG:"75px" }}
-              subTitleProps={{ mb: "10px", fontColor: "#5034fc" }}
+              titleProps={{ mb: "40px", mbLG: "75px" }}
+              subTitleProps={{ mb: "10px", fontColor: "#7BC0E3" }}
             />
             {/*/ .Section Title */}
           </Col>
@@ -102,7 +105,6 @@ export default function ProtfolioSection() {
                 layout="fullWidth"
                 placeholder="blurred"
               />
-              
             }
             totalItem="3"
             currentItemCount="1"
@@ -145,5 +147,5 @@ export default function ProtfolioSection() {
         </Slider>
       </Container>
     </Protfolio>
-  )
+  );
 }
