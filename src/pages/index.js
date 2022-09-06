@@ -2,6 +2,7 @@ import React from "react";
 import { PageWrapper } from "~components";
 import HeaderButton from "~sections/it/Header";
 import HeroSection from "~sections/custom/Hero";
+import IdeaSection from "~sections/custom/Ideas";
 import ServicesSection from "~sections/it/Services";
 import FeatureSection from "~sections/it/Feature";
 // import ContentSectionOne from "~sections/it/ContentOne";
@@ -32,6 +33,7 @@ export default function Marketing() {
   return (
     <PageWrapper innerPage={true}>
       <HeroSection />
+      <IdeaSection />
       <ServicesSection />
       <TechStackSection />
       <FeatureSection />

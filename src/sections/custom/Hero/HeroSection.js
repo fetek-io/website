@@ -5,6 +5,14 @@ import { Link } from "~components";
 import ImageGroup from "./Components/ImageGroup";
 import Hero from "./style";
 import { StaticImage as Img } from "gatsby-plugin-image";
+import styled from "styled-components";
+import heroImg from "../../../assets/image/custom/hero.png";
+
+const ImageContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
 
 export default function HeroSection() {
   return (
@@ -47,23 +55,26 @@ export default function HeroSection() {
               </Hero.BtnGroup>
             </div>
           </Col>
-          {/*/ .Welcome Content Area */}
-          {/*Welcome Image Area */}
-          <Col
-            xs="12"
-            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
-          >
-            <Img
-              src="../../../assets/image/custom/hero.png"
-              alt="heroimg"
-              layout="fullWidth"
-              placeholder="none"
-            />
-            {/* <ImageGroup /> */}
-          </Col>
-          {/*/ .Welcome Image Area */}
         </Row>
       </Container>
+      {/*/ .Welcome Content Area */}
+      {/*Welcome Image Area */}
+      {/* <Col
+        xs="12"
+        className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
+      > */}
+      <ImageContainer>
+        <img
+          src={heroImg}
+          alt="heroimg"
+          layout="fullWidth"
+          placeholder="none"
+        />
+      </ImageContainer>
+
+      {/* <ImageGroup /> */}
+      {/* </Col> */}
+      {/*/ .Welcome Image Area */}
     </Hero>
   );
 }
