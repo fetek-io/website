@@ -30,14 +30,15 @@ export default function HeroSection() {
               </Hero.Text>
               <Hero.BtnGroup>
                 <Hero.Button
-                  className="btn-primary btn-1 text-white"
+                  className="btn-primary text-white"
                   as={Video}
                   id="LWZ7iytIA6k"
                 >
                   Write A Message
                 </Hero.Button>
                 <Hero.Button
-                  className="btn-electric-violet-2 btn-2"
+                  className="btn-white text-primary"
+                  style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
                   as={Link}
                   to="/"
                 >
@@ -56,7 +57,7 @@ export default function HeroSection() {
               src="../../../assets/image/custom/hero.png"
               alt="heroimg"
               layout="fullWidth"
-              // placeholder="blurred"
+              placeholder="none"
             />
             {/* <ImageGroup /> */}
           </Col>

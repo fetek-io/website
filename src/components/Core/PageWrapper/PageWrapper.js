@@ -16,7 +16,9 @@ const PageWrapper = ({
       "light-header site-header--menu-end site-header--button-sep position-relative",
     containerFluid: false,
     darkLogo: true,
-    buttonBlock: <HeaderButton as={Link} btnText="Contact us" />,
+    buttonBlock: (
+      <HeaderButton as={Link} btnText={`Contact us`} btnDefault={true} />
+    ),
   };
   const activeHeader = innerPage ? innerPageDefault : headerDefault;
   const sitectx = React.useContext(GlobalHeaderContext);

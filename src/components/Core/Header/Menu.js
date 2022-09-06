@@ -31,7 +31,6 @@ const Menu = ({ ...rest }) => {
               },
               index
             ) => {
-              console.log("name :>> ", name);
               const hasSubItems = Array.isArray(items);
               const hasMegaMenu = isObject(items);
               const active = pathname
