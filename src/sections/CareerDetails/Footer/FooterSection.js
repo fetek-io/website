@@ -14,14 +14,18 @@ export default function FooterSection() {
                 {/* Brand Logo*/}
                 <Footer.Box mb="30px">
                   <Link to="#">
-                    <img src={Images.FooterSix.LogoBlack} alt="logo" />
+                    <img
+                      src={Images.FooterSix.LogoBlack}
+                      alt="logo"
+                      style={{ width: "100px", height: "50px" }}
+                    />
                   </Link>
                 </Footer.Box>
                 <Footer.Text mb="36px">
-                  We’re the digital agency to create
-                  <br className="d-none d-xl-block" /> your digital presence for
-                  better
-                  <br className="d-none d-xl-block" /> conversion and sales.
+                  With a experienced talent team,
+                  <br className="d-none d-xl-block" /> Fetek will be a reputable
+                  technology partner to maximize the development
+                  <br className="d-none d-xl-block" /> of your business
                 </Footer.Text>
                 <Footer.SocialShare>
                   <Footer.SocialShareItem>

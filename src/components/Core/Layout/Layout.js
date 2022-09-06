@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import favicon from "~image/mixed/favicon.png";
+import favicon from "~image/logo/logo-no-name.svg";
 import Header from "../Header";
 import { QueryClient, QueryClientProvider } from "react-query";
 

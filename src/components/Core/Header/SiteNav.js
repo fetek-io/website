@@ -27,7 +27,11 @@ const SiteNavbar = ({
               FETEK
             </span>
           ) : defaultLogo ? (
-            <img src={defaultLogo} alt="site-brand" />
+            <img
+              src={defaultLogo}
+              alt="site-brand"
+              style={{ width: "100px", height: "46px" }}
+            />
           ) : customLogo ? (
             <img src={customLogo} alt="site-brand" />
           ) : (
