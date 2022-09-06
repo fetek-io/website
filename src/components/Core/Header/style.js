@@ -1,4 +1,4 @@
-import styled from "styled-components/macro"
+import styled from "styled-components/macro";
 
 const SiteHeader = styled.div.attrs({
   className: "site-header",
@@ -7,9 +7,9 @@ const SiteHeader = styled.div.attrs({
   width: 100%;
   z-index: 99;
   top: 0;
-  @media(max-width:992px){
-    padding-top:13px;
-    padding-bottom:13px;
+  @media (max-width: 992px) {
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
   .hamburgur {
     order: 3;
@@ -28,8 +28,8 @@ const SiteHeader = styled.div.attrs({
         color: inherit;
       }
     }
-    &:focus{
-      outline:none;
+    &:focus {
+      outline: none;
       box-shadow: none;
     }
   }
@@ -67,7 +67,7 @@ const SiteHeader = styled.div.attrs({
         opacity: 0;
         z-index: -99;
         font-weight: 400;
-        transition:top .4s linear;
+        transition: top 0.4s linear;
       }
       @media (max-width: 992px) {
         border-color: transparent;
@@ -77,7 +77,7 @@ const SiteHeader = styled.div.attrs({
     }
     .main-nav-item {
       > .nav-link {
-        color: #000;
+        color: #60e1cb; /* primary color */
         font-size: 16px;
         font-weight: 400;
         font-style: normal;
@@ -125,7 +125,7 @@ const SiteHeader = styled.div.attrs({
       }
       > a,
       .dropdown-toggle {
-        color: #000 !important;
+        color: #60e1cb !important;
         text-decoration: none;
         display: block;
         padding-top: 10px;
@@ -154,7 +154,7 @@ const SiteHeader = styled.div.attrs({
       & > .dropdown-toggle {
         display: flex !important;
         justify-content: space-between;
-        @media (min-width:992px) {
+        @media (min-width: 992px) {
           &:after {
             top: 0px;
             transform: rotate(-90deg);
@@ -180,11 +180,11 @@ const SiteHeader = styled.div.attrs({
             pointer-events: visible;
             border-radius: 0px 0px 15px 15px;
             border-top: 3px solid #fbb040;
-            transition:top .4s linear;
+            transition: top 0.4s linear;
           }
         }
         & > .dropdown-toggle {
-          @media (min-width:992px) {
+          @media (min-width: 992px) {
             &:after {
               transform: rotate(0deg);
             }
@@ -205,7 +205,7 @@ const SiteHeader = styled.div.attrs({
         @media (min-width: 992px) {
           padding: 30px;
           pointer-events: none;
-          transition:top .4s linear;
+          transition: top 0.4s linear;
         }
         .row {
           @media (max-width: 992px) {
@@ -452,8 +452,8 @@ const SiteHeader = styled.div.attrs({
           z-index: 1000;
         }
       }
-      &.reveal-header{
-        @media (min-width:992px){
+      &.reveal-header {
+        @media (min-width: 992px) {
           padding-top: 10px;
           z-index: 999;
           padding-bottom: 10px;
@@ -483,8 +483,13 @@ const SiteHeader = styled.div.attrs({
   /* Light Header */
   &.light-header {
     .main-nav-item > .nav-link {
+      color: #60e1cb !important;
+    }
+
+    .main-nav-item.active > .nav-link {
       color: #000 !important;
     }
+
     &.reveal-header {
       background: #fff;
     }
@@ -496,18 +501,21 @@ const SiteHeader = styled.div.attrs({
   /* Dark Header */
   &.dark-header {
     &.reveal-header {
-        background: #19191b;
+      background: #19191b;
+    }
+    .main-nav-item.active > .nav-link {
+      color: #ffffff !important;
     }
     &-2 {
       &.reveal-header {
-      background: #416ff4;
+        background: #416ff4;
       }
     }
   }
 
   &.site-header--menu-center {
     .navbar-collapse {
-      @media (min-width:992px) {
+      @media (min-width: 992px) {
         justify-content: center;
         margin-right: calc(-214px / 2);
       }
@@ -519,9 +527,9 @@ const SiteHeader = styled.div.attrs({
     }
   }
   &.site-header--menu-start {
-    .container-fluid{
+    .container-fluid {
       .navbar-collapse {
-        @media (min-width:992px){
+        @media (min-width: 992px) {
           padding-left: 15px;
           margin-left: 3.125rem !important;
         }
@@ -531,40 +539,37 @@ const SiteHeader = styled.div.attrs({
 
   /* Header Buttons */
 
-
-
-
-&.site-header--menu-sep{
-    @media (min-width: 992px){
+  &.site-header--menu-sep {
+    @media (min-width: 992px) {
       .navbar-collapse {
-          margin-right: 20px;
-          padding-right: 10px;
-          position:relative;
-          &:before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2px;
-            height: 26px;
-            border-right: 2px solid rgba(130, 130, 136, 0.3);
-          } 
+        margin-right: 20px;
+        padding-right: 10px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2px;
+          height: 26px;
+          border-right: 2px solid rgba(130, 130, 136, 0.3);
+        }
       }
     }
   }
-  &.site-header--button-sep{
-      .header-btn-block{
-        display:none;
-      @media (min-width:480px){
-        display:block;
-        margin-left:auto;
-        margin-right:20px;
+  &.site-header--button-sep {
+    .header-btn-block {
+      display: none;
+      @media (min-width: 480px) {
+        display: block;
+        margin-left: auto;
+        margin-right: 20px;
       }
-      @media (min-width:992px){
-        margin-right:0px;
-        margin-left:20px;
-        &:before{
+      @media (min-width: 992px) {
+        margin-right: 0px;
+        margin-left: 20px;
+        &:before {
           content: "";
           position: absolute;
           left: -18px;
@@ -578,34 +583,33 @@ const SiteHeader = styled.div.attrs({
     }
   }
 
+  &.site-header--with-border {
+    .navbar-brand {
+      @media (min-width: 992px) {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          right: -21px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2px;
+          height: 26px;
+          border-left: 2px solid rgba(38, 39, 41, 0.3);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.site-header--services {
+    .navbar-collapse {
+      @media (min-width: 992px) {
+        margin-right: 55px;
+      }
+    }
+  }
 
-&.site-header--with-border{
-  .navbar-brand{
-    @media (min-width:992px){
-      position:relative;
-      &:before{
-        content: "";
-        position: absolute;
-        right: -21px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 2px;
-        height: 26px;
-        border-left: 2px solid rgba(38, 39, 41, 0.3);
-        opacity:0;
-      } 
-    }
-  }
-}
-&.site-header--services{
-  .navbar-collapse{
-    @media (min-width:992px){
-      margin-right: 55px;
-    }
-  }
-}
-  
-/* .site-header--service{
+  /* .site-header--service{
   @media (min-width:992px){
     background: #19191b;
   }
@@ -613,6 +617,6 @@ const SiteHeader = styled.div.attrs({
   /* &.site-header--startup{
     positon
   } */
-`
+`;
 
-export default SiteHeader
+export default SiteHeader;

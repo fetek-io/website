@@ -24,11 +24,14 @@ const HeaderButtonWrapper = styled(Box).attrs({
     margin-left: 10px;
     background-color: #7bc0e3;
     border-color: #7bc0e3;
+    /*
     box-shadow: -12px 20px 50px rgb(80 52 252 / 30%);
+    */
     border-radius: 500px;
     &:hover {
+      /*
       box-shadow: -12px 20px 50px rgb(80 52 252 / 0%);
-      /* box-shadow: 0 0px 0px rgba(241, 139, 98, 0.3); */
+       box-shadow: 0 0px 0px rgba(241, 139, 98, 0.3); */
     }
   }
 `;

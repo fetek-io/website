@@ -30,6 +30,7 @@ const Header = () => {
   if (!hasMounted) {
     return null;
   }
+
   return (
     <SiteHeader
       className={`${header.headerClasses} ${showScrolling ? "scrolling" : ""} ${

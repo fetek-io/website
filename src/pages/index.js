@@ -30,7 +30,7 @@ const header = {
 
 export default function Marketing() {
   return (
-    <PageWrapper headerConfig={header}>
+    <PageWrapper innerPage={true}>
       <HeroSection />
       <ServicesSection />
       <TechStackSection />
