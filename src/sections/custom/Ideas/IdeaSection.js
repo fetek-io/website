@@ -90,7 +90,7 @@ export default function IdeaSection() {
       </Container>
       {/*/ .Welcome Content Area */}
       {/*Welcome Image Area */}
-      <ImageContainer>
+      <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-block">
         <img
           src={IdeaImg}
           alt="Ideaimg"

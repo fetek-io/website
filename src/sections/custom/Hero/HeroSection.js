@@ -10,8 +10,8 @@ import heroImg from "../../../assets/image/custom/hero.png";
 
 const ImageContainer = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 110px;
+  left: 50%;
 `;
 
 export default function HeroSection() {
@@ -63,12 +63,13 @@ export default function HeroSection() {
         xs="12"
         className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
       > */}
-      <ImageContainer>
+      <ImageContainer className="d-none d-sm-none d-md-none d-lg-block">
         <img
           src={heroImg}
           alt="heroimg"
           layout="fullWidth"
           placeholder="none"
+          style={{ width: "900px", height: "auto" }}
         />
       </ImageContainer>
 
