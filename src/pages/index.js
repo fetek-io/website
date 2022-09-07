@@ -3,7 +3,8 @@ import { PageWrapper } from "~components";
 import HeaderButton from "~sections/it/Header";
 import HeroSection from "~sections/custom/Hero";
 import IdeaSection from "~sections/custom/Ideas";
-import ServicesSection from "~sections/it/Services";
+import GreatworkSection from "~sections/custom/GreatWork";
+import ServicesSection from "~sections/custom/Services";
 import FeatureSection from "~sections/it/Feature";
 // import ContentSectionOne from "~sections/it/ContentOne";
 import ProcessSection from "~sections/it/Process";
@@ -35,8 +36,9 @@ export default function Marketing() {
       <HeroSection />
       <IdeaSection />
       <ServicesSection />
-      <TechStackSection />
-      <FeatureSection />
+      {/* <TechStackSection /> */}
+      <GreatworkSection />
+      {/* <FeatureSection /> */}
       <ContentSectionOne />
       <ProcessSection />
       <CtaSection />

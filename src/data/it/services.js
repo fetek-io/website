@@ -41,12 +41,12 @@ const ServiceData = [
     text: "50 availabe vacancy",
     iconBackground: "#0cd68a",
   },
-  {
-    id: "is7",
-    icon: "fas fa-money-bill-alt",
-    title: "Business Development",
-    text: "50 availabe vacancy",
-    iconBackground: "#fcdc00",
-  },
+  // {
+  //   id: "is7",
+  //   icon: "fas fa-money-bill-alt",
+  //   title: "Business Development",
+  //   text: "50 availabe vacancy",
+  //   iconBackground: "#fcdc00",
+  // },
 ];
 export default ServiceData;
