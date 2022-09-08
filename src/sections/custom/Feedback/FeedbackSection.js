@@ -17,7 +17,7 @@ const ImageContainer = styled.div`
 const SliderWrapper = styled(Box)`
   margin: auto;
   .slick-slide {
-    padding: 0 0 60px 0;
+    padding: 0 0 10px 0;
   }
 `;
 
@@ -115,23 +115,35 @@ export default function FeedbackSection() {
     slidesToScroll: 1,
     nextArrow: <NextArrow elSlider={elSlider} />,
     prevArrow: <PreviousArrow elSlider={elSlider} />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: <></>,
+          prevArrow: <></>,
+        },
+      },
+    ],
   };
   return (
     <Feedback backgroundColor="#ffffff">
       <Container>
-        <Feedback.Subtitle>Testiomonials</Feedback.Subtitle>
-        <SectionTitle
-          title={`Our Happy Clients`}
-          subTitleProps={{ mb: "27px" }}
-          titleProps={{ mb: "10px", as: "h2" }}
-          mb="69px"
-          className="text-center"
-        ></SectionTitle>
+        <Row className="justify-content-center justify-content-md-start">
+          <Feedback.Subtitle>Testiomonials</Feedback.Subtitle>
+          <SectionTitle
+            title={`Our Happy Clients`}
+            subTitleProps={{ mb: "27px" }}
+            titleProps={{ mb: "10px", as: "h2" }}
+            mb="69px"
+          ></SectionTitle>
+        </Row>
 
-        <Row
-          className="align-items-center justify-content-center justify-content-md-start"
-          style={{ paddingBottom: "138px" }}
-        >
+        <Row className="align-items-center justify-content-center justify-content-md-start">
           <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
               <div style={{ display: "inline !important" }}>

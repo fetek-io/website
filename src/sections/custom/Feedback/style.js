@@ -3,9 +3,9 @@ import { Box, Heading, Button, Paragraph } from "~styled";
 
 const Feedback = styled(Box)`
   position: relative;
-  /* padding-top: 125px;
-  padding-bottom: 70px;
-  @media (min-width: 768px) {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  /*  @media (min-width: 768px) {
     padding-top: 115px;
     padding-bottom: 110px;
   }

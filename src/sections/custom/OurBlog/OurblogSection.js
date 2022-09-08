@@ -7,6 +7,14 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import ServicesCard from "./Components/Card";
 
+const SliderWrapper = styled.div`
+  @media (min-width: 1200px) {
+    .slick-slide {
+      padding: 0 0 30px 0;
+    }
+  }
+`;
+
 export default function OurblogSection() {
   const sliderConfig = {
     dots: true,
@@ -15,6 +23,20 @@ export default function OurblogSection() {
     slidesToShow: 2,
     slidesToScroll: 2,
     prevArrow: <></>,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: <></>,
+          prevArrow: <></>,
+        },
+      },
+    ],
   };
 
   return (
@@ -24,7 +46,7 @@ export default function OurblogSection() {
           {/* Welcome content Area */}
           <Col
             xs="12"
-            className="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-xs-10"
+            className="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-xs-10 mt-3"
           >
             <div className="welcome-content welcome-content--l3">
               <OurBlog.Subtitle>Get Started</OurBlog.Subtitle>
@@ -48,40 +70,42 @@ export default function OurblogSection() {
           <Col xs="1"></Col>
           <Col
             xs="12"
-            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
+            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-lg-block mt-3"
           >
-            <Slider {...sliderConfig}>
-              <div>
-                <ServicesCard
-                  title={`Why Your SaaS Business should use WordPress`}
-                  text={`A content management system like WordPress can help you build a highly engaging website`}
-                />
-              </div>
-              <div>
-                <ServicesCard
-                  title={`Why Your SaaS Business should use WordPress`}
-                  text={`A content management system like WordPress can help you build a highly engaging website`}
-                />
-              </div>
-              <div>
-                <ServicesCard
-                  title={`Why Your SaaS Business should use WordPress`}
-                  text={`A content management system like WordPress can help you build a highly engaging website`}
-                />
-              </div>
-              <div>
-                <ServicesCard
-                  title={`Why Your SaaS Business should use WordPress`}
-                  text={`A content management system like WordPress can help you build a highly engaging website`}
-                />
-              </div>
-              <div>
-                <ServicesCard
-                  title={`Why Your SaaS Business should use WordPress`}
-                  text={`A content management system like WordPress can help you build a highly engaging website`}
-                />
-              </div>
-            </Slider>
+            <SliderWrapper>
+              <Slider {...sliderConfig}>
+                <div>
+                  <ServicesCard
+                    title={`Why Your SaaS Business should use WordPress`}
+                    text={`A content management system like WordPress can help you build a highly engaging website`}
+                  />
+                </div>
+                <div>
+                  <ServicesCard
+                    title={`Why Your SaaS Business should use WordPress`}
+                    text={`A content management system like WordPress can help you build a highly engaging website`}
+                  />
+                </div>
+                <div>
+                  <ServicesCard
+                    title={`Why Your SaaS Business should use WordPress`}
+                    text={`A content management system like WordPress can help you build a highly engaging website`}
+                  />
+                </div>
+                <div>
+                  <ServicesCard
+                    title={`Why Your SaaS Business should use WordPress`}
+                    text={`A content management system like WordPress can help you build a highly engaging website`}
+                  />
+                </div>
+                <div>
+                  <ServicesCard
+                    title={`Why Your SaaS Business should use WordPress`}
+                    text={`A content management system like WordPress can help you build a highly engaging website`}
+                  />
+                </div>
+              </Slider>
+            </SliderWrapper>
           </Col>
         </Row>
       </Container>

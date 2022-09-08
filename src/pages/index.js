@@ -7,6 +7,7 @@ import GreatworkSection from "~sections/custom/GreatWork";
 import ServicesSection from "~sections/custom/Services";
 import FeedbackSection from "~sections/custom/Feedback";
 import OurblogSection from "~sections/custom/OurBlog";
+import ContactUsSection from "~sections/custom/ContactUs";
 // import FeatureSection from "~sections/it/Feature";
 // import ContentSectionOne from "~sections/it/ContentOne";
 // import ProcessSection from "~sections/it/Process";
@@ -40,6 +41,7 @@ export default function Marketing() {
       <ServicesSection />
       {/* <TechStackSection /> */}
       <GreatworkSection />
+      <ContactUsSection />
       <FeedbackSection />
       <OurblogSection />
       {/* <FeatureSection /> */}

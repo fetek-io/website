@@ -10,8 +10,8 @@ export default function ServicesSection() {
   return (
     <Services backgroundColor="#ffffff">
       <Container>
-        <Row className="justify-content-center">
-          <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10 text-center">
+        <Row className="justify-content-center justify-content-md-start">
+          <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10">
             <SectionTitle
               subTitle="Our Services"
               title="We run all kinds of services in form of Technologies"
