@@ -6,11 +6,27 @@ import GreatWork from "./style";
 import firstForte from "~assets/image/custom/forte1.png";
 import secondForte from "~assets/image/custom/forte2.png";
 import thirdForte from "~assets/image/custom/forte3.png";
+import ArrowLeft from "~assets/image/custom/arrow-left.inline.svg";
+import ArrowRight from "~assets/image/custom/arrow-right.inline.svg";
 import styled from "styled-components";
 import SectionTitle from "./Components/SectionTitle";
+import { Box } from "~styled";
+
+const SliderWrapper = styled(Box)`
+  .slick-list {
+    transform: translate(0, 15%) !important;
+  }
+
+  @media (max-width: 1200px) {
+    .slick-dots {
+      bottom: -75px;
+    }
+  }
+`;
 
 const ImageContainer = styled.div`
   padding: 20px;
+  margin: auto;
 `;
 
 const ForteImage = styled.img`
@@ -27,10 +43,85 @@ const ForteImage = styled.img`
   }
 `;
 
+const WorkTabContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0px 0px 0px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
+
+const WorkTab = styled.div`
+  cursor: pointer;
+  padding: 23px 40px;
+  &.active {
+    border: 2px solid #292525;
+    border-radius: 1000px;
+  }
+`;
+
+const WorkText = styled.p`
+  padding: 0;
+  margin: 0;
+  color: ${(props) => props.theme.colors.white};
+`;
+
+const PreviousArrow = ({ elSlider }) => {
+  return (
+    <button
+      style={{
+        width: "64px",
+        height: "64px",
+        border: "2px solid white",
+        borderRadius: "50%",
+        background: "white",
+        position: "absolute",
+        top: "50%",
+        left: "-20px",
+        zIndex: 100,
+      }}
+      onClick={() => {
+        elSlider.current.slickPrev();
+      }}
+    >
+      <span style={{ color: "#7BC0E3" }}>
+        <ArrowLeft />
+      </span>
+    </button>
+  );
+};
+
+const NextArrow = ({ elSlider }) => {
+  return (
+    <button
+      style={{
+        width: "64px",
+        height: "64px",
+        border: "2px solid white",
+        borderRadius: "50%",
+        background: "white",
+        position: "absolute",
+        top: "50%",
+        right: "-40px",
+        zIndex: 100,
+      }}
+      onClick={() => {
+        elSlider.current.slickNext();
+      }}
+    >
+      <span style={{ color: "#7BC0E3" }}>
+        <ArrowRight />
+      </span>
+    </button>
+  );
+};
+
 export default function GreatworkSection() {
   const elSlider = React.useRef();
 
-  //   $screen-xxs: 320px;
+  // $screen-xxs: 320px;
   // $screen-xs: 480px;
   // $screen-sm: 576px;
   // $screen-md: 768px;
@@ -45,6 +136,8 @@ export default function GreatworkSection() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <NextArrow elSlider={elSlider} />,
+    prevArrow: <PreviousArrow elSlider={elSlider} />,
     responsive: [
       {
         breakpoint: 320,
@@ -126,6 +219,8 @@ export default function GreatworkSection() {
           speed: 500,
           slidesToShow: 2,
           slidesToScroll: 2,
+          nextArrow: <NextArrow elSlider={elSlider} />,
+          prevArrow: <PreviousArrow elSlider={elSlider} />,
         },
       },
     ],
@@ -133,8 +228,8 @@ export default function GreatworkSection() {
 
   return (
     <GreatWork
-      backgroundColor="#E9FBF8"
-      style={{ backgroundImage: "linear-gradient(#E9FBF8 50%, white 50%)" }}
+      backgroundColor="#60E1CB"
+      style={{ backgroundImage: "linear-gradient(#60E1CB 60%, white 50%)" }}
     >
       <Container>
         <SectionTitle
@@ -144,42 +239,69 @@ export default function GreatworkSection() {
           mb="69px"
           className="text-center"
         ></SectionTitle>
-        <Row className="align-items-center justify-content-center justify-content-md-start">
-          <Slider ref={elSlider} {...sliderConfig}>
-            <ImageContainer>
-              <ForteImage src={firstForte} alt="our forte" />
+        <WorkTabContainer>
+          <WorkTab className="active">
+            <WorkText>Website Optimization</WorkText>
+          </WorkTab>
+          <WorkTab>
+            <WorkText>Website Redesign</WorkText>
+          </WorkTab>
+          <WorkTab>
+            <WorkText>Search Engine Optimization</WorkText>
+          </WorkTab>
+        </WorkTabContainer>
+        <Row
+          className="align-items-center justify-content-center justify-content-md-start"
+          style={{ paddingBottom: "138px" }}
+        >
+          <SliderWrapper>
+            <Slider ref={elSlider} {...sliderConfig}>
+              <div style={{ display: "inline !important" }}>
+                <ImageContainer>
+                  <ForteImage src={firstForte} alt="our forte" />
 
-              <GreatWork.Text>
-                With a talented team and a transparent working process, we are
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </GreatWork.Text>
-            </ImageContainer>
-            <ImageContainer>
-              <ForteImage src={secondForte} alt="our forte" />
-              <GreatWork.Text>
-                With a talented team and a transparent working process, we are
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </GreatWork.Text>
-            </ImageContainer>
-            <ImageContainer>
-              <ForteImage src={thirdForte} alt="our forte" />
-              <GreatWork.Text>
-                With a talented team and a transparent working process, we are
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </GreatWork.Text>
-            </ImageContainer>
-            <ImageContainer>
-              <ForteImage src={thirdForte} alt="our forte" />
-              <GreatWork.Text>
-                With a talented team and a transparent working process, we are
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </GreatWork.Text>
-            </ImageContainer>
-          </Slider>
+                  <GreatWork.Text>
+                    With a talented team and a transparent working process, we
+                    are always ready to move forwards with you on the way to
+                    pursuing innovative ideas.
+                  </GreatWork.Text>
+                </ImageContainer>
+              </div>
+              <div style={{ display: "inline !important" }}>
+                <ImageContainer>
+                  <ForteImage src={firstForte} alt="our forte" />
+
+                  <GreatWork.Text>
+                    With a talented team and a transparent working process, we
+                    are always ready to move forwards with you on the way to
+                    pursuing innovative ideas.
+                  </GreatWork.Text>
+                </ImageContainer>
+              </div>
+              <div style={{ display: "inline !important" }}>
+                <ImageContainer>
+                  <ForteImage src={firstForte} alt="our forte" />
+
+                  <GreatWork.Text>
+                    With a talented team and a transparent working process, we
+                    are always ready to move forwards with you on the way to
+                    pursuing innovative ideas.
+                  </GreatWork.Text>
+                </ImageContainer>
+              </div>
+              <div style={{ display: "inline !important" }}>
+                <ImageContainer>
+                  <ForteImage src={firstForte} alt="our forte" />
+
+                  <GreatWork.Text>
+                    With a talented team and a transparent working process, we
+                    are always ready to move forwards with you on the way to
+                    pursuing innovative ideas.
+                  </GreatWork.Text>
+                </ImageContainer>
+              </div>
+            </Slider>
+          </SliderWrapper>
         </Row>
       </Container>
     </GreatWork>

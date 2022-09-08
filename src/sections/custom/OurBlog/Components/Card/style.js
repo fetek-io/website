@@ -14,16 +14,17 @@ const Card = styled(Box).attrs({ className: "card" })`
   padding-bottom: 28px;
   /* margin-bottom: 24px; */
   transition: 0.4s;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   border-color: transparent;
-  border-top: 8px solid ${(props) => props.theme.colors.primary};
+  /* border-top: 8px solid ${(props) => props.theme.colors.primary}; */
   display: inline-flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   /* &:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   } */
+  margin: 0 20px;
 `;
 Card.Icon = styled(Box)`
   display: flex;

@@ -2,8 +2,8 @@ import styled from "styled-components/macro";
 import { Box, Heading, Button, Paragraph } from "~styled";
 
 const GreatWork = styled(Box)`
-  padding-top: 125px;
   position: relative;
+  /* padding-top: 125px;
   padding-bottom: 70px;
   @media (min-width: 768px) {
     padding-top: 115px;
@@ -17,7 +17,7 @@ const GreatWork = styled(Box)`
 
   @media (min-width: 1200px) {
     padding-top: 220px;
-  }
+  } */
 `;
 
 GreatWork.Button = styled(Button)`

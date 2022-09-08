@@ -5,15 +5,17 @@ import HeroSection from "~sections/custom/Hero";
 import IdeaSection from "~sections/custom/Ideas";
 import GreatworkSection from "~sections/custom/GreatWork";
 import ServicesSection from "~sections/custom/Services";
-import FeatureSection from "~sections/it/Feature";
+import FeedbackSection from "~sections/custom/Feedback";
+import OurblogSection from "~sections/custom/OurBlog";
+// import FeatureSection from "~sections/it/Feature";
 // import ContentSectionOne from "~sections/it/ContentOne";
-import ProcessSection from "~sections/it/Process";
-import CtaSection from "~sections/it/Cta";
-import TestimonialSection from "~sections/it/Testimonial";
-import ContactSection from "~sections/it/Contact";
+// import ProcessSection from "~sections/it/Process";
+// import CtaSection from "~sections/it/Cta";
+// import TestimonialSection from "~sections/it/Testimonial";
+// import ContactSection from "~sections/it/Contact";
 import FooterThree from "~sections/it/FooterThree";
-import TechStackSection from "~sections/it/TechStack";
-import ContentSectionOne from "~sections/services/ContentOne";
+// import TechStackSection from "~sections/it/TechStack";
+// import ContentSectionOne from "~sections/services/ContentOne";
 
 const header = {
   headerClasses:
@@ -38,12 +40,14 @@ export default function Marketing() {
       <ServicesSection />
       {/* <TechStackSection /> */}
       <GreatworkSection />
+      <FeedbackSection />
+      <OurblogSection />
       {/* <FeatureSection /> */}
-      <ContentSectionOne />
+      {/* <ContentSectionOne />
       <ProcessSection />
       <CtaSection />
       <TestimonialSection />
-      <ContactSection />
+      <ContactSection /> */}
       <FooterThree />
     </PageWrapper>
   );

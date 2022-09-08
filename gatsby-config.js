@@ -1,4 +1,4 @@
-const path = require(`path`)
+const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Shade Gatsby`,
@@ -24,12 +24,20 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `assets`,`image`),
+        path: path.join(__dirname, `src`, `assets`, `image`),
         // `${__dirname}/src/assets/image`
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/, // See below to configure properly
+        },
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-background-image`,
   ],
-}
+};
