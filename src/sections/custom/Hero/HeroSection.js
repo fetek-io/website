@@ -20,6 +20,15 @@ export default function HeroSection() {
       <Container>
         <Row className="align-items-center justify-content-center justify-content-md-start">
           {/* Welcome content Area */}
+          <Col xs="12" className="position-static d-xs-block d-lg-none">
+            <img
+              src={heroImg}
+              alt="heroimg"
+              layout="fullWidth"
+              placeholder="none"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Col>
           <Col
             xs="12"
             className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11"
@@ -55,6 +64,18 @@ export default function HeroSection() {
               </Hero.BtnGroup>
             </div>
           </Col>
+          <Col
+            xs="12"
+            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
+          >
+            <img
+              src={heroImg}
+              alt="heroimg"
+              layout="fullWidth"
+              placeholder="none"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Col>
         </Row>
       </Container>
       {/*/ .Welcome Content Area */}
@@ -63,7 +84,7 @@ export default function HeroSection() {
         xs="12"
         className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
       > */}
-      <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
+      {/* <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
         <img
           src={heroImg}
           alt="heroimg"
@@ -71,7 +92,7 @@ export default function HeroSection() {
           placeholder="none"
           style={{ width: "900px", height: "auto" }}
         />
-      </ImageContainer>
+      </ImageContainer> */}
 
       {/* <ImageGroup /> */}
       {/* </Col> */}

@@ -6,6 +6,8 @@ import OurBlog from "./style";
 import styled from "styled-components";
 import Slider from "react-slick";
 import ServicesCard from "./Components/Card";
+import { useQuery } from "react-query";
+import { findBlogs } from "~services/blogServices";
 
 const SliderWrapper = styled.div`
   @media (min-width: 1200px) {
@@ -16,6 +18,10 @@ const SliderWrapper = styled.div`
 `;
 
 export default function OurblogSection() {
+  const { data: recentPosts } = useQuery(["findBlogs"], () =>
+    findBlogs({ limit: 3, offset: 0 })
+  );
+
   const sliderConfig = {
     dots: true,
     infinite: true,
@@ -49,7 +55,8 @@ export default function OurblogSection() {
             className="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-xs-10 mt-3"
           >
             <div className="welcome-content welcome-content--l3">
-              <OurBlog.Subtitle>Get Started</OurBlog.Subtitle>
+              <OurBlog.Subtitle>News & Articles</OurBlog.Subtitle>
+              <OurBlog.Title>Fetek Blog</OurBlog.Title>
               <OurBlog.Text>
                 With a talented team and a transparent working process, we are
                 <br className="d-none d-sm-block" />
@@ -58,11 +65,13 @@ export default function OurblogSection() {
               </OurBlog.Text>
               <OurBlog.BtnGroup>
                 <OurBlog.Button
-                  className="btn-primary text-white"
-                  as={Video}
+                  className="btn-white text-primary"
+                  style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
                   id="LWZ7iytIA6k"
+                  as={Link}
+                  to="/blog"
                 >
-                  Write A Message
+                  See All
                 </OurBlog.Button>
               </OurBlog.BtnGroup>
             </div>
@@ -74,36 +83,17 @@ export default function OurblogSection() {
           >
             <SliderWrapper>
               <Slider {...sliderConfig}>
-                <div>
-                  <ServicesCard
-                    title={`Why Your SaaS Business should use WordPress`}
-                    text={`A content management system like WordPress can help you build a highly engaging website`}
-                  />
-                </div>
-                <div>
-                  <ServicesCard
-                    title={`Why Your SaaS Business should use WordPress`}
-                    text={`A content management system like WordPress can help you build a highly engaging website`}
-                  />
-                </div>
-                <div>
-                  <ServicesCard
-                    title={`Why Your SaaS Business should use WordPress`}
-                    text={`A content management system like WordPress can help you build a highly engaging website`}
-                  />
-                </div>
-                <div>
-                  <ServicesCard
-                    title={`Why Your SaaS Business should use WordPress`}
-                    text={`A content management system like WordPress can help you build a highly engaging website`}
-                  />
-                </div>
-                <div>
-                  <ServicesCard
-                    title={`Why Your SaaS Business should use WordPress`}
-                    text={`A content management system like WordPress can help you build a highly engaging website`}
-                  />
-                </div>
+                {recentPosts?.data?.items?.map(({ fields, sys }, index) => {
+                  return (
+                    <div>
+                      <ServicesCard
+                        title={fields?.title}
+                        text={fields?.desc}
+                        to={"/blog/" + fields?.keyword}
+                      />
+                    </div>
+                  );
+                })}
               </Slider>
             </SliderWrapper>
           </Col>

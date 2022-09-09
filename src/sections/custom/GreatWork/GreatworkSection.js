@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { Images } from "~data";
 import { Col, Container, Row } from "react-bootstrap";
@@ -118,8 +118,24 @@ const NextArrow = ({ elSlider }) => {
   );
 };
 
+const tabs = [
+  {
+    id: 1,
+    name: "Website Optimization",
+  },
+  {
+    id: 2,
+    name: "Website Redesign",
+  },
+  {
+    id: 3,
+    name: "Search Engine Optimization",
+  },
+];
+
 export default function GreatworkSection() {
   const elSlider = React.useRef();
+  const [tabActive, setTabActive] = useState(1);
 
   // $screen-xxs: 320px;
   // $screen-xs: 480px;
@@ -240,15 +256,19 @@ export default function GreatworkSection() {
           className="text-center"
         ></SectionTitle>
         <WorkTabContainer>
-          <WorkTab className="active">
-            <WorkText>Website Optimization</WorkText>
-          </WorkTab>
-          <WorkTab>
-            <WorkText>Website Redesign</WorkText>
-          </WorkTab>
-          <WorkTab>
-            <WorkText>Search Engine Optimization</WorkText>
-          </WorkTab>
+          {tabs.map((item) => {
+            return (
+              <WorkTab
+                className={tabActive === item.id ? "active" : undefined}
+                key={item.id}
+                onClick={() => {
+                  setTabActive(item.id);
+                }}
+              >
+                <WorkText>{item.name}</WorkText>
+              </WorkTab>
+            );
+          })}
         </WorkTabContainer>
         <Row
           className="align-items-center justify-content-center justify-content-md-start"
