@@ -63,7 +63,7 @@ export default function HeroSection() {
         xs="12"
         className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
       > */}
-      <ImageContainer className="d-none d-sm-none d-md-none d-lg-block">
+      <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
         <img
           src={heroImg}
           alt="heroimg"

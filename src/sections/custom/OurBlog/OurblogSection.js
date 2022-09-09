@@ -40,7 +40,7 @@ export default function OurblogSection() {
   };
 
   return (
-    <OurBlog>
+    <OurBlog backgroundColor="#E9FBF8">
       <Container>
         <Row className="align-items-center justify-content-center justify-content-md-start">
           {/* Welcome content Area */}

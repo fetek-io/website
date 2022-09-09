@@ -90,12 +90,13 @@ export default function IdeaSection() {
       </Container>
       {/*/ .Welcome Content Area */}
       {/*Welcome Image Area */}
-      <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-block">
+      <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
         <img
           src={IdeaImg}
           alt="Ideaimg"
           layout="fullWidth"
           placeholder="none"
+          style={{ width: "800px", height: "auto" }}
         />
       </ImageContainer>
       {/* <ImageGroup /> */}

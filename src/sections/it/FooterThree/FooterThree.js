@@ -5,7 +5,7 @@ import { Images } from "~data";
 import Footer from "./style";
 export default function FooterThree() {
   return (
-    <Footer>
+    <Footer backgroundColor="#60E1CB">
       <Container>
         <Footer.Box pbXL="95px">
           <Row>
@@ -83,51 +83,24 @@ export default function FooterThree() {
 
                 <Col xs="12" className="col-lg-4 col-xs-7">
                   <Footer.Widgets>
-                    <Footer.Title>Instagram</Footer.Title>
-                    <Footer.Gallery as={Row}>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg1}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg2}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg3}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg4}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg5}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                      <Col xs="4">
-                        <img
-                          src={Images.footerThree.instaImg6}
-                          alt="insta-image"
-                          className="w-100"
-                        />
-                      </Col>
-                    </Footer.Gallery>
+                    <Footer.Title>Company</Footer.Title>
+                    <Footer.List>
+                      <Footer.ListItems>
+                        <a href="#">About us</a>
+                      </Footer.ListItems>
+                      <Footer.ListItems>
+                        <a href="#">Privacy Policy</a>
+                      </Footer.ListItems>
+                      <Footer.ListItems>
+                        <a href="#">Terms &amp; Conditions</a>
+                      </Footer.ListItems>
+                      <Footer.ListItems>
+                        <a href="#">Rider</a>
+                      </Footer.ListItems>
+                      <Footer.ListItems>
+                        <a href="#">Contact</a>
+                      </Footer.ListItems>
+                    </Footer.List>
                   </Footer.Widgets>
                 </Col>
               </Row>
@@ -135,9 +108,7 @@ export default function FooterThree() {
           </Row>
         </Footer.Box>
         <Footer.Copyright>
-          <Footer.CopyrightText>
-            © 2021 Fastland By FinestDevs. All Rights Reserved
-          </Footer.CopyrightText>
+          <Footer.CopyrightText>© 2022 FeTek</Footer.CopyrightText>
           <Footer.SocialShare>
             <Footer.SocialShareItem>
               <a href="#">
