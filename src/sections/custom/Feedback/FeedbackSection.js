@@ -133,7 +133,7 @@ export default function FeedbackSection() {
   return (
     <Feedback backgroundColor="#ffffff">
       <Container>
-        <Row className="justify-content-center justify-content-md-start">
+        <Row className="align-items-center justify-content-center">
           {/* <Feedback.Subtitle>Testiomonials</Feedback.Subtitle> */}
           <SectionTitle
             subTitle={`Testiomonials`}
@@ -141,6 +141,7 @@ export default function FeedbackSection() {
             subTitleProps={{ mb: "27px" }}
             titleProps={{ mb: "10px", as: "h2" }}
             mb="69px"
+            className="text-center"
           ></SectionTitle>
         </Row>
 

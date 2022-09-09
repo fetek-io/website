@@ -33,49 +33,32 @@ export default function FooterThree() {
               <Row>
                 <Col xs="12" className="col-lg-4 col-xs-6">
                   <Footer.Widgets>
-                    <Footer.Title>Contact Details</Footer.Title>
+                    <Footer.Title>Work</Footer.Title>
                     <Footer.Address className="widgets-address">
                       <Footer.AddressItem>
-                        <span>
-                          Amsterdam <br className="d-block" />
-                          Netherlands
-                        </span>
+                        <span>Blog</span>
                       </Footer.AddressItem>
                       <Footer.AddressItem>
-                        <a href="#">
-                          +31 62 19 22 705
-                          <span className="d-block">
-                            {" "}
-                            7 Days - 8am - 10pm{" "}
-                          </span>{" "}
-                        </a>
+                        <a href="#">How We Work</a>
                       </Footer.AddressItem>
                       <Footer.AddressItem>
-                        <a href="mailto:info@medcartel.com">
-                          info@medcartel.com
-                        </a>
+                        <a>Testimonial</a>
                       </Footer.AddressItem>
                     </Footer.Address>
                   </Footer.Widgets>
                 </Col>
                 <Col xs="12" className="col-lg-4 col-xs-6">
                   <Footer.Widgets>
-                    <Footer.Title>Company</Footer.Title>
+                    <Footer.Title>Services</Footer.Title>
                     <Footer.List>
                       <Footer.ListItems>
-                        <a href="#">About us</a>
+                        <a href="#">Marketing Strategy</a>
                       </Footer.ListItems>
                       <Footer.ListItems>
-                        <a href="#">Privacy Policy</a>
+                        <a href="#">Website Optimization</a>
                       </Footer.ListItems>
                       <Footer.ListItems>
-                        <a href="#">Terms &amp; Conditions</a>
-                      </Footer.ListItems>
-                      <Footer.ListItems>
-                        <a href="#">Rider</a>
-                      </Footer.ListItems>
-                      <Footer.ListItems>
-                        <a href="#">Contact</a>
+                        <a href="#">Email Marketing</a>
                       </Footer.ListItems>
                     </Footer.List>
                   </Footer.Widgets>
@@ -83,22 +66,16 @@ export default function FooterThree() {
 
                 <Col xs="12" className="col-lg-4 col-xs-7">
                   <Footer.Widgets>
-                    <Footer.Title>Company</Footer.Title>
+                    <Footer.Title>Business Solution</Footer.Title>
                     <Footer.List>
                       <Footer.ListItems>
-                        <a href="#">About us</a>
+                        <a href="#">Partnership</a>
                       </Footer.ListItems>
                       <Footer.ListItems>
-                        <a href="#">Privacy Policy</a>
+                        <a href="#">About Project</a>
                       </Footer.ListItems>
                       <Footer.ListItems>
-                        <a href="#">Terms &amp; Conditions</a>
-                      </Footer.ListItems>
-                      <Footer.ListItems>
-                        <a href="#">Rider</a>
-                      </Footer.ListItems>
-                      <Footer.ListItems>
-                        <a href="#">Contact</a>
+                        <a href="#">Corporate</a>
                       </Footer.ListItems>
                     </Footer.List>
                   </Footer.Widgets>

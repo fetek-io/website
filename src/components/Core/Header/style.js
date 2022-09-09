@@ -495,7 +495,7 @@ const SiteHeader = styled.div.attrs({
     }
     .hamburgur {
       color: #000;
-      border-color: #000;
+      /* border-color: #000; */
     }
   }
   /* Dark Header */

@@ -34,8 +34,17 @@ export default function HeroSection() {
             className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11"
           >
             <div className="welcome-content welcome-content--l3">
-              <Hero.Subtitle>Get Started</Hero.Subtitle>
-              <Hero.Title>
+              <Hero.Subtitle className="d-none d-lg-block">
+                Get Started
+              </Hero.Subtitle>
+              <Hero.Subtitle className="d-lg-none d-xs-block text-center">
+                Get Started
+              </Hero.Subtitle>
+              <Hero.Title className="d-none d-lg-block">
+                YOUR RELIABLE <br className="d-none d-xs-block" /> TECHNOLOGY
+                PARTNER
+              </Hero.Title>
+              <Hero.Title className="d-lg-none d-xs-block text-center">
                 YOUR RELIABLE <br className="d-none d-xs-block" /> TECHNOLOGY
                 PARTNER
               </Hero.Title>
@@ -45,7 +54,24 @@ export default function HeroSection() {
                 always ready to move forwards with you on the way to pursuing
                 innovative ideas.
               </Hero.Text>
-              <Hero.BtnGroup>
+              <Hero.BtnGroup className="d-none d-lg-block">
+                <Hero.Button
+                  className="btn-primary text-white"
+                  as={Video}
+                  id="LWZ7iytIA6k"
+                >
+                  Write A Message
+                </Hero.Button>
+                <Hero.Button
+                  className="btn-white text-primary"
+                  style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
+                  as={Link}
+                  to="/"
+                >
+                  Schedule A Meet
+                </Hero.Button>
+              </Hero.BtnGroup>
+              <Hero.BtnGroup className="d-lg-none d-xs-block text-center">
                 <Hero.Button
                   className="btn-primary text-white"
                   as={Video}

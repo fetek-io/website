@@ -10,7 +10,7 @@ export default function ServicesSection() {
   return (
     <Services backgroundColor="#ffffff">
       <Container>
-        <Row className="justify-content-center justify-content-md-start">
+        <Row className="justify-content-center justify-content-md-center">
           <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10">
             <SectionTitle
               subTitle="Our Services"
@@ -18,6 +18,7 @@ export default function ServicesSection() {
               subTitleProps={{ mb: "27px" }}
               titleProps={{ mb: "10px", as: "h2" }}
               mb="69px"
+              className="text-center"
             />
           </Col>
         </Row>

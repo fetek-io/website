@@ -55,15 +55,36 @@ export default function OurblogSection() {
             className="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-xs-10 mt-3"
           >
             <div className="welcome-content welcome-content--l3">
-              <OurBlog.Subtitle>News & Articles</OurBlog.Subtitle>
-              <OurBlog.Title>Fetek Blog</OurBlog.Title>
+              <OurBlog.Subtitle className="d-none d-lg-block">
+                News & Articles
+              </OurBlog.Subtitle>
+              <OurBlog.Title className="d-none d-lg-block">
+                Fetek Blog
+              </OurBlog.Title>
+              <OurBlog.Subtitle className="d-lg-none d-xs-block text-center">
+                News & Articles
+              </OurBlog.Subtitle>
+              <OurBlog.Title className="d-lg-none d-xs-block text-center">
+                Fetek Blog
+              </OurBlog.Title>
               <OurBlog.Text>
                 With a talented team and a transparent working process, we are
                 <br className="d-none d-sm-block" />
                 always ready to move forwards with you on the way to pursuing
                 innovative ideas.
               </OurBlog.Text>
-              <OurBlog.BtnGroup>
+              <OurBlog.BtnGroup className="d-none d-lg-block">
+                <OurBlog.Button
+                  className="btn-white text-primary"
+                  style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
+                  id="LWZ7iytIA6k"
+                  as={Link}
+                  to="/blog"
+                >
+                  See All
+                </OurBlog.Button>
+              </OurBlog.BtnGroup>
+              <OurBlog.BtnGroup className="d-lg-none d-xs-block text-center">
                 <OurBlog.Button
                   className="btn-white text-primary"
                   style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
