@@ -61,7 +61,7 @@ const SiteHeader = styled.div.attrs({
         z-index: 99;
         pointer-events: visible;
         border-radius: 0px 0px 15px 15px;
-        border-top: 3px solid #fbb040;
+        border-top: 3px solid #7bc0e3;
         display: block !important;
         visibility: hidden;
         opacity: 0;
@@ -107,7 +107,7 @@ const SiteHeader = styled.div.attrs({
             z-index: 99;
             pointer-events: visible;
             border-radius: 0px 0px 15px 15px;
-            border-top: 3px solid #fbb040;
+            border-top: 3px solid #7bc0e3;
           }
         }
       }
@@ -179,7 +179,7 @@ const SiteHeader = styled.div.attrs({
             z-index: 99;
             pointer-events: visible;
             border-radius: 0px 0px 15px 15px;
-            border-top: 3px solid #fbb040;
+            border-top: 3px solid #7bc0e3;
             transition: top 0.4s linear;
           }
         }
