@@ -6,6 +6,7 @@ import RightParagraphSection from "~sections/OurServices/RightParagraph";
 import styled from "styled-components";
 import { Heading, Paragraph } from "~styled";
 import { Col, Container, Row } from "react-bootstrap";
+import FooterThree from "~sections/it/FooterThree";
 
 const Title = styled(Heading)`
   font-size: 38px;
@@ -76,6 +77,7 @@ export default function WebApp() {
         <RightParagraphSection />
         <RightParagraphSection isLeftContent={true} />
       </div>
+      <FooterThree />
     </PageWrapper>
   );
 }
