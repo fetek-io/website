@@ -5,20 +5,29 @@ export const menuItems = [
     name: "",
     label: "Services",
     items: [
-      { name: "", label: "Mobile App Development" },
-      { name: "project", label: "Website Development" },
-      { name: "it", label: "Front-end Development" },
-      { name: "services", label: "Backend Development" },
+      { name: "services/web-app", label: "Web application development" },
+      { name: "services/web-app", label: "Mobile application development" },
+      { name: "services/web-app", label: "Data Engineering services" },
+      {
+        name: "services/web-app",
+        label: "Digital Transformation Consulting",
+      },
+      { name: "services/web-app", label: "Talent solutions" },
     ],
   },
   {
     name: "innerpage/about-us",
-    label: "About",
+    label: "Portfolio",
     isExternal: false,
   },
   {
     name: "blog",
     label: "Blog",
+    isExternal: false,
+  },
+  {
+    name: "innerpage/about-us",
+    label: "About",
     isExternal: false,
   },
   {

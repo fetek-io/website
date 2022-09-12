@@ -483,11 +483,11 @@ const SiteHeader = styled.div.attrs({
   /* Light Header */
   &.light-header {
     .main-nav-item > .nav-link {
-      color: #60e1cb !important;
+      color: #000 !important;
     }
 
     .main-nav-item.active > .nav-link {
-      color: #000 !important;
+      color: #60e1cb !important;
     }
 
     &.reveal-header {
