@@ -60,7 +60,7 @@ export default function SideBarSection() {
   return (
     <SideBar>
       {/* Single Widgets */}
-      <SideBar.Widgets>
+      {/* <SideBar.Widgets>
         <SideBar.Title>Search</SideBar.Title>
         <SuggestionSearch>
           <SuggestionForm action="./">
@@ -128,7 +128,7 @@ export default function SideBarSection() {
             </>
           )}
         </SuggestionSearch>
-      </SideBar.Widgets>
+      </SideBar.Widgets> */}
       {/*/ .Single Widgets */}
       {/* Single Widgets */}
       <SideBar.Widgets>
