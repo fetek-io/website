@@ -19,7 +19,12 @@ const PageWrapper = ({
     containerFluid: false,
     darkLogo: true,
     buttonBlock: (
-      <HeaderButton as={Link} btnText={`Contact us`} btnDefault={true} />
+      <HeaderButton
+        as={Link}
+        btnText={`Contact us`}
+        btnDefault={true}
+        btnLink={`/contact`}
+      />
     ),
   };
   const activeHeader = innerPage ? innerPageDefault : headerDefault;

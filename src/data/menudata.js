@@ -31,7 +31,7 @@ export const menuItems = [
     isExternal: false,
   },
   {
-    name: "innerpage/contact/contact-1",
+    name: "contact",
     label: "Contact",
     isExternal: false,
   },

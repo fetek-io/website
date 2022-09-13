@@ -3,6 +3,7 @@ import ContactUs from "./style";
 import { Col, Container, Row } from "react-bootstrap";
 import LineOne from "~assets/image/custom/line-one.inline.svg";
 import LineTwo from "~assets/image/custom/line-two.inline.svg";
+import { Link } from "~components";
 
 export default function ContactUsSection() {
   return (
@@ -37,7 +38,9 @@ export default function ContactUsSection() {
           <ContactUs.Text className="text-center">
             Send a line here get and update daily
           </ContactUs.Text>
-          <ContactUs.Button>contact@fetek.io</ContactUs.Button>
+          <ContactUs.Button as={Link} to="/contact">
+            contact@fetek.io
+          </ContactUs.Button>
         </Row>
       </Container>
     </ContactUs>

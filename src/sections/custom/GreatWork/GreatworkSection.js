@@ -11,6 +11,7 @@ import ArrowRight from "~assets/image/custom/arrow-right.inline.svg";
 import styled from "styled-components";
 import SectionTitle from "./Components/SectionTitle";
 import { Box } from "~styled";
+import { Link } from "~components";
 
 const SliderWrapper = styled(Box)`
   .slick-list {
@@ -122,20 +123,72 @@ const tabs = [
   {
     id: 1,
     name: "Website Optimization",
+    items: [
+      {
+        img: firstForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: firstForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: firstForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+    ],
   },
   {
     id: 2,
     name: "Website Redesign",
+    items: [
+      {
+        img: secondForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: secondForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: secondForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+    ],
   },
   {
     id: 3,
     name: "Search Engine Optimization",
+    items: [
+      {
+        img: thirdForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: thirdForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+      {
+        img: thirdForte,
+        content:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      },
+    ],
   },
 ];
 
 export default function GreatworkSection() {
   const elSlider = React.useRef();
   const [tabActive, setTabActive] = useState(1);
+  const [content, setContent] = useState(tabs[0].items);
 
   // $screen-xxs: 320px;
   // $screen-xs: 480px;
@@ -263,6 +316,7 @@ export default function GreatworkSection() {
                 key={item.id}
                 onClick={() => {
                   setTabActive(item.id);
+                  setContent(item.items);
                 }}
               >
                 <WorkText>{item.name}</WorkText>
@@ -276,50 +330,15 @@ export default function GreatworkSection() {
         >
           <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
-              <div style={{ display: "inline !important" }}>
-                <ImageContainer>
-                  <ForteImage src={firstForte} alt="our forte" />
+              {content.map((item, index) => (
+                <Link className="pointer" to="/portfolio/default" key={index}>
+                  <ImageContainer>
+                    <ForteImage src={item.img} alt="our forte" />
 
-                  <GreatWork.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </GreatWork.Text>
-                </ImageContainer>
-              </div>
-              <div style={{ display: "inline !important" }}>
-                <ImageContainer>
-                  <ForteImage src={firstForte} alt="our forte" />
-
-                  <GreatWork.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </GreatWork.Text>
-                </ImageContainer>
-              </div>
-              <div style={{ display: "inline !important" }}>
-                <ImageContainer>
-                  <ForteImage src={firstForte} alt="our forte" />
-
-                  <GreatWork.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </GreatWork.Text>
-                </ImageContainer>
-              </div>
-              <div style={{ display: "inline !important" }}>
-                <ImageContainer>
-                  <ForteImage src={firstForte} alt="our forte" />
-
-                  <GreatWork.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </GreatWork.Text>
-                </ImageContainer>
-              </div>
+                    <GreatWork.Text>{item.content}</GreatWork.Text>
+                  </ImageContainer>
+                </Link>
+              ))}
             </Slider>
           </SliderWrapper>
         </Row>

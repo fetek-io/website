@@ -35,7 +35,7 @@ export default function ServicesSection() {
                   title={title}
                   text={text}
                   icon={icon}
-                  to="/marketing"
+                  to="/services/web-app"
                   iconBackground={iconBackground}
                 />
               </Services.Box>

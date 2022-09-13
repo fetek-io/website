@@ -74,7 +74,7 @@ const HeaderButton = ({ btnLink, btnText, btnDefault, as, ...rest }) => {
         className={cls(btnDefault ? "btn-primary" : "btn")}
         to={btnLink ? btnLink : "/"}
       >
-        {btnText}
+        <span style={{ fontSize: "16px" }}>{btnText}</span>
       </Box>
     </HeaderButtonWrapper>
   );

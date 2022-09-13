@@ -62,9 +62,12 @@ ContactUs.Button = styled(Button)`
   border: 1px solid black;
   background: black;
   color: white;
+  padding: 20px 40px;
 
   &:hover {
     color: white;
+    background: #333;
+    border: 1px solid #333;
   }
 
   /* &.btn-1 {
