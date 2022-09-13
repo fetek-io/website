@@ -5,7 +5,7 @@ export default function PortfolioCard({ to, image, title, text, ...rest }) {
   return (
     <Card as={Link} to={to ? to : "/portfolio/default"} {...rest}>
       <img className="w-100" src={image} alt="portfolio" />
-      <Card.InnerBlock backgroundColor="#fd346e">
+      <Card.InnerBlock backgroundColor="#7bc0e3">
         <Card.InnerIcon fontColor="#fff">
           <i className="fas fa-external-link-square-alt" />
         </Card.InnerIcon>
