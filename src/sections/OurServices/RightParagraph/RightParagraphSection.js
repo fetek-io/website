@@ -49,7 +49,7 @@ export default function RightParagraphSection({ isLeftContent }) {
         <Row className="align-items-center justify-content-center justify-content-md-start">
           <Col
             xs="12"
-            className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11 text-center"
+            className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11 text-center mb-5"
           >
             <MyFigure>
               <FigureWrapper>
@@ -66,7 +66,7 @@ export default function RightParagraphSection({ isLeftContent }) {
           </Col>
           <Col
             xs="12"
-            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
+            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static mb-5"
           >
             <SmallTitle>Understanding customers</SmallTitle>
             <Text>
@@ -83,7 +83,7 @@ export default function RightParagraphSection({ isLeftContent }) {
         <Row className="align-items-center justify-content-center justify-content-md-start">
           <Col
             xs="12"
-            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
+            className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static mb-5"
           >
             <SmallTitle>Understanding customers</SmallTitle>
             <Text>
@@ -97,7 +97,7 @@ export default function RightParagraphSection({ isLeftContent }) {
           </Col>
           <Col
             xs="12"
-            className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11 text-center"
+            className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11 text-center mb-5"
           >
             <MyFigure>
               <FigureWrapper>
