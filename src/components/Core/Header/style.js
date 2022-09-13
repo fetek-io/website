@@ -8,7 +8,7 @@ const SiteHeader = styled.div.attrs({
   z-index: 99;
   top: 0;
   @media (max-width: 992px) {
-    padding-top: 13px;
+    padding-top: 0px;
     padding-bottom: 13px;
   }
   .hamburgur {
