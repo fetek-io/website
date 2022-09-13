@@ -1,6 +1,6 @@
 import React from "react";
 import { BlogSidebarTwo } from "~sections/Blog";
-import FooterSection from "~sections/Blog/Footer";
+import FooterThree from "~sections/it/FooterThree";
 import { PageWrapper } from "~components/Core";
 import * as queryString from "query-string";
 
@@ -10,7 +10,7 @@ export default function BlogPage({ location }) {
   return (
     <PageWrapper innerPage={true}>
       <BlogSidebarTwo badge={badge} authorId={authorId} />
-      <FooterSection />
+      <FooterThree />
     </PageWrapper>
   );
 }
