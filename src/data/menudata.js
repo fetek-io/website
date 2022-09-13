@@ -16,7 +16,7 @@ export const menuItems = [
     ],
   },
   {
-    name: "innerpage/about-us",
+    name: "portfolio",
     label: "Portfolio",
     isExternal: false,
   },
