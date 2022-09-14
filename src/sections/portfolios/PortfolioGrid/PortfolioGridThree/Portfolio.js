@@ -4,6 +4,13 @@ import PortfolioCard from "./Components/Card";
 import Portfolio from "./style";
 import { Images } from "~data";
 // import portfolioData from "./data";
+import { findProjects, getCategories } from "~services/projectServices";
+import { getPage } from "~util/MyUtil";
+import { useQuery } from "react-query";
+
+import { navigate } from "gatsby";
+
+const limit = 10;
 
 const portfolioData = [
   {
@@ -64,30 +71,60 @@ const portfolioData = [
   },
 ];
 
-const FilterButton = ({ name, handleSetTag, tagActive, children }) => {
+const FilterButton = ({ name, tagActive, children }) => {
   return (
     <Portfolio.NavItem
       className={`btn-reset ${tagActive === name ? "active" : ""}`}
-      onClick={() => handleSetTag(name)}
+      onClick={() => {
+        navigate("/portfolio?category=" + name);
+      }}
     >
       {children}
     </Portfolio.NavItem>
   );
 };
 
-export default function PortfolioSection({ gutters, containerFluid, ...rest }) {
+export default function PortfolioSection({
+  gutters,
+  containerFluid,
+  category,
+  ...rest
+}) {
   const [tag, setTag] = React.useState("all");
   const [filteredImages, setFilteredImages] = React.useState([]);
 
-  React.useEffect(() => {
-    tag === "all"
-      ? setFilteredImages(portfolioData)
-      : setFilteredImages(
-          portfolioData.filter((image) =>
-            image.tagi.find((item) => item === tag)
-          )
-        );
-  }, [tag]);
+  const [offset, setOffset] = useState(0);
+
+  const { data, isLoading: loading } = useQuery(
+    ["findProjects", limit, offset, category],
+    () =>
+      findProjects({
+        limit: limit,
+        offset: offset,
+        category: category,
+      })
+  );
+
+  const { data: categories } = useQuery(["getCategories"], () =>
+    getCategories()
+  );
+
+  // React.useEffect(() => {
+  //   tag === "all"
+  //     ? setFilteredImages(portfolioData)
+  //     : setFilteredImages(
+  //         portfolioData.filter((image) =>
+  //           image.tagi.find((item) => item === tag)
+  //         )
+  //       );
+  // }, [tag]);
+
+  const handleChangeOffset = (page) => {
+    setOffset(page * limit - limit);
+  };
+
+  console.log("data :>> ", data);
+  console.log("categories :>> ", categories);
   return (
     <Portfolio {...rest}>
       <Container fluid={containerFluid}>
@@ -105,38 +142,24 @@ export default function PortfolioSection({ gutters, containerFluid, ...rest }) {
               <FilterButton
                 className="is-checked"
                 name="all"
-                tagActive={tag}
-                handleSetTag={setTag}
+                tagActive={category}
               >
                 All
               </FilterButton>
-              <FilterButton name="work" tagActive={tag} handleSetTag={setTag}>
-                Design
-              </FilterButton>
-              <FilterButton
-                name="development"
-                tagActive={tag}
-                handleSetTag={setTag}
-              >
-                {" "}
-                Development
-              </FilterButton>
-              <FilterButton
-                name="marketing"
-                tagActive={tag}
-                handleSetTag={setTag}
-              >
-                {" "}
-                Marketing
-              </FilterButton>
-              <FilterButton name="seo" tagActive={tag} handleSetTag={setTag}>
-                SEO
-              </FilterButton>
+              {categories?.data?.items?.map(({ fields }, index) => (
+                <FilterButton
+                  name={fields?.name}
+                  tagActive={category}
+                  key={index}
+                >
+                  {fields?.name}
+                </FilterButton>
+              ))}
             </Portfolio.Nav>
           </Col>
         </Row>
         <Row className={`justify-content-center ${!gutters ? "gx-0" : null}`}>
-          {portfolioData.map(({ image }, index) => {
+          {data?.data?.items?.map(({ fields }, index) => {
             return (
               <Portfolio.Box
                 mb={gutters ? "25px" : null}
@@ -144,10 +167,16 @@ export default function PortfolioSection({ gutters, containerFluid, ...rest }) {
                 key={index + "pp"}
               >
                 <PortfolioCard
-                  image={image}
-                  to="/portfolio/default"
-                  title="Agency Brand guide & Development"
-                  text="UX and UI, Design, Development"
+                  image={fields?.image?.fields?.file?.url}
+                  to={`/portfolio/${fields?.keyword}`}
+                  title={fields?.name}
+                  text={
+                    fields?.category && fields?.category?.length > 1
+                      ? fields?.category
+                          ?.map((item) => item?.fields?.name)
+                          .join(" , ")
+                      : fields?.category[0].fields.name
+                  }
                 />
               </Portfolio.Box>
             );

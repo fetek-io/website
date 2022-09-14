@@ -3,10 +3,10 @@ import { PageWrapper } from "~components/Core";
 import FooterThree from "~sections/it/FooterThree";
 import PortfolioDetailsSection from "~sections/portfolio-details/PortfolioDetailsThree/PortfolioDetails";
 
-export default function PortfolioDetail() {
+export default function PortfolioDetail({ params }) {
   return (
     <PageWrapper innerPage={true}>
-      <PortfolioDetailsSection />
+      <PortfolioDetailsSection params={params} />
       <FooterThree />
     </PageWrapper>
   );
