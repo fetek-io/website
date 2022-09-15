@@ -1,13 +1,13 @@
 import React from "react";
 import ContactSection from "~sections/contact/ContactOne/ContactSection";
-import FooterSection from "~sections/contact/ContactOne/Footer";
+import FooterThree from "~sections/it/FooterThree";
 import { PageWrapper } from "~components/Core";
 
 export default function contactOne() {
   return (
     <PageWrapper innerPage={true}>
       <ContactSection />
-      <FooterSection />
+      <FooterThree />
     </PageWrapper>
   );
 }

@@ -6,13 +6,13 @@ export const menuItems = [
     label: "Services",
     items: [
       { name: "services/web-app", label: "Web application development" },
-      { name: "services/web-app", label: "Mobile application development" },
-      { name: "services/web-app", label: "Data Engineering services" },
+      { name: "services/mobile-app", label: "Mobile application development" },
+      { name: "services/data", label: "Data Engineering services" },
       {
-        name: "services/web-app",
+        name: "services/digital",
         label: "Digital Transformation Consulting",
       },
-      { name: "services/web-app", label: "Talent solutions" },
+      { name: "services/solution", label: "Talent solutions" },
     ],
   },
   {
@@ -26,7 +26,7 @@ export const menuItems = [
     isExternal: false,
   },
   {
-    name: "innerpage/about-us",
+    name: "about-us",
     label: "About",
     isExternal: false,
   },

@@ -5,7 +5,7 @@ import ContentSection from "~sections/OurServices/Content";
 
 import FooterThree from "~sections/it/FooterThree";
 
-export default function MobileApp() {
+export default function DigitalPage() {
   return (
     <PageWrapper innerPage={true}>
       <HeroSection />
