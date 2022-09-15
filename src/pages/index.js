@@ -17,6 +17,7 @@ import ContactUsSection from "~sections/custom/ContactUs";
 import FooterThree from "~sections/it/FooterThree";
 // import TechStackSection from "~sections/it/TechStack";
 // import ContentSectionOne from "~sections/services/ContentOne";
+import HomeData from "~data/fetekData/home";
 
 const header = {
   headerClasses:
@@ -36,14 +37,14 @@ const header = {
 export default function Marketing() {
   return (
     <PageWrapper innerPage={true}>
-      <HeroSection />
-      <IdeaSection />
-      <ServicesSection />
+      <HeroSection data={HomeData.hero} />
+      <IdeaSection data={HomeData.idea} />
+      <ServicesSection data={HomeData.service} />
       {/* <TechStackSection /> */}
       <GreatworkSection />
       <ContactUsSection />
-      <FeedbackSection />
-      <OurblogSection />
+      <FeedbackSection data={HomeData.testiomonials} />
+      <OurblogSection data={HomeData.blog} />
       {/* <FeatureSection /> */}
       {/* <ContentSectionOne />
       <ProcessSection />

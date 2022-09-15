@@ -17,7 +17,7 @@ const SliderWrapper = styled.div`
   }
 `;
 
-export default function OurblogSection() {
+export default function OurblogSection({ data }) {
   const { data: recentPosts } = useQuery(["findBlogs"], () =>
     findBlogs({ limit: 3, offset: 0 })
   );
@@ -56,23 +56,18 @@ export default function OurblogSection() {
           >
             <div className="welcome-content welcome-content--l3">
               <OurBlog.Subtitle className="d-none d-lg-block">
-                News & Articles
+                {data.subtitle}
               </OurBlog.Subtitle>
               <OurBlog.Title className="d-none d-lg-block">
-                Fetek Blog
+                {data.title}
               </OurBlog.Title>
               <OurBlog.Subtitle className="d-lg-none d-xs-block text-center">
-                News & Articles
+                {data.subtitle}
               </OurBlog.Subtitle>
               <OurBlog.Title className="d-lg-none d-xs-block text-center">
-                Fetek Blog
+                {data.title}
               </OurBlog.Title>
-              <OurBlog.Text>
-                With a talented team and a transparent working process, we are
-                <br className="d-none d-sm-block" />
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </OurBlog.Text>
+              <OurBlog.Text>{data.description}</OurBlog.Text>
               <OurBlog.BtnGroup className="d-none d-lg-block">
                 <OurBlog.Button
                   className="btn-white text-primary"

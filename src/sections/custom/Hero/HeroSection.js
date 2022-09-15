@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   left: 50%;
 `;
 
-export default function HeroSection() {
+export default function HeroSection({ data }) {
   return (
     <Hero>
       <Container>
@@ -35,30 +35,23 @@ export default function HeroSection() {
           >
             <div className="welcome-content welcome-content--l3">
               <Hero.Subtitle className="d-none d-lg-block">
-                Get Started
+                {data.subtitle}
               </Hero.Subtitle>
               <Hero.Subtitle className="d-lg-none d-xs-block text-center">
-                Get Started
+                {data.subtitle}
               </Hero.Subtitle>
               <Hero.Title className="d-none d-lg-block">
-                YOUR RELIABLE <br className="d-none d-xs-block" /> TECHNOLOGY
-                PARTNER
+                {data.title}
               </Hero.Title>
               <Hero.Title className="d-lg-none d-xs-block text-center">
-                YOUR RELIABLE <br className="d-none d-xs-block" /> TECHNOLOGY
-                PARTNER
+                {data.title}
               </Hero.Title>
-              <Hero.Text>
-                With a talented team and a transparent working process, we are
-                <br className="d-none d-sm-block" />
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </Hero.Text>
+              <Hero.Text>{data.description}</Hero.Text>
               <Hero.BtnGroup className="d-none d-lg-block">
                 <Hero.Button
                   className="btn-primary text-white"
-                  as={Video}
-                  id="LWZ7iytIA6k"
+                  as={Link}
+                  to="contact"
                 >
                   Write A Message
                 </Hero.Button>
@@ -66,7 +59,7 @@ export default function HeroSection() {
                   className="btn-white text-primary"
                   style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
                   as={Link}
-                  to="/"
+                  to="contact"
                 >
                   Schedule A Meet
                 </Hero.Button>
@@ -74,8 +67,8 @@ export default function HeroSection() {
               <Hero.BtnGroup className="d-lg-none d-xs-block text-center">
                 <Hero.Button
                   className="btn-primary text-white"
-                  as={Video}
-                  id="LWZ7iytIA6k"
+                  as={Link}
+                  to="contact"
                 >
                   Write A Message
                 </Hero.Button>
@@ -83,7 +76,7 @@ export default function HeroSection() {
                   className="btn-white text-primary"
                   style={{ border: "1px solid rgba(7, 0, 59, 0.17)" }}
                   as={Link}
-                  to="/"
+                  to="contact"
                 >
                   Schedule A Meet
                 </Hero.Button>
@@ -95,7 +88,7 @@ export default function HeroSection() {
             className="col-xxl-7 col-xl-6 col-lg-5 col-md-8 col-6 position-static d-none d-lg-block"
           >
             <img
-              src={heroImg}
+              src={data.image}
               alt="heroimg"
               layout="fullWidth"
               placeholder="none"

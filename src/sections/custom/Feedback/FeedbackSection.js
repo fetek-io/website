@@ -106,7 +106,21 @@ const NextArrow = ({ elSlider }) => {
   );
 };
 
-export default function FeedbackSection() {
+const MyStars = ({ stars }) => {
+  const arr = [];
+
+  for (let i = 0; i < stars; i++) {
+    arr.push(
+      <RatingSingle key={i}>
+        <i className="fa fa-star" />
+      </RatingSingle>
+    );
+  }
+
+  return arr;
+};
+
+export default function FeedbackSection({ data }) {
   const elSlider = React.useRef();
   const sliderConfig = {
     dots: false,
@@ -131,7 +145,7 @@ export default function FeedbackSection() {
     ],
   };
   return (
-    <Feedback backgroundColor="#ffffff">
+    <Feedback backgroundColor="#ffffff" id="Testimonial">
       <Container>
         <Row className="align-items-center justify-content-center">
           {/* <Feedback.Subtitle>Testiomonials</Feedback.Subtitle> */}
@@ -148,102 +162,22 @@ export default function FeedbackSection() {
         <Row className="align-items-center justify-content-center justify-content-md-start">
           <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
-              <div style={{ display: "inline !important" }}>
-                <CommentBox>
-                  <Feedback.Text>5.0</Feedback.Text>
-                  <Rating pb="15px">
-                    <RatingSingle active={true}>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                  </Rating>
-                  <Feedback.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Feedback.Text>
-                </CommentBox>
-                <UserInfo>
-                  <img src={clientAvatar} alt="" />
-                  <Feedback.UserName>Paulus Haverinen</Feedback.UserName>
-                  <Feedback.Subtitle>Owner, Ikirakenne Ltd</Feedback.Subtitle>
-                </UserInfo>
-              </div>
-              <div style={{ display: "inline !important" }}>
-                <CommentBox>
-                  <Feedback.Text>5.0</Feedback.Text>
-                  <Rating pb="15px">
-                    <RatingSingle active={true}>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                  </Rating>
-                  <Feedback.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Feedback.Text>
-                </CommentBox>
-                <UserInfo>
-                  <img src={clientAvatar} alt="" />
-                  <Feedback.UserName>Paulus Haverinen</Feedback.UserName>
-                  <Feedback.Subtitle>Owner, Ikirakenne Ltd</Feedback.Subtitle>
-                </UserInfo>
-              </div>
-              <div style={{ display: "inline !important" }}>
-                <CommentBox>
-                  <Feedback.Text>5.0</Feedback.Text>
-                  <Rating pb="15px">
-                    <RatingSingle active={true}>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                    <RatingSingle>
-                      <i className="fa fa-star" />
-                    </RatingSingle>
-                  </Rating>
-                  <Feedback.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Feedback.Text>
-                </CommentBox>
-                <UserInfo>
-                  <img src={clientAvatar} alt="" />
-                  <Feedback.UserName>Paulus Haverinen</Feedback.UserName>
-                  <Feedback.Subtitle>Owner, Ikirakenne Ltd</Feedback.Subtitle>
-                </UserInfo>
-              </div>
+              {data.items.map((item, index) => (
+                <div key={index}>
+                  <CommentBox>
+                    <Feedback.Text>{item.scores}</Feedback.Text>
+                    <Rating pb="15px">
+                      <MyStars stars={item.stars} />
+                    </Rating>
+                    <Feedback.Text>{item.comment}</Feedback.Text>
+                  </CommentBox>
+                  <UserInfo>
+                    <img src={item.guest.avatar} alt="" />
+                    <Feedback.UserName>{item.guest.name}</Feedback.UserName>
+                    <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle>
+                  </UserInfo>
+                </div>
+              ))}
             </Slider>
           </SliderWrapper>
         </Row>

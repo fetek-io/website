@@ -6,15 +6,15 @@ import ServicesCard from "./Components/Card";
 import ServicesCardTwo from "./Components/CardTwo";
 import { ServiceDataIt } from "~data";
 import { Link } from "~components";
-export default function ServicesSection() {
+export default function ServicesSection({ data }) {
   return (
     <Services backgroundColor="#ffffff">
       <Container>
         <Row className="justify-content-center justify-content-md-center">
           <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10">
             <SectionTitle
-              subTitle="Our Services"
-              title="We run all kinds of services in form of Technologies"
+              subTitle={data.subtitle}
+              title={data.title}
               subTitleProps={{ mb: "27px" }}
               titleProps={{ mb: "10px", as: "h2" }}
               mb="69px"
@@ -23,19 +23,19 @@ export default function ServicesSection() {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {ServiceDataIt.map(({ title, icon, text, id, iconBackground }) => {
+          {data.items.map(({ name, desc, to, icon, iconBackground }) => {
             return (
               <Services.Box
                 mb="25px"
                 xs="12"
                 className="col-xl-4 col-lg-4 col-md-6 col-sm-9 col-xs-10"
-                key={id}
+                key={name}
               >
                 <ServicesCard
-                  title={title}
-                  text={text}
+                  title={name}
+                  text={desc}
                   icon={icon}
-                  to="/services/web-app"
+                  to={to}
                   iconBackground={iconBackground}
                 />
               </Services.Box>

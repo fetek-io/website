@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   right: 0;
 `;
 
-export default function IdeaSection() {
+export default function IdeaSection({ data }) {
   return (
     <Idea backgroundColor="#E9FBF8">
       <Container>
@@ -25,13 +25,9 @@ export default function IdeaSection() {
             className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-xs-12"
           >
             <div className="welcome-content welcome-content--l3 mb-7">
-              <Idea.Subtitle>Get Started</Idea.Subtitle>
-              <Idea.Title>YOUR RELIABLE TECHNOLOGY PARTNER</Idea.Title>
-              <Idea.Text>
-                With a talented team and a transparent working process, we are
-                always ready to move forwards with you on the way to pursuing
-                innovative ideas.
-              </Idea.Text>
+              <Idea.Subtitle>{data.subtitle}</Idea.Subtitle>
+              <Idea.Title>{data.title}</Idea.Title>
+              <Idea.Text>{data.description}</Idea.Text>
             </div>
             <div style={{ display: "flex" }}>
               <StepBarSection />
@@ -43,46 +39,14 @@ export default function IdeaSection() {
                   marginLeft: "32px",
                 }}
               >
-                <div>
-                  <Idea.Subtitle style={{ marginBottom: "0px" }}>
-                    YOUR RELIABLE TECHNOLOGY PARTNER
-                  </Idea.Subtitle>
-                  <Idea.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Idea.Text>
-                </div>
-                <div>
-                  <Idea.Subtitle style={{ marginBottom: "0px" }}>
-                    YOUR RELIABLE TECHNOLOGY PARTNER
-                  </Idea.Subtitle>
-                  <Idea.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Idea.Text>
-                </div>
-                <div>
-                  <Idea.Subtitle style={{ marginBottom: "0px" }}>
-                    YOUR RELIABLE TECHNOLOGY PARTNER
-                  </Idea.Subtitle>
-                  <Idea.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Idea.Text>
-                </div>
-                <div>
-                  <Idea.Subtitle style={{ marginBottom: "0px" }}>
-                    YOUR RELIABLE TECHNOLOGY PARTNER
-                  </Idea.Subtitle>
-                  <Idea.Text>
-                    With a talented team and a transparent working process, we
-                    are always ready to move forwards with you on the way to
-                    pursuing innovative ideas.
-                  </Idea.Text>
-                </div>
+                {data.steps.map((item, index) => (
+                  <div>
+                    <Idea.Subtitle style={{ marginBottom: "0px" }}>
+                      {item.title}
+                    </Idea.Subtitle>
+                    <Idea.Text>{item.description}</Idea.Text>
+                  </div>
+                ))}
               </div>
             </div>
           </Col>
@@ -92,7 +56,7 @@ export default function IdeaSection() {
       {/*Welcome Image Area */}
       <ImageContainer className="d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
         <img
-          src={IdeaImg}
+          src={data.image}
           alt="Ideaimg"
           layout="fullWidth"
           placeholder="none"
