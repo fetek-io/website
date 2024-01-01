@@ -44,7 +44,7 @@ export default function Marketing() {
       <GreatworkSection />
       <ContactUsSection />
       <FeedbackSection data={HomeData.testiomonials} />
-      <OurblogSection data={HomeData.blog} />
+      {/* <OurblogSection data={HomeData.blog} /> */}
       {/* <FeatureSection /> */}
       {/* <ContentSectionOne />
       <ProcessSection />

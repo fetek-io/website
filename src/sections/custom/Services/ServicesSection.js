@@ -9,7 +9,7 @@ import { Link } from "~components";
 export default function ServicesSection({ data }) {
   return (
     <Services backgroundColor="#ffffff">
-      <Container>
+      <Services.Container id="services-section">
         <Row className="justify-content-center justify-content-md-center">
           <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10">
             <SectionTitle
@@ -45,7 +45,7 @@ export default function ServicesSection({ data }) {
         <ServicesCardTwo/>
       </Services.Box> */}
         </Row>
-      </Container>
+      </Services.Container>
     </Services>
   );
 }

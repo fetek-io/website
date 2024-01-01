@@ -13,10 +13,10 @@ const footer = {
     {
       name: "Work",
       rows: [
-        {
-          name: "Blog",
-          to: "blog",
-        },
+        // {
+        //   name: "Blog",
+        //   to: "blog",
+        // },
         {
           name: "How We Work",
           to: "contact",

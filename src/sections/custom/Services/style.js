@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { Container } from "react-bootstrap";
 import {
     Box,
     Heading,
@@ -23,6 +24,14 @@ const Services = styled(Box)
 
 `
 Services.Box = styled(Box)`
+`
+
+
+Services.Container = styled(Container)
+`
+    padding-top: 100px;
+    margin-top: -100px;
+
 `
 
 Services.Title = styled(Heading)`
