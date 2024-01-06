@@ -38,8 +38,8 @@ export default function Marketing() {
   return (
     <PageWrapper innerPage={true}>
       <HeroSection data={HomeData.hero} />
-      <IdeaSection data={HomeData.idea} />
       <ServicesSection data={HomeData.service} />
+      <IdeaSection data={HomeData.idea} />
       {/* <TechStackSection /> */}
       <GreatworkSection />
       <ContactUsSection />
