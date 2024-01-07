@@ -1,12 +1,13 @@
 import Images from "./my-image";
+import clientAvatar from "~image/custom/client-avatar.png";
 
 // console.log("Images.home.testiomonials :>> ", Images.home.testiomonials);
 const HomeData = {
   hero: {
     subtitle: "Get Started",
     title: "YOUR RELIABLE TECHNOLOGY PARTNER",
-    description:
-      "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+    // description:
+    //   "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
     image: Images.home.hero,
   },
   idea: {
@@ -90,6 +91,32 @@ const HomeData = {
         iconBackground: "#0cd68a",
       },
     ],
+  },
+  about: {
+    items: [
+      {
+        scores: "5.0",
+        stars: 5,
+        comment:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+        guest: {
+          name: "Paulus Haverinen",
+          position: "Owner, Ikirakenne Ltd",
+          avatar: clientAvatar,
+        },
+      },
+      {
+        scores: "5.0",
+        stars: 5,
+        comment:
+          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+        guest: {
+          name: "Paulus Haverinen",
+          position: "Owner, Ikirakenne Ltd",
+          avatar: clientAvatar,
+        },
+      },
+    ]
   },
   testiomonials: {
     subtitle: "Testiomonials",

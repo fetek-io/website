@@ -23,7 +23,7 @@ export default function ServicesSection({ data }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {data.items.map(({ name, desc, to, icon, iconBackground }) => {
+          {data.items.map(({ name, description, to, icon, iconBackground }) => {
             return (
               <Services.Box
                 mb="25px"
@@ -33,7 +33,7 @@ export default function ServicesSection({ data }) {
               >
                 <ServicesCard
                   title={name}
-                  text={desc}
+                  text={description}
                   icon={icon}
                   to={to}
                   iconBackground={iconBackground}

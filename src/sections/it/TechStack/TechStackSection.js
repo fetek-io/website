@@ -7,8 +7,8 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export default function TechStackSection() {
   return (
-    <TechStack backgroundColor="white">
-      <Container>
+    <TechStack backgroundColor="#E9FBF8">
+      <TechStack.Container id="technologies-section">
         <Row className="justify-content-center">
           <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10 text-center">
             <SectionTitle
@@ -19,7 +19,7 @@ export default function TechStackSection() {
               mb="16px"
             ></SectionTitle>
             <Paragraph>
-              From scratch to execution, AgileTech always applies advanced and
+              From scratch to execution, Fetek always applies advanced and
               cutting-edge technologies to deliver your ideas into impactful and
               scalable products.
             </Paragraph>
@@ -38,7 +38,7 @@ export default function TechStackSection() {
               <Row className="justify-content-center">
                 {value.map(({ name, logo }) => {
                   return (
-                    <Col className="col-xxl-3 col-sm-10 text-center">
+                    <Col className="col-xxl-2 col-sm-6 text-center">
                       <img src={logo} alt="logo" />
                       <Paragraph mt="16px">{name}</Paragraph>
                     </Col>
@@ -48,7 +48,7 @@ export default function TechStackSection() {
             </div>
           ))}
         </Row>
-      </Container>
+      </TechStack.Container>
     </TechStack>
   );
 }

@@ -5,17 +5,18 @@ import HeroSection from "~sections/custom/Hero";
 import IdeaSection from "~sections/custom/Ideas";
 import GreatworkSection from "~sections/custom/GreatWork";
 import ServicesSection from "~sections/custom/Services";
-import FeedbackSection from "~sections/custom/Feedback";
+import AboutSection from "~sections/custom/About";
 import OurblogSection from "~sections/custom/OurBlog";
 import ContactUsSection from "~sections/custom/ContactUs";
 // import FeatureSection from "~sections/it/Feature";
 // import ContentSectionOne from "~sections/it/ContentOne";
-// import ProcessSection from "~sections/it/Process";
+import ProcessSection from "~sections/it/Process";
 // import CtaSection from "~sections/it/Cta";
+// import TestimonialSection from "~sections/it/Testimonial";
 // import TestimonialSection from "~sections/it/Testimonial";
 // import ContactSection from "~sections/it/Contact";
 import FooterThree from "~sections/it/FooterThree";
-// import TechStackSection from "~sections/it/TechStack";
+import TechStackSection from "~sections/it/TechStack";
 // import ContentSectionOne from "~sections/services/ContentOne";
 import HomeData from "~data/fetekData/home";
 
@@ -39,11 +40,11 @@ export default function Marketing() {
     <PageWrapper innerPage={true}>
       <HeroSection data={HomeData.hero} />
       <ServicesSection data={HomeData.service} />
+      <TechStackSection />
       <IdeaSection data={HomeData.idea} />
-      {/* <TechStackSection /> */}
       <GreatworkSection />
       <ContactUsSection />
-      <FeedbackSection data={HomeData.testiomonials} />
+      <AboutSection data={HomeData.about} />
       {/* <OurblogSection data={HomeData.blog} /> */}
       {/* <FeatureSection /> */}
       {/* <ContentSectionOne />

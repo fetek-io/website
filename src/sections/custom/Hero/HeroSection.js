@@ -14,9 +14,17 @@ const ImageContainer = styled.div`
   left: 50%;
 `;
 
+const MyHero = styled(Hero)`
+  background: url("https://agiletech.vn/wp-content/uploads/2021/06/Our-Service-1.png")
+    no-repeat center;
+  margin-top: 72px;
+  height: 906px;
+  color: white;
+`;
+
 export default function HeroSection({ data }) {
   return (
-    <Hero>
+    <MyHero>
       <Container>
         <Row className="align-items-center justify-content-center justify-content-md-start">
           {/* Welcome content Area */}
@@ -34,17 +42,17 @@ export default function HeroSection({ data }) {
             className="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-xs-11"
           >
             <div className="welcome-content welcome-content--l3">
-              <Hero.Subtitle className="d-none d-lg-block">
+              <Hero.Subtitle className="text-white d-none d-lg-block">
                 {data.subtitle}
               </Hero.Subtitle>
-              <Hero.Subtitle className="d-lg-none d-xs-block text-center">
+              <Hero.Subtitle className="text-white d-lg-none d-xs-block text-center">
                 {data.subtitle}
               </Hero.Subtitle>
-              <Hero.Title className="d-none d-lg-block">
+              <Hero.Title className="text-white d-none d-lg-block">
                 {data.title}
               </Hero.Title>
-              <Hero.Title className="d-lg-none d-xs-block text-center">
-                {data.title}
+              <Hero.Title className="text-white d-lg-none d-xs-block text-center">
+               {data.title} 
               </Hero.Title>
               <Hero.Text>{data.description}</Hero.Text>
               <Hero.BtnGroup className="d-none d-lg-block">
@@ -116,6 +124,6 @@ export default function HeroSection({ data }) {
       {/* <ImageGroup /> */}
       {/* </Col> */}
       {/*/ .Welcome Image Area */}
-    </Hero>
+    </MyHero>
   );
 }

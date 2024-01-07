@@ -32,23 +32,23 @@ const footer = {
       rows: [
         {
           name: "Web application development",
-          to: "services/web-app",
+          to: "#services-section",
         },
         {
           name: "Mobile application development",
-          to: "services/mobile-app",
+          to: "#services-section",
         },
         {
           name: "Data Engineering services",
-          to: "services/data",
+          to: "#services-section",
         },
         {
           name: "Digital Transformation Consulting",
-          to: "services/digital",
+          to: "#services-section",
         },
         {
           name: "Talent solutions",
-          to: "services/solution",
+          to: "#services-section",
         },
       ],
     },
@@ -57,7 +57,7 @@ const footer = {
       rows: [
         {
           name: "Partnership",
-          to: "#",
+          to: "contact",
         },
         {
           name: "About Project",
@@ -65,7 +65,7 @@ const footer = {
         },
         {
           name: "Corporate",
-          to: "#",
+          to: "contact",
         },
       ],
     },

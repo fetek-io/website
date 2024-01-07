@@ -16,7 +16,7 @@ const ImageContainer = styled.div`
 
 export default function IdeaSection({ data }) {
   return (
-    <Idea backgroundColor="#E9FBF8">
+    <Idea>
       <Container>
         <Row className="align-items-center justify-content-center justify-content-md-start">
           {/* Welcome content Area */}
@@ -27,7 +27,7 @@ export default function IdeaSection({ data }) {
             <div className="welcome-content welcome-content--l3 mb-7">
               <Idea.Subtitle>{data.subtitle}</Idea.Subtitle>
               <Idea.Title>{data.title}</Idea.Title>
-              <Idea.Text>{data.description}</Idea.Text>
+              {/* <Idea.Text>{data.description}</Idea.Text> */}
             </div>
             <div style={{ display: "flex" }}>
               <StepBarSection />
@@ -37,6 +37,7 @@ export default function IdeaSection({ data }) {
                   justifyContent: "space-between",
                   flexDirection: "column",
                   marginLeft: "32px",
+
                 }}
               >
                 {data.steps.map((item, index) => (

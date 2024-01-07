@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Box, Heading, Button, Paragraph } from "~styled";
+import { Container } from "react-bootstrap";
 
 const TechStack = styled(Box)`
   padding-top: 50px;
@@ -16,6 +17,13 @@ const TechStack = styled(Box)`
   }
 `;
 TechStack.Box = styled(Box)``;
+
+TechStack.Container = styled(Container)
+`
+    padding-top: 100px;
+    margin-top: -100px;
+
+`
 
 TechStack.Title = styled(Heading)`
   color: #262729;

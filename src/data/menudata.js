@@ -17,9 +17,29 @@ export const menuItems = [
     // ],
   },
   {
+    name: "#technologies-section",
+    label: "Technologies",
+    isExternal: false,
+    // items: [
+    //   { name: "services/web-app", label: "Web application development" },
+    //   { name: "services/mobile-app", label: "Mobile application development" },
+    //   { name: "services/data", label: "Data Engineering services" },
+    //   {
+    //     name: "services/digital",
+    //     label: "Digital Transformation Consulting",
+    //   },
+    //   { name: "services/solution", label: "Talent solutions" },
+    // ],
+  },
+  {
     name: "portfolio",
     label: "Portfolio",
     isExternal: false,
+    isExternal: false,
+    items: [
+    { name: "portfolio/data", label: "Data services" },
+    { name: "portfolio/software", label: "Software services" }
+  ],
   },
   // {
   //   name: "blog",
@@ -32,8 +52,8 @@ export const menuItems = [
   //   isExternal: false,
   // },
   {
-    name: "contact",
-    label: "Contact",
+    name: "#about-section",
+    label: "About",
     isExternal: false,
   },
 ];
