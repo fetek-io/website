@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import PortfolioCard from "./Components/Card";
 import Portfolio from "./style";
-import { Images } from "~data";
-// import portfolioData from "./data";
-import { findProjects, getCategories } from "~services/projectServices";
-import { getPage } from "~util/MyUtil";
-import { useQuery } from "react-query";
-
-import { navigate } from "gatsby";
-
-const limit = 10;
 
 export default function PortfolioSection({
   gutters,
@@ -21,31 +11,7 @@ export default function PortfolioSection({
   downladLink,
   ...rest
 }) {
-  const [tag, setTag] = React.useState("all");
-  const [filteredImages, setFilteredImages] = React.useState([]);
 
-  const [offset, setOffset] = useState(0);
-
-  // const { data: categories } = useQuery(["getCategories"], () =>
-  //   getCategories()
-  // );
-
-  // React.useEffect(() => {
-  //   tag === "all"
-  //     ? setFilteredImages(portfolioData)
-  //     : setFilteredImages(
-  //         portfolioData.filter((image) =>
-  //           image.tagi.find((item) => item === tag)
-  //         )
-  //       );
-  // }, [tag]);
-
-  const handleChangeOffset = (page) => {
-    setOffset(page * limit - limit);
-  };
-
-  // console.log("data :>> ", data);
-  // console.log("categories :>> ", categories);
   return (
     <Portfolio {...rest}>
       <Container fluid={containerFluid}>
