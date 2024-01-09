@@ -4,17 +4,17 @@ import clientAvatar from "~image/custom/client-avatar.png";
 // console.log("Images.home.testiomonials :>> ", Images.home.testiomonials);
 const HomeData = {
   hero: {
-    subtitle: "Get Started",
+    subtitle: "Welcome",
     title: "YOUR RELIABLE TECHNOLOGY PARTNER",
     // description:
     //   "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
     image: Images.home.hero,
   },
   idea: {
-    subtitle: "Welcome",
-    title: "YOUR RELIABLE TECHNOLOGY TEAM",
+    subtitle: "Our process",
+    title: "How do we work together?",
     description:
-      "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to archive your goals.",
+      "Evolving from a concept to a construct is an adventure, and it’s our role to guide you through this process:",
     steps: [
       {
         id: 1,
@@ -50,43 +50,43 @@ const HomeData = {
       {
         icon: "fas fa-envelope",
         name: "Web & Mobile Development",
-        description: "50 availabe vacancy",
+        description: "Elevate your business with our mobile and web development outsourcing. Our expert team crafts tailored solutions for a seamless user experience",
         to: "services/web-app",
 
         iconBackground: "#1de2cf",
       },
       {
         icon: "fas fa-layer-group",
-        name: "Design & vreatives",
-        description: "50 availabe vacancy",
+        name: "Backend Development",
+        description: "Our skilled team delivers tailored solutions, ensuring a robust foundation for your applications. Streamline operations and enhance performance with our expertise.",
         to: "services/web-app",
         iconBackground: "#494ca2",
       },
       {
         icon: "fas fa-headphones",
         name: "AI & Machine Learning",
-        description: "50 availabe vacancy",
+        description: "Unlock business potential with our AI and machine learning outsourcing. Our experts deliver smart solutions, harnessing advanced tech for automation and innovation.",
         to: "services/web-app",
         iconBackground: "#0f89ff",
       },
       {
         icon: "fas fa-bell",
         name: "Data Transformation",
-        description: "50 availabe vacancy",
+        description: "Transform your data seamlessly with our services. We specialize in efficient data transformation, unlocking insights and enhancing decision-making",
         to: "services/web-app",
         iconBackground: "#60E1CB",
       },
       {
         icon: "fas fa-file-invoice",
         name: "Datalake & Lakehouse",
-        description: "50 availabe vacancy",
+        description: "Harness the power of centralized data storage, analysis, and processing for enhanced insights. Drive efficiency and innovation with our tailored data solutions",
         to: "services/web-app",
         iconBackground: "#0f89ff",
       },
       {
         icon: "fas fa-chart-pie",
         name: "Reporting development",
-        description: "50 availabe vacancy",
+        description: "Providing actionable insights and enhancing data visualization. Empower your decision-making processes with our efficient reporting development.",
         to: "services/web-app",
         iconBackground: "#0cd68a",
       },
