@@ -11,34 +11,34 @@ const HomeData = {
     image: Images.home.hero,
   },
   idea: {
-    subtitle: "Get Started",
-    title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+    subtitle: "Welcome",
+    title: "YOUR RELIABLE TECHNOLOGY TEAM",
     description:
-      "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+      "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to archive your goals.",
     steps: [
       {
         id: 1,
-        title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+        title: "Share us your problem",
         description:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "Our engineers will co-work with you to understand, analyze and proposal you our solutions for finishing the projects.",
       },
       {
         id: 2,
-        title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+        title: "We build out our team",
         description:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "Our lead engineer will work with you to build out your engineering dream team. All the people you’ll need to make your project a reality",
       },
       {
         id: 3,
-        title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+        title: "We work the way you work",
         description:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "We’ll act as an extension of your team. Whether you use agile, kanban, or waterfall methodology, your new team will fit in with your working style.",
       },
       {
         id: 4,
-        title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+        title: "We stick around post-delivery",
         description:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "We’re in this for the long term and we are available for post-project support and maintenance or anything else.",
       },
     ],
     image: Images.home.idea,
@@ -49,7 +49,7 @@ const HomeData = {
     items: [
       {
         icon: "fas fa-envelope",
-        name: "Product Management",
+        name: "Web & Mobile Development",
         description: "50 availabe vacancy",
         to: "services/web-app",
 
@@ -57,35 +57,35 @@ const HomeData = {
       },
       {
         icon: "fas fa-layer-group",
-        name: "Web & Mobile Development",
+        name: "Design & vreatives",
         description: "50 availabe vacancy",
         to: "services/web-app",
         iconBackground: "#494ca2",
       },
       {
         icon: "fas fa-headphones",
-        name: "Customer Support",
+        name: "AI & Machine Learning",
         description: "50 availabe vacancy",
         to: "services/web-app",
         iconBackground: "#0f89ff",
       },
       {
         icon: "fas fa-bell",
-        name: "Human Resources",
+        name: "Data Transformation",
         description: "50 availabe vacancy",
         to: "services/web-app",
         iconBackground: "#60E1CB",
       },
       {
         icon: "fas fa-file-invoice",
-        name: "Design & vreatives",
+        name: "Datalake & Lakehouse",
         description: "50 availabe vacancy",
         to: "services/web-app",
         iconBackground: "#0f89ff",
       },
       {
         icon: "fas fa-chart-pie",
-        name: "Marketing & Commuication",
+        name: "Reporting development",
         description: "50 availabe vacancy",
         to: "services/web-app",
         iconBackground: "#0cd68a",
@@ -98,7 +98,7 @@ const HomeData = {
         scores: "5.0",
         stars: 5,
         comment:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "About us about us about us.",
         guest: {
           name: "Paulus Haverinen",
           position: "Owner, Ikirakenne Ltd",
@@ -109,7 +109,7 @@ const HomeData = {
         scores: "5.0",
         stars: 5,
         comment:
-          "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
+          "About us about us about us.",
         guest: {
           name: "Paulus Haverinen",
           position: "Owner, Ikirakenne Ltd",
