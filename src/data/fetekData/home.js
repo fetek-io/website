@@ -5,7 +5,7 @@ import clientAvatar from "~image/custom/client-avatar.png";
 const HomeData = {
   hero: {
     subtitle: "Welcome",
-    title: "YOUR RELIABLE TECHNOLOGY PARTNER",
+    title: "YOUR RELIABLE TECHNOLOGY TEAM",
     // description:
     //   "With a talented team and a transparent working process, we are always ready to move forwards with you on the way to pursuing innovative ideas.",
     image: Images.home.hero,

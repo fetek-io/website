@@ -19,11 +19,11 @@ const footer = {
         // },
         {
           name: "How We Work",
-          to: "contact",
+          to: "process",
         },
         {
-          name: "Testimonial",
-          to: "#Testimonial",
+          name: "Contact Us",
+          to: "contact",
         },
       ],
     },
