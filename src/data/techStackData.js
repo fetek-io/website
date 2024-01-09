@@ -1,7 +1,7 @@
 import Images from "~data/imageImports";
 
 export const stackData = {
-  Languages & Frameworks: [
+  Languages and Frameworks: [
     {
       name: "C#",
       logo: Images.techstacks.languages.csharpImg,
