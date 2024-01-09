@@ -1,7 +1,7 @@
 import Images from "~data/imageImports";
 
 export const stackData = {
-  Languages: [
+  Languages & Frameworks: [
     {
       name: "C#",
       logo: Images.techstacks.languages.csharpImg,
@@ -77,7 +77,7 @@ export const stackData = {
       logo: Images.techstacks.databases.coredataImg,
     },
   ],
-  Frameworks: [
+  Data Stacks: [
     {
       name: "Laravel",
       logo: Images.techstacks.frameworks.laravelImg,
