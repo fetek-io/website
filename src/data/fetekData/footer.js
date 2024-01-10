@@ -31,7 +31,7 @@ const footer = {
       name: "Services",
       rows: [
         {
-          name: "Web & Mobile development",
+          name: "Web and Mobile development",
           to: "#services-section",
         },
         {
@@ -39,7 +39,7 @@ const footer = {
           to: "#services-section",
         },
         {
-          name: "AI & Machine Learning",
+          name: "AI and Machine Learning",
           to: "#services-section",
         },
         {
@@ -47,7 +47,7 @@ const footer = {
           to: "#services-section",
         },
         {
-          name: "Datalake & lakehouse",
+          name: "Datalake and Lakehouse",
           to: "#services-section",
         },
         {
