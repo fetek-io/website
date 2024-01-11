@@ -1,5 +1,7 @@
 import Images from "./my-image";
 import clientAvatar from "~image/custom/client-avatar.png";
+import team1 from "~image/custom/team1.png";
+import team2 from "~image/custom/team2.webp";
 
 // console.log("Images.home.testiomonials :>> ", Images.home.testiomonials);
 const HomeData = {
@@ -102,7 +104,7 @@ const HomeData = {
         guest: {
           name: "Paulus Haverinen",
           position: "Owner, Ikirakenne Ltd",
-          avatar: clientAvatar,
+          avatar: team1,
         },
       },
       {
@@ -113,7 +115,7 @@ const HomeData = {
         guest: {
           name: "Paulus Haverinen",
           position: "Owner, Ikirakenne Ltd",
-          avatar: clientAvatar,
+          avatar: team2,
         },
       },
     ]

@@ -7,7 +7,7 @@ import ArrowRight from "~assets/image/custom/arrow-right.inline.svg";
 import clientAvatar from "~assets/image/custom/client-avatar.png";
 import styled from "styled-components";
 import SectionTitle from "./Components/SectionTitle";
-import { Box } from "~styled";
+import { Box, Paragraph } from "~styled";
 import Feedback from "./style";
 
 const ImageContainer = styled.div`
@@ -65,7 +65,8 @@ const PreviousArrow = ({ elSlider }) => {
         borderRadius: "50%",
         background: "white",
         position: "absolute",
-        top: "20%",
+        top: "45%",
+        left: "-25px",
         zIndex: 100,
         boxShadow: "0px 24px 32px rgba(59, 59, 59, 0.12)",
       }}
@@ -90,7 +91,7 @@ const NextArrow = ({ elSlider }) => {
         borderRadius: "50%",
         background: "white",
         position: "absolute",
-        top: "20%",
+        top: "45%",
         right: "-25px",
         zIndex: 100,
         boxShadow: "0px 24px 32px rgba(59, 59, 59, 0.12)",
@@ -158,8 +159,10 @@ export default function FeedbackSection({ data }) {
             subTitleProps={{ mb: "27px" }}
             titleProps={{ mb: "10px", as: "h2" }}
             mb="69px"
-            className="text-center"
+            // className="text-center"
           ></SectionTitle>
+            <Paragraph
+          >About us, about us....</Paragraph>
           </Col>
           <Col
             xs="12"
@@ -169,10 +172,10 @@ export default function FeedbackSection({ data }) {
             <Slider ref={elSlider} {...sliderConfig}>
               {data.items.map((item, index) => (
                 <div key={index}>
-                  <UserInfo>
                     <img src={item.guest.avatar} alt="" />
-                    <Feedback.UserName>{item.guest.name}</Feedback.UserName>
-                    <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle>
+                  <UserInfo>
+                    {/* <Feedback.UserName>{item.guest.name}</Feedback.UserName> */}
+                    {/* <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle> */}
                   </UserInfo>
                 </div>
               ))}

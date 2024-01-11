@@ -15,30 +15,36 @@ export default function PortfolioSection({
   return (
     <Portfolio {...rest}>
       <Container fluid={containerFluid}>
-        <Row className="align-items-center justify-content-center">
+        {/* <Row className="align-items-center justify-content-center">
           <Col xs="12" className="col-xl-7 col-lg-5 col-md-8 col-xs-9">
-            <Portfolio.Box mbLG="45px" mb="10px">
-              <Portfolio.Subtitle as="h4" fontColor="#fd346e" mb="13px">
-                {name}
-              </Portfolio.Subtitle>
-              {/* <Portfolio.Title as="h2">{description}</Portfolio.Title> */}
-            </Portfolio.Box>
+         
           </Col>
-        </Row>
+        </Row> */}
         <Row className={`pa-5 justify-content-center ${!gutters ? "gx-0" : null}`}>
-          <Col xs="12" className="col-xl-6 col-lg-6 col-md-6 col-xs-6">
+         
+          <Col xs="12" className="col-xl-6 col-lg-5 col-md-6 col-xs-6 d-flex flex-xs-column  gap-3">
+          <Portfolio.Box mbLG="45px" mb="10px">
+              <Portfolio.Title as="h4" mb="13px">
+                {name}
+              </Portfolio.Title>
+              <Portfolio.Subtitle as="h2">{description}</Portfolio.Subtitle>
+            </Portfolio.Box>
+
+          {/* <Portfolio.Title as="h2">{description}</Portfolio.Title> */}
+      
+          </Col>
+          <Col xs="12" className="col-xl-4 col-lg-4 col-md-4 col-xs-4 col-offset-2">
             <figure class="max-w-lg">
               <img src={image} class="h-auto max-w-full rounded-lg" alt="image description" />
             </figure>
           </Col>
-          <Col xs="12" className="col-xl-6 col-lg-5 col-md-6 col-xs-6 d-flex flex-xs-column justify-content-around">
-          <Portfolio.Title as="h2">{description}</Portfolio.Title>
-            <Portfolio.Box className="text-center" mt="30px">
+        </Row>
+        <Row>
+        <Portfolio.Box className="text-center" mt="30px">
             <a href={downladLink} download target="_blank">
               <Portfolio.Button className="btn-primary">Download</Portfolio.Button>
               </a>
             </Portfolio.Box>
-          </Col>
         </Row>
       </Container>
     </Portfolio>
