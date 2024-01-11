@@ -83,7 +83,7 @@ export default function ContactOne() {
           <Col xs="12" className="col-xl-5 col-lg-5">
             <Contact.WidgetsBox className="contact-widget-box">
               <Contact.WidgetsBoxTitle as="h2">Get In Touch</Contact.WidgetsBoxTitle>
-              <Contact.WidgetsBoxText as="p">therefore always free from <br className="d-none d-xl-block" />  repetition, injected humour, or <br className="d-none d-xl-block" /> non-characteristic</Contact.WidgetsBoxText>
+              <Contact.WidgetsBoxText as="p">Our office location <br className="d-none d-xl-block" />  mail and phone <br className="d-none d-xl-block" /> </Contact.WidgetsBoxText>
               <Row>
                 <Col xs="12" className="col-lg-12 col-sm-6">
                   <Contact.Widgets>
@@ -92,7 +92,7 @@ export default function ContactOne() {
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
                       <Contact.WidgetsTitle as="h3">visit us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">27 Division St, New York, <br className="d-block" /> NY 10002, USA</Contact.WidgetsText>
+                      <Contact.WidgetsText as="p">2nd floor, 29T1 Building, Hoang Dao Thuy Street <br className="d-block" /> Ha Noi, Viet Nam</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
@@ -103,7 +103,7 @@ export default function ContactOne() {
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
                       <Contact.WidgetsTitle as="h3">mail us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">phlox@mail.com <br className="d-block" /> contact@mail.com</Contact.WidgetsText>
+                      <Contact.WidgetsText as="p">contact@fetek.vn <br className="d-block" /> customer@fetek.vn</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
@@ -114,7 +114,7 @@ export default function ContactOne() {
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
                       <Contact.WidgetsTitle as="h3">call us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">+8 (123) 985 789 <br className="d-block" /> +1 (123) 456 789</Contact.WidgetsText>
+                      <Contact.WidgetsText as="p">+84-987 654 321 <br className="d-block" /> +84 987 654 321</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>

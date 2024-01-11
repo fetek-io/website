@@ -19,11 +19,11 @@ const footer = {
         // },
         {
           name: "How We Work",
-          to: "contact",
+          to: "process",
         },
         {
-          name: "Testimonial",
-          to: "#Testimonial",
+          name: "Contact Us",
+          to: "contact",
         },
       ],
     },
@@ -31,23 +31,27 @@ const footer = {
       name: "Services",
       rows: [
         {
-          name: "Web application development",
+          name: "Web and Mobile development",
           to: "#services-section",
         },
         {
-          name: "Mobile application development",
+          name: "Backend Development",
           to: "#services-section",
         },
         {
-          name: "Data Engineering services",
+          name: "AI and Machine Learning",
           to: "#services-section",
         },
         {
-          name: "Digital Transformation Consulting",
+          name: "Data Transformation",
           to: "#services-section",
         },
         {
-          name: "Talent solutions",
+          name: "Datalake and Lakehouse",
+          to: "#services-section",
+        },
+        {
+          name: "Reporting Development",
           to: "#services-section",
         },
       ],
@@ -56,11 +60,15 @@ const footer = {
       name: "Business Solution",
       rows: [
         {
-          name: "Partnership",
+          name: "Contact us",
           to: "contact",
         },
         {
-          name: "About Project",
+          name: "Data Solution",
+          to: "portfolio",
+        },
+        {
+          name: "IT Solution",
           to: "portfolio",
         },
         {
