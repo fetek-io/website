@@ -146,28 +146,43 @@ export default function FeedbackSection({ data }) {
     ],
   };
   return (
-    <Feedback backgroundColor="#ffffff" id="Testimonial">
+    <Feedback backgroundColor="#ffffff" id="Testimonial" paddingBottom="100px">
       <Feedback.Container id="about-section">
+      <Row className="justify-content-center">
+          <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10 text-center">
+            <SectionTitle
+              subTitle="About us"
+              title="About us"
+              subTitleProps={{ className: 'aboutUsSubtitle', mb: "27px", pt: "50px", }}
+              titleProps={{ pb: "50px",  mb: "27px", as: "h2" }}
+              mb="16px"
+            ></SectionTitle>
+          </Col>
+        </Row>
         <Row className="">
           <Col
            xs="12"
            className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-xs-12"
           >
           {/* <Feedback.Subtitle>Testiomonials</Feedback.Subtitle> */}
-          <SectionTitle
+          {/* <SectionTitle
             title={`About Us`}
             subTitleProps={{ mb: "27px" }}
             titleProps={{ mb: "10px", as: "h2" }}
             // mb="69px"
             // className="text-center"
-          ></SectionTitle>
+          ></SectionTitle> */}
             <Paragraph
           >{data.description}</Paragraph>
           </Col>
           <Col
             className="text-center"
           >
-          <img className="w-100 rounded rounded-55" src={data.image} alt="" />
+          <img className="rounded rounded-55" src={data.image} alt="" 
+            style={{
+              width: '70%'
+            }}
+          />
           {/* <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
               {data.items.map((item, index) => (

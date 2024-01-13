@@ -94,7 +94,7 @@ const HomeData = {
     ],
   },
   about: {
-    description: 'About us',
+    description: 'About us, about us...',
     image: team1,
   },
   testiomonials: {

@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 const Feedback = styled(Box)`
   position: relative;
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
   /*  @media (min-width: 768px) {
     padding-top: 115px;
     padding-bottom: 110px;
@@ -23,9 +23,9 @@ const Feedback = styled(Box)`
 
 Feedback.Container = styled(Container)
 `
-    padding-top: 100px;
-    margin-top: -100px;
-
+    padding-top: 120px;
+    margin-top: -150px;
+    padding-bottom: 150px;
 `
 
 Feedback.Button = styled(Button)`
