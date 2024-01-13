@@ -2,6 +2,9 @@ import React from 'react'
 import Contact from './style'
 import SectionTitle from './Components/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function ContactOne() {
 
   const hanleSubmitForm = (e) => {
@@ -20,12 +23,18 @@ export default function ContactOne() {
           phone: e.target[1].value,
           message: e.target[2].value,
         })
-      }).then(() => e.target.reset());
+      }).then(() => {
+        toast.dismiss();
+        e.target.reset();
+        toast("Contact info has been saved! We'll contact you soon");
+      }
+      );
   }
 
 
   return (
     <Contact backgroundColor="#f3f4f6">
+      <ToastContainer />
       <Container>
         <Row>
           <Col className="col-xl-7 col-lg-7">

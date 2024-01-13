@@ -20,9 +20,9 @@ export default function PortfolioSection({
          
           </Col>
         </Row> */}
-        <Row className={`pa-5 justify-content-center ${!gutters ? "gx-0" : null}`}>
+        <Row className={`pa-5 gap-3 justify-content-center ${!gutters ? "gx-0" : null}`}>
          
-          <Col xs="12" className="col-xl-6 col-lg-5 col-md-6 col-xs-6 d-flex flex-xs-column  gap-3">
+          <Col xs="12" className="col-xl-3 col-lg-3 col-md-3 col-xs-3 d-flex flex-xs-column gap-3">
           <Portfolio.Box mbLG="45px" mb="10px">
               <Portfolio.Title as="h4" mb="13px">
                 {name}
@@ -30,22 +30,25 @@ export default function PortfolioSection({
               <Portfolio.Subtitle as="h2">{description}</Portfolio.Subtitle>
             </Portfolio.Box>
 
+    
           {/* <Portfolio.Title as="h2">{description}</Portfolio.Title> */}
       
           </Col>
-          <Col xs="12" className="col-xl-4 col-lg-4 col-md-4 col-xs-4 col-offset-2">
+          <Col xs="12" className="col-xl-7 col-lg-7 col-md-7 col-xs-7 col-offset-2">
             <figure class="max-w-lg">
-              <img src={image} class="h-auto max-w-full rounded-lg" alt="image description" />
+              <img src={image} class="h-auto w-100 rounded-lg rounded" alt="image description" />
             </figure>
           </Col>
         </Row>
+
         <Row>
-        <Portfolio.Box className="text-center" mt="30px">
-            <a href={downladLink} download target="_blank">
-              <Portfolio.Button className="btn-primary">Download</Portfolio.Button>
-              </a>
-            </Portfolio.Box>
+            <Portfolio.Box className="text-center hidden-xs" mt="30px">
+                <a href={downladLink} download target="_blank">
+                  <Portfolio.Button className="btn-primary">Download</Portfolio.Button>
+                  </a>
+                </Portfolio.Box>
         </Row>
+       
       </Container>
     </Portfolio>
   );

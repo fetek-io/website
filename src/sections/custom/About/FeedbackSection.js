@@ -148,7 +148,7 @@ export default function FeedbackSection({ data }) {
   return (
     <Feedback backgroundColor="#ffffff" id="Testimonial">
       <Feedback.Container id="about-section">
-        <Row className="align-items-center justify-content-center">
+        <Row className="">
           <Col
            xs="12"
            className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-xs-12"
@@ -158,29 +158,29 @@ export default function FeedbackSection({ data }) {
             title={`About Us`}
             subTitleProps={{ mb: "27px" }}
             titleProps={{ mb: "10px", as: "h2" }}
-            mb="69px"
+            // mb="69px"
             // className="text-center"
           ></SectionTitle>
             <Paragraph
-          >About us, about us....</Paragraph>
+          >{data.description}</Paragraph>
           </Col>
           <Col
-            xs="12"
-            className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-xs-12"
+            className="text-center"
           >
-          <SliderWrapper>
+          <img className="w-100 rounded rounded-55" src={data.image} alt="" />
+          {/* <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
               {data.items.map((item, index) => (
                 <div key={index}>
                     <img src={item.guest.avatar} alt="" />
                   <UserInfo>
-                    {/* <Feedback.UserName>{item.guest.name}</Feedback.UserName> */}
-                    {/* <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle> */}
+                    <Feedback.UserName>{item.guest.name}</Feedback.UserName>
+                    <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle>
                   </UserInfo>
                 </div>
               ))}
             </Slider>
-          </SliderWrapper>
+          </SliderWrapper> */}
           </Col>
         </Row>
      

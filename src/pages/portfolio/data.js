@@ -2,7 +2,7 @@ import React from "react";
 import { PageWrapper } from "~components/Core";
 import PortfolioSection from "./PortfolioGridThree";
 import FooterThree from "~sections/it/FooterThree";
-import l6teamImg4 from "~image/home-digital-agency/team-member-4.png";
+import l6teamImg4 from "~image/custom/data-science.webp";
 
 export default function OurPortfolio({ location }) {
   return (

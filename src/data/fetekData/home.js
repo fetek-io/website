@@ -1,7 +1,6 @@
 import Images from "./my-image";
 import clientAvatar from "~image/custom/client-avatar.png";
-import team1 from "~image/custom/team1.png";
-import team2 from "~image/custom/team2.webp";
+import team1 from "~image/custom/team1.webp";
 
 // console.log("Images.home.testiomonials :>> ", Images.home.testiomonials);
 const HomeData = {
@@ -95,30 +94,8 @@ const HomeData = {
     ],
   },
   about: {
-    items: [
-      {
-        scores: "5.0",
-        stars: 5,
-        comment:
-          "About us about us about us.",
-        guest: {
-          name: "Paulus Haverinen",
-          position: "Owner, Ikirakenne Ltd",
-          avatar: team1,
-        },
-      },
-      {
-        scores: "5.0",
-        stars: 5,
-        comment:
-          "About us about us about us.",
-        guest: {
-          name: "Paulus Haverinen",
-          position: "Owner, Ikirakenne Ltd",
-          avatar: team2,
-        },
-      },
-    ]
+    description: 'About us',
+    image: team1,
   },
   testiomonials: {
     subtitle: "Testiomonials",
