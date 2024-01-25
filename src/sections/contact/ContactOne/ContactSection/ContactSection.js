@@ -42,8 +42,7 @@ export default function ContactOne() {
               <SectionTitle
                 subTitle="Contact Us"
                 title="Send A Message"
-                text="When, while lovely valley teems with vapour around meand <br class='d-non d-lg-block'/>
-            meridian the upper impenetrable."
+                text="send us an email today to explore how our expert software outsourcing services <br class='d-non d-lg-block'/> can elevate your business to new heights."
                 subTitleProps={{ mb: "10px" }}
                 titleProps={{ mb: "10px", as: "h2" }}
                 mb="50px" />
@@ -112,7 +111,7 @@ export default function ContactOne() {
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
                       <Contact.WidgetsTitle as="h3">Call us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">+84-987 654 321 <br className="d-block" /> +84 987 654 321</Contact.WidgetsText>
+                      <Contact.WidgetsText as="p">+84-973 450 208 <br className="d-block" /> (Mr Dung)</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
