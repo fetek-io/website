@@ -94,7 +94,7 @@ const HomeData = {
     ],
   },
   about: {
-    description: 'We are a dynamic and innovative company dedicated to providing top-notch software development services tailored to meet the unique needs of our clients. With a team of highly skilled and experienced professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency. <br/> <br/> Our commitment to quality, transparency, and timely delivery sets us apart. We work closely with our clients to understand their objectives, leveraging the latest technologies and industry best practices to deliver solutions that exceed expectations. From custom software development and mobile app creation to quality assurance and ongoing support, we offer a comprehensive suite of services to address all your software needs.',
+    description: 'We are a dynamic and innovative company dedicated to providing top-notch software development services tailored to meet the unique needs of our clients. With a team of highly skilled and experienced professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency. <br className="d-block" /> <br/> Our commitment to quality, transparency, and timely delivery sets us apart. We work closely with our clients to understand their objectives, leveraging the latest technologies and industry best practices to deliver solutions that exceed expectations. From custom software development and mobile app creation to quality assurance and ongoing support, we offer a comprehensive suite of services to address all your software needs.',
     image: team1,
   },
   testiomonials: {

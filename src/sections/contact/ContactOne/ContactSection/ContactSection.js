@@ -92,7 +92,7 @@ export default function ContactOne() {
           <Col xs="12" className="col-xl-5 col-lg-5">
             <Contact.WidgetsBox className="contact-widget-box">
               <Contact.WidgetsBoxTitle as="h2">Get In Touch</Contact.WidgetsBoxTitle>
-              <Contact.WidgetsBoxText as="p">Our office location <br className="d-none d-xl-block" />  mail and phone <br className="d-none d-xl-block" /> </Contact.WidgetsBoxText>
+              <Contact.WidgetsBoxText as="p">Our office location <br className="d-none d-xl-block" />  Mail and Phone <br className="d-none d-xl-block" /> </Contact.WidgetsBoxText>
               <Row>
                 <Col xs="12" className="col-lg-12 col-sm-6">
                   <Contact.Widgets>
@@ -100,8 +100,8 @@ export default function ContactOne() {
                       <i className="fas fa-envelope" />
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
-                      <Contact.WidgetsTitle as="h3">visit us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">2nd floor, 29T1 Building, Hoang Dao Thuy Street <br className="d-block" /> Ha Noi, Viet Nam</Contact.WidgetsText>
+                      <Contact.WidgetsTitle as="h3">Mail us :</Contact.WidgetsTitle>
+                      <Contact.WidgetsText as="p">contact@fetek.vn <br className="d-block" /> customer@fetek.vn</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
@@ -111,8 +111,8 @@ export default function ContactOne() {
                       <i className="fas fa-phone-alt" />
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
-                      <Contact.WidgetsTitle as="h3">mail us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">contact@fetek.vn <br className="d-block" /> customer@fetek.vn</Contact.WidgetsText>
+                      <Contact.WidgetsTitle as="h3">Call us :</Contact.WidgetsTitle>
+                      <Contact.WidgetsText as="p">+84-987 654 321 <br className="d-block" /> +84 987 654 321</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
@@ -122,8 +122,8 @@ export default function ContactOne() {
                       <i className="fas fa-map-marker-alt" />
                     </Contact.WidgetsIcon>
                     <Contact.WidgetsBoxBody>
-                      <Contact.WidgetsTitle as="h3">call us :</Contact.WidgetsTitle>
-                      <Contact.WidgetsText as="p">+84-987 654 321 <br className="d-block" /> +84 987 654 321</Contact.WidgetsText>
+                      <Contact.WidgetsTitle as="h3">Visit us :</Contact.WidgetsTitle>
+                      <Contact.WidgetsText as="p">2nd floor, 29T1 Building, Hoang Dao Thuy Street <br className="d-block" /> Ha Noi, Viet Nam</Contact.WidgetsText>
                     </Contact.WidgetsBoxBody>
                   </Contact.Widgets>
                 </Col>
