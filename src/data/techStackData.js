@@ -77,7 +77,7 @@ export const stackData = {
       logo: Images.techstacks.databases.coredataImg,
     },
   ],
-  Frameworks: [
+  Data: [
     {
       name: "Laravel",
       logo: Images.techstacks.frameworks.laravelImg,
