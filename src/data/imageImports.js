@@ -210,6 +210,9 @@ import vueImg from "~image/tech-stacks/frameworks/vue-js.png";
 import wordpressImg from "~image/tech-stacks/frameworks/wordpress.png";
 import yiiImg from "~image/tech-stacks/frameworks/yii.png";
 import iconTableau from "~image/tech-stacks/frameworks/icon-tableau-1.png";
+import iconHadoop from "~image/tech-stacks/frameworks/hadoop-icon.png";
+import iconPowerBI from "~image/tech-stacks/frameworks/power-bi.png";
+import iconQlik from "~image/tech-stacks/frameworks/qlik.png";
 
 const Images = {
   techstacks: {
@@ -249,6 +252,9 @@ const Images = {
       wordpressImg,
       yiiImg,
       iconTableau,
+      iconHadoop,
+      iconPowerBI,
+      iconQlik,
     },
     languages: {
       csharpImg,

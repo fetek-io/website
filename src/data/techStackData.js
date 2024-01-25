@@ -83,16 +83,16 @@ export const stackData = {
       logo: Images.techstacks.frameworks.iconTableau,
     },
     {
-      name: "AngularJS",
-      logo: Images.techstacks.frameworks.angularjsImg,
+      name: "Qlik",
+      logo: Images.techstacks.frameworks.iconQlik,
     },
     {
-      name: "React Native",
-      logo: Images.techstacks.frameworks.reactnativeImg,
+      name: "Power BI",
+      logo: Images.techstacks.frameworks.iconPowerBI,
     },
     {
-      name: "ASP.net",
-      logo: Images.techstacks.frameworks.dotnetImg,
+      name: "Hadoop",
+      logo: Images.techstacks.frameworks.iconHadoop,
     },
     {
       name: "NodeJS",
