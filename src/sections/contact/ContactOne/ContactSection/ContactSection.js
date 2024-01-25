@@ -42,7 +42,7 @@ export default function ContactOne() {
               <SectionTitle
                 subTitle="Contact Us"
                 title="Send A Message"
-                text="send us an email today to explore how our expert software outsourcing services <br class='d-non d-lg-block'/> can elevate your business to new heights."
+                text="Send us an email today to explore how our expert software outsourcing services <br class='d-non d-lg-block'/> can elevate your business to new heights."
                 subTitleProps={{ mb: "10px" }}
                 titleProps={{ mb: "10px", as: "h2" }}
                 mb="50px" />
