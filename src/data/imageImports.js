@@ -209,7 +209,7 @@ import symfonyImg from "~image/tech-stacks/frameworks/symfony.png";
 import vueImg from "~image/tech-stacks/frameworks/vue-js.png";
 import wordpressImg from "~image/tech-stacks/frameworks/wordpress.png";
 import yiiImg from "~image/tech-stacks/frameworks/yii.png";
-import iconTableau from "~image/tech-stacks/frameworks/icon-tableau.png";
+import iconTableau from "~image/tech-stacks/frameworks/icon-tableau-1.png";
 
 const Images = {
   techstacks: {
