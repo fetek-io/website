@@ -1,5 +1,6 @@
 import Images from "./my-image";
 import clientAvatar from "~image/custom/client-avatar.png";
+import team1 from "~image/custom/team1.webp";
 
 // console.log("Images.home.testiomonials :>> ", Images.home.testiomonials);
 const HomeData = {
@@ -93,30 +94,8 @@ const HomeData = {
     ],
   },
   about: {
-    items: [
-      {
-        scores: "5.0",
-        stars: 5,
-        comment:
-          "About us about us about us.",
-        guest: {
-          name: "Paulus Haverinen",
-          position: "Owner, Ikirakenne Ltd",
-          avatar: clientAvatar,
-        },
-      },
-      {
-        scores: "5.0",
-        stars: 5,
-        comment:
-          "We are a dynamic and innovative company dedicated to providing top-notch software development services tailored to meet the unique needs of our clients. With a team of highly skilled and experienced professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency.",
-        guest: {
-          name: "Paulus Haverinen",
-          position: "Owner, Ikirakenne Ltd",
-          avatar: clientAvatar,
-        },
-      },
-    ]
+    description: 'We are a dynamic and innovative company dedicated to providing top-notch software development services tailored to meet the unique needs of our clients. With a team of highly skilled and experienced professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency.',
+    image: team1,
   },
   testiomonials: {
     subtitle: "Testiomonials",

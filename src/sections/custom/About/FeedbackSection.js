@@ -7,7 +7,7 @@ import ArrowRight from "~assets/image/custom/arrow-right.inline.svg";
 import clientAvatar from "~assets/image/custom/client-avatar.png";
 import styled from "styled-components";
 import SectionTitle from "./Components/SectionTitle";
-import { Box } from "~styled";
+import { Box, Paragraph } from "~styled";
 import Feedback from "./style";
 
 const ImageContainer = styled.div`
@@ -65,7 +65,8 @@ const PreviousArrow = ({ elSlider }) => {
         borderRadius: "50%",
         background: "white",
         position: "absolute",
-        top: "20%",
+        top: "45%",
+        left: "-25px",
         zIndex: 100,
         boxShadow: "0px 24px 32px rgba(59, 59, 59, 0.12)",
       }}
@@ -90,7 +91,7 @@ const NextArrow = ({ elSlider }) => {
         borderRadius: "50%",
         background: "white",
         position: "absolute",
-        top: "20%",
+        top: "45%",
         right: "-25px",
         zIndex: 100,
         boxShadow: "0px 24px 32px rgba(59, 59, 59, 0.12)",
@@ -145,39 +146,56 @@ export default function FeedbackSection({ data }) {
     ],
   };
   return (
-    <Feedback backgroundColor="#ffffff" id="Testimonial">
+    <Feedback backgroundColor="#ffffff" id="Testimonial" paddingBottom="100px">
       <Feedback.Container id="about-section">
-        <Row className="align-items-center justify-content-center">
+      <Row className="justify-content-center">
+          <Col className="col-xxl-6 col-xl-7 col-md-9 col-sm-10 text-center">
+            <SectionTitle
+              subTitle="About us"
+              title="About us"
+              subTitleProps={{ className: 'aboutUsSubtitle', mb: "27px", pt: "50px", }}
+              titleProps={{ pb: "50px",  mb: "27px", as: "h2" }}
+              mb="16px"
+            ></SectionTitle>
+          </Col>
+        </Row>
+        <Row className="">
           <Col
            xs="12"
            className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-xs-12"
           >
           {/* <Feedback.Subtitle>Testiomonials</Feedback.Subtitle> */}
-          <SectionTitle
+          {/* <SectionTitle
             title={`About Us`}
             subTitleProps={{ mb: "27px" }}
             titleProps={{ mb: "10px", as: "h2" }}
-            mb="69px"
-            className="text-center"
-          ></SectionTitle>
+            // mb="69px"
+            // className="text-center"
+          ></SectionTitle> */}
+            <Paragraph
+          >{data.description}</Paragraph>
           </Col>
           <Col
-            xs="12"
-            className="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-xs-12"
+            className="text-center"
           >
-          <SliderWrapper>
+          <img className="rounded rounded-55" src={data.image} alt="" 
+            style={{
+              width: '70%'
+            }}
+          />
+          {/* <SliderWrapper>
             <Slider ref={elSlider} {...sliderConfig}>
               {data.items.map((item, index) => (
                 <div key={index}>
-                  <UserInfo>
                     <img src={item.guest.avatar} alt="" />
+                  <UserInfo>
                     <Feedback.UserName>{item.guest.name}</Feedback.UserName>
                     <Feedback.Subtitle>{item.guest.position}</Feedback.Subtitle>
                   </UserInfo>
                 </div>
               ))}
             </Slider>
-          </SliderWrapper>
+          </SliderWrapper> */}
           </Col>
         </Row>
      

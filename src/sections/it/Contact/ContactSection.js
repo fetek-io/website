@@ -3,6 +3,13 @@ import Contact from './style'
 import SectionTitle from './Components/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 export default function ContactSection(){
+
+const hanleSubmitForm = (e) => {
+  e.preventDefault();
+  console.log(e);
+  fetch({ method: 'POST', url: 'https://eohlkg832d0086w.m.pipedream.net', body: e.target });
+}
+
 return(
 <Contact backgroundColor="#f3f4f6">
   <Container>
@@ -19,7 +26,7 @@ return(
             mb="50px" />
         </Contact.Box>
         <Contact.From>
-            <form action="./">
+            <form onSubmit={hanleSubmitForm}>
                     <Row>
                       <Col xs="12" className="col-lg-6 mb-4">
                         <div className="form-floating">

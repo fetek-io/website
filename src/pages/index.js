@@ -42,7 +42,7 @@ export default function Marketing() {
       <ServicesSection data={HomeData.service} />
       <TechStackSection />
       <IdeaSection data={HomeData.idea} />
-      <GreatworkSection />
+      {/* <GreatworkSection /> */}
       <ContactUsSection />
       <AboutSection data={HomeData.about} />
       {/* <OurblogSection data={HomeData.blog} /> */}
