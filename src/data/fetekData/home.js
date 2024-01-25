@@ -109,7 +109,7 @@ const HomeData = {
         scores: "5.0",
         stars: 5,
         comment:
-          "About us about us about us.",
+          "We are a dynamic and innovative company dedicated to providing top-notch software development services tailored to meet the unique needs of our clients. With a team of highly skilled and experienced professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency.",
         guest: {
           name: "Paulus Haverinen",
           position: "Owner, Ikirakenne Ltd",
