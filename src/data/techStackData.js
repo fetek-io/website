@@ -79,8 +79,8 @@ export const stackData = {
   ],
   Data: [
     {
-      name: "Laravel",
-      logo: Images.techstacks.frameworks.laravelImg,
+      name: "Tableau",
+      logo: Images.techstacks.frameworks.iconTableau,
     },
     {
       name: "AngularJS",
