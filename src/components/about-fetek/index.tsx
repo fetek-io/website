@@ -18,6 +18,7 @@ export const AboutFetek = () => {
           <div className='!w-4 !h-4 bg-primary-50 rounded-full' />
 
           <div className='text-base font-light text-gray-50'>
+            kakaka
             We are a dynamic and innovative company dedicated to providing top-notch software development services
             tailored to meet the unique needs of our clients. With a team of highly skilled and experienced
             professionals, we specialize in delivering cutting-edge solutions that drive business growth and efficiency.
