@@ -6,7 +6,8 @@ export const PAGE_KEYS = {
   PORTFOLIO: 'portfolio',
   DATA_SERVICES: 'data-services',
   SOFTWARE_SERVICES: 'software-services',
-  SEND_MESSAGE: 'send-message'
+  SEND_MESSAGE: 'send-message',
+  CARRER: 'carrer'
 }
 
 export const MAPPING_PATH = {
@@ -16,7 +17,8 @@ export const MAPPING_PATH = {
   [PAGE_KEYS.PROCESS]: '/',
   [PAGE_KEYS.SEND_MESSAGE]: '/',
   [PAGE_KEYS.DATA_SERVICES]: '/portfolio/data',
-  [PAGE_KEYS.SOFTWARE_SERVICES]: '/portfolio/software'
+  [PAGE_KEYS.SOFTWARE_SERVICES]: '/portfolio/software',
+  [PAGE_KEYS.CARRER]: '/recruitment'
 }
 
 export const menuItems = [
@@ -35,6 +37,10 @@ export const menuItems = [
   {
     key: PAGE_KEYS.PROCESS,
     label: 'Process'
+  },
+  {
+    key: PAGE_KEYS.CARRER,
+    label: 'Carrer'
   },
   {
     key: PAGE_KEYS.PORTFOLIO,

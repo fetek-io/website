@@ -3,6 +3,7 @@ import { HomePage } from './containers/homepage'
 import { Layout } from './layout'
 import { SoftwareServices } from './containers/software-services'
 import { createBrowserRouter } from 'react-router-dom'
+import Recruitment from './components/recruitment'
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,14 @@ export const router = createBrowserRouter([
     element: (
       <Layout>
         <SoftwareServices />
+      </Layout>
+    )
+  },
+  {
+    path: '/recruitment',
+    element: (
+      <Layout>
+        <Recruitment />
       </Layout>
     )
   }

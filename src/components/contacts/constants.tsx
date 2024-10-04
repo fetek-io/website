@@ -58,7 +58,7 @@ export const contactCards = [
   {
     key: 'location',
     title: 'location',
-    description: '2nd floor, 291 Building, Hoang Dao Thuy Street Ha Noi, Viet Nam',
+    description: '5th floor, 8 Building, Nguyen Thi Dinh Street, Cau Giay, Ha Noi, Viet Nam',
     icon: <Image alt='phone' preview={false} src={PinIcon} />
   }
 ]
