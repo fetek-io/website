@@ -3,10 +3,12 @@ import { RouterProvider } from 'react-router-dom'
 import { customTheme } from './constants/CustomTheme'
 import { router } from './Router'
 
-export const App = () => (
+export const App = () => {
+  return (
   <ConfigProvider theme={customTheme}>
     <RouterProvider router={router} />
   </ConfigProvider>
-)
+  )
+}
 
 export default App
