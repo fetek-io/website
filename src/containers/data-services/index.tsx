@@ -7,7 +7,7 @@ import { PAGE_KEYS } from '@/layout/constants'
 
 export const DataServices = () => {
   const handleOpenPdfPage = () => {
-    window.open('https://www.dot.nd.gov/manuals/design/caddmanual/UG_Meetings/Adobe%20Portfolio%20Guide.pdf', '_blank')
+    window.open('/UNITEL_FETEK_ReportingSystem_102024.pdf', '_blank')
   }
 
   return (

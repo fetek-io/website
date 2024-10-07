@@ -7,9 +7,9 @@ import SoftwareImage from '@/assets/images/software-services-image.jpg'
 
 export const SoftwareServices = () => {
   const handleOpenPdfPage = () => {
-    window.open('https://www.dot.nd.gov/manuals/design/caddmanual/UG_Meetings/Adobe%20Portfolio%20Guide.pdf', '_blank')
+    window.open('/FETEK_Software_2024_v1.pdf', '_blank')
   }
-
+  
   return (
     <div id={PAGE_KEYS.SOFTWARE_SERVICES} className='software-services -mt-[81px]'>
       <div className='flex flex-col gap-10 xl:mx-[12.5rem] mx-20 mt-56 mb-44'>
