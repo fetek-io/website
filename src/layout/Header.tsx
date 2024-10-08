@@ -43,7 +43,8 @@ export const Header = () => {
 
   return (
     <>
-      <AntdHeader className='sticky top-0 z-10 w-full h-[81px] flex justify-between layout-header px-0 border-x-0 border-t-0 border-b border-solid border-green-caribbean'>
+      <AntdHeader 
+        className='text-black sticky top-0 z-10 w-full h-[81px] flex justify-between layout-header px-0 border-x-0 border-t-0 border-b border-solid border-green-caribbean bg-white'>
         {isMobile ? (
           <>
             <div className='flex items-center w-40 h-[81px] border-y-0 border-l-0 border-green-caribbean'>

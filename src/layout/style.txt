@@ -1,3 +1,4 @@
+/* 
 .fetek-layout
   .layout-banner
     background-image: url('@/assets/images/banner.png')
@@ -6,7 +7,7 @@
     background-position: 100% 50%
 
   .layout-header
-    background: linear-gradient(to bottom right, rgb(29, 62, 65), rgb(17, 59, 58)) !important
+    background: linear-gradient(to bottom right, rgb(29, 62, 65), rgb(17, 59, 58)) !important 
 
     @media (max-width: 768px)
       border-bottom: none
@@ -35,3 +36,5 @@
     @apply bg-transparent
     .ant-menu-item-selected, .ant-menu-item-only-child:hover
       @apply bg-transparent text-green-shamrock #{!important}
+
+*/

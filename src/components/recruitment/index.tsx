@@ -13,7 +13,7 @@ const Recruitment = () => {
       try {
         const response = await axios.get('http://localhost:1337/api/jobs', {
           headers: {
-            Authorization: `Bearer dc9263dcbf037df898ac69345c58e3f6116e111a6892282b5e614e48e4a0c85406f96a7d2ed13c95ecd3f699782e42e17435bc30253f7d82c358b3ad619b58f2cd52bac3b2426a48a8ed85223e7c7abeb19737ee18039d4152fe7eeb3d74b0e55235a27db8f50109ff8d01c93abf05f440673c12b238b58d58c18ddf77c74500` // Thêm Bearer Token vào headers
+            Authorization: `Bearer ${process.env.STRAPI_KEY}` // Thêm Bearer Token vào headers
           }
         });
         setJobData(response.data.data);
