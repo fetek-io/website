@@ -36,14 +36,14 @@ export const Banner = () => {
           "Not only striving towards effective value for customers, FETEK is also committed to providing specialized service quality for each customer's characteristics."
         )}
       </div>
-      <div className='flex items-center justify-center gap-2 bg-primary-700 h-14 w-[11.25rem] cursor-pointer mt-12 hover:bg-primary-800'>
+      <div className='rounded-md flex items-center justify-center gap-2 bg-primary-700 h-14 w-[11.25rem] cursor-pointer mt-12 hover:bg-primary-800'>
         <span
           className='font-lexend text-base uppercase'
           onClick={() => {
             handleNavigateTo(PAGE_KEYS.SEND_MESSAGE)
           }}
         >
-          Contact Us
+          {t('Contact Us')}
         </span>
         <Image alt='icon-arrow-right' src={ArrowRightIcon} preview={false} />
       </div>

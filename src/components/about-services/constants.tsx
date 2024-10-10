@@ -5,41 +5,42 @@ import DatabaseIcon from '@/assets/icons/database-icon.svg'
 import { Image } from 'antd'
 import MachineLearningIcon from '@/assets/icons/machine-learning-icon.svg'
 import ReportIcon from '@/assets/icons/report-icon.svg'
+import { Translation } from 'react-i18next'
 
 export const serviceLists = [
   {
     key: 'Web & Mobile Development',
-    label: 'Web & Mobile \nDevelopment',
+    label: <Translation>{(t) => t('Web & Mobile \nDevelopment')}</Translation>,
     bgClassName: 'web-dev-bg',
     icon: <Image alt='web-dev-bg' preview={false} src={CodingIcon} height={61} />
   },
   {
     key: 'Backend Development',
-    label: 'Backend \nDevelopment',
+    label: <Translation>{(t) => t('Backend \nDevelopment')}</Translation>,
     bgClassName: 'backend-dev-bg',
     icon: <Image alt='backend-dev-bg' preview={false} src={AlgorithmIcon} height={61} />
   },
   {
     key: 'AI & Machine Learning',
-    label: 'AI & Machine \nLearning',
+    label: <Translation>{(t) => t('AI & Machine \nLearning')}</Translation>,
     bgClassName: 'machine-learning-dev-bg',
     icon: <Image alt='machine-learning-dev-bg' preview={false} src={MachineLearningIcon} height={61} />
   },
   {
     key: 'Data transformation',
-    label: 'Data \ntransformation',
+    label: <Translation>{(t) => t('Data \nTransformation')}</Translation>,
     bgClassName: 'data-transformation-dev-bg',
     icon: <Image alt='data-transformation-dev-bg' preview={false} src={BigDataIcon} height={61} />
   },
   {
     key: 'datalake . & lakehouse',
-    label: 'datalake . \n& lakehouse',
+    label: <Translation>{(t) => t('Datalake . \n& Lakehouse')}</Translation>,
     bgClassName: 'datalake-dev-bg',
     icon: <Image alt='datalake-dev-bg' preview={false} src={DatabaseIcon} height={61} />
   },
   {
     key: 'reporting Development',
-    label: 'reporting \nDevelopment',
+    label: <Translation>{(t) => t('Reporting \nDevelopment')}</Translation>,
     bgClassName: 'reporting-dev-bg',
     icon: <Image alt='reporting-dev-bg' preview={false} src={ReportIcon} height={61} />
   }

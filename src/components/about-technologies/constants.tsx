@@ -1,64 +1,36 @@
-// import AlamofireIcon from '@/assets/icons/data/Alamofire.png'
-// import CSharpIcon from '@/assets/icons/language/c.svg'
-// import CakePHPIcon from '@/assets/icons/data/CakePHP.png'
-// import CoreDataIcon from '@/assets/icons/database/CoreData.png'
 import DartIcon from '@/assets/icons/language/dart.svg'
 import DiangoIcon from '@/assets/icons/data/Django.png'
 import ElasticsearchIcon from '@/assets/icons/database/elasticsearch.png'
-// import FirebaseIcon from '@/assets/icons/database/Firebase.png'
 import FlutterIcon from '@/assets/icons/data/Flutter.png'
 import HadoopIcon from '@/assets/icons/data/Hadoop.png'
 import { Image } from 'antd'
 import JavaIcon from '@/assets/icons/language/java.svg'
 import JavascriptIcon from '@/assets/icons/language/javascript.svg'
 import KotlinIcon from '@/assets/icons/language/kotlin.svg'
-// import MagentoIcon from '@/assets/icons/data/Magento.png'
-// import MeteorIcon from '@/assets/icons/data/Meteor.png'
-// import MongoDBIcon from '@/assets/icons/database/mongoDB.png'
 import MySQLIcon from '@/assets/icons/database/MySQL.png'
-// import NestJSIcon from '@/assets/icons/data/NestJS.png'
 import NextJSIcon from '@/assets/icons/data/NextJS.png'
 import NodeJSIcon from '@/assets/icons/data/NodeJS.png'
 import NuxtJSIcon from '@/assets/icons/data/NuxtJS.png'
-// import ObjectiveCIcon from '@/assets/icons/language/objective-c.svg'
-// import PHPIcon from '@/assets/icons/language/php.svg'
 import PostgreSQLIcon from '@/assets/icons/database/postgreSQL.png'
 import PowerBIIcon from '@/assets/icons/data/Power-BI.png'
 import PythonIcon from '@/assets/icons/language/python.svg'
 import QlikIcon from '@/assets/icons/data/Qlik.png'
 import ReactJSIcon from '@/assets/icons/data/ReactJS.png'
-// import ReactiveCocoa from '@/assets/icons/data/ReactiveCocoa.png'
-// import RealmIcon from '@/assets/icons/database/Realm.png'
-// import RubyOnRailsIcon from '@/assets/icons/data/Ruby-on-Rails.png'
-// import RxJavaIcon from '@/assets/icons/data/RxJava.png'
-// import SQLiteIcon from '@/assets/icons/database/SQLite.png'
-// import SailJSIcon from '@/assets/icons/data/sailsJS.png'
 import SpringBootIcon from '@/assets/icons/data/Spring-Boot.png'
 import SwiftIcon from '@/assets/icons/language/swift.svg'
-// import SymfonyIcon from '@/assets/icons/data/Symfony.png'
 import TableauIcon from '@/assets/icons/data/Tableau.png'
 import TypescriptIcon from '@/assets/icons/language/typescript.svg'
 import VueJSIcon from '@/assets/icons/data/vuejs.png'
-// import WordPressIcon from '@/assets/icons/data/WordPress.png'
-// import YiiIcon from '@/assets/icons/data/YII.png'
 import SnowFlakeIcon from '@/assets/icons/data/snowflake.png'
 import SuperSetIcon from '@/assets/icons/data/superset.png'
 import DataBrickIcon from '@/assets/icons/data/databrick.png'
-
 export enum TECHNOLOGIES {
-  LANGUAGE = 'Software engineering',
-  //DATABASE = 'Database',
-  DATA = 'Data engineering'
+  LANGUAGE = 'technology.language',
+  DATA = 'technology.data'
 }
-export const technologyTabs = [TECHNOLOGIES.LANGUAGE, //TECHNOLOGIES.DATABASE, 
-  TECHNOLOGIES.DATA]
+export const technologyTabs = [TECHNOLOGIES.LANGUAGE, TECHNOLOGIES.DATA]
 
 export const languageList = [
-  // {
-  //   key: 'C#',
-  //   label: 'C#',
-  //   icon: <Image alt='c#' src={CSharpIcon} preview={false} height={56} width={56} />
-  // },
   {
     key: 'Java',
     label: 'Java',
@@ -79,11 +51,6 @@ export const languageList = [
     label: 'TypeScript',
     icon: <Image alt='TypeScript' src={TypescriptIcon} preview={false} height={56} width={56} />
   },
-  // {
-  //   key: 'PHP',
-  //   label: 'PHP',
-  //   icon: <Image alt='PHP' className='text-white' src={PHPIcon} preview={false} height={56} width={56} />
-  // },
   {
     key: 'Javascript',
     label: 'Javascript',
@@ -129,11 +96,6 @@ export const languageList = [
     label: 'Swift',
     icon: <Image alt='Swift' src={SwiftIcon} preview={false} height={56} width={56} />
   },
-  // {
-  //   key: 'Objective C',
-  //   label: 'Objective C',
-  //   icon: <Image alt='Objective C' src={ObjectiveCIcon} preview={false} height={56} width={56} />
-  // },
   {
     key: 'Python',
     label: 'Python',
@@ -143,72 +105,10 @@ export const languageList = [
     key: 'Django',
     label: 'Django',
     icon: <Image alt='Django' src={DiangoIcon} preview={false} height={56} width={56} />
-  },
-  // {
-  //   key: 'Magento',
-  //   label: 'Magento',
-  //   icon: <Image alt='Magento' src={MagentoIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'NestJS',
-  //   label: 'NestJS',
-  //   icon: <Image alt='NestJS' src={NestJSIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'WordPress',
-  //   label: 'WordPress',
-  //   icon: <Image alt='WordPress' src={WordPressIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'Sails.JS',
-  //   label: 'Sails.JS',
-  //   icon: <Image alt='Sails.JS' src={SailJSIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'RxJava',
-  //   label: 'RxJava',
-  //   icon: <Image alt='RxJava' src={RxJavaIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'Alamofire',
-  //   label: 'Alamofire',
-  //   icon: <Image alt='Alamofire' src={AlamofireIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'Symfony',
-  //   label: 'Symfony',
-  //   icon: <Image alt='Symfony' src={SymfonyIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'ReactiveCocoa',
-  //   label: 'Reactive Cocoa',
-  //   icon: <Image alt='ReactiveCocoa' src={ReactiveCocoa} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'Ruby on Rails',
-  //   label: 'Ruby on Rails',
-  //   icon: <Image alt='Ruby on Rails' src={RubyOnRailsIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'CakePHP',
-  //   label: 'CakePHP',
-  //   icon: <Image alt='CakePHP' src={CakePHPIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'YII',
-  //   label: 'YII',
-  //   icon: <Image alt='YII' src={YiiIcon} preview={false} height={56} width={56} />
-  // },
-  // {
-  //   key: 'Meteor',
-  //   label: 'Meteor',
-  //   icon: <Image alt='Meteor' src={MeteorIcon} preview={false} height={56} width={56} />
-  // }
+  }
 ]
 
-export const databaseList = [
-  
-]
+export const databaseList = []
 
 export const dataList = [
   {
@@ -260,11 +160,10 @@ export const dataList = [
     key: 'Databricks',
     label: 'Databricks',
     icon: <Image alt='Databricks' src={DataBrickIcon} preview={false} height={56} width={56} />
-  },
+  }
 ]
 
 export const technologyList = {
   [TECHNOLOGIES.LANGUAGE]: languageList,
-  //[TECHNOLOGIES.DATABASE]: databaseList,
   [TECHNOLOGIES.DATA]: dataList
 }

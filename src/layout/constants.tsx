@@ -91,7 +91,7 @@ export const serviceItems = [
   },
   {
     key: 'Datalake and Lakehouse',
-    label: <Translation>{(t) => <p>{t('Datalake and Lakehouse')}</p>}</Translation>
+    label: 'Datalake and Lakehouse'
   },
   {
     key: 'Reporting Development',
