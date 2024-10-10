@@ -4,20 +4,24 @@ import { Button, Image } from 'antd'
 
 import { PAGE_KEYS } from '@/layout/constants'
 import SoftwareImage from '@/assets/images/software-services-image.jpg'
+import { useTranslation } from 'react-i18next'
 
 export const SoftwareServices = () => {
+  const { t } = useTranslation()
   const handleOpenPdfPage = () => {
     window.open('/FETEK_Software_2024_v1.pdf', '_blank')
   }
-  
+
   return (
     <div id={PAGE_KEYS.SOFTWARE_SERVICES} className='software-services -mt-[81px]'>
       <div className='flex flex-col gap-10 xl:mx-[12.5rem] mx-20 mt-56 mb-44'>
         <div className='flex justify-center gap-10'>
           <div className='flex flex-col justify-center gap-3.5 w-[20.25rem]'>
-            <span className='text-5xl font-medium text-white'>Software services</span>
+            <span className='text-5xl font-medium text-white'>{t('Software services')}</span>
             <span className='text-base font-light text-gray-50'>
-              Data services are part of cloud-native application development and open hybrid cloud IT strategies
+              {t(
+                'Software services provide flexible and efficient solutions, helping businesses optimize operational processes and enhance user experience.'
+              )}
             </span>
           </div>
           <div className='w-[47.25rem]'>
@@ -31,7 +35,7 @@ export const SoftwareServices = () => {
             className='flex h-14 text-base uppercase text-gray-50 bg-primary-700 justify-center items-center mx-auto w-44 rounded-full hover:!bg-primary-800'
             onClick={handleOpenPdfPage}
           >
-            Download
+            {t('Download')}
           </Button>
         </div>
       </div>
