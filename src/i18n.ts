@@ -74,6 +74,11 @@ const resources = {
       'IT Solution': 'IT Solution',
       'Corporate': 'Corporate',
       'Copyright by Fetek. All Right Reserved.': 'Copyright by Fetek. All Right Reserved.',
+      'Data services': 'Data services',
+      'Data services enable businesses to collect, analyze, and manage information effectively, allowing them to make informed strategic decisions.': 'Data services enable businesses to collect, analyze, and manage information effectively, allowing them to make informed strategic decisions.',
+      'Download': 'Download',
+      'Software services': 'Software services',
+      'Software services provide flexible and efficient solutions, helping businesses optimize operational processes and enhance user experience.': 'Software services provide flexible and efficient solutions, helping businesses optimize operational processes and enhance user experience.',
 
     }
   },
@@ -145,6 +150,12 @@ const resources = {
       'IT Solution': 'Giải pháp IT',
       'Corporate': 'Doanh nghiệp',
       'Copyright by Fetek. All Right Reserved.': 'Bản quyền thuộc về Fetek. Mọi quyền được bảo lưu.',
+      'Data services': 'Dịch vụ Data',
+      'Data services enable businesses to collect, analyze, and manage information effectively, allowing them to make informed strategic decisions.': 'Dịch vụ dữ liệu giúp doanh nghiệp thu thập, phân tích và quản lý thông tin một cách hiệu quả, từ đó đưa ra những quyết định chiến lược chính xác.',
+      'Download': 'Tải về',
+      'Software services': 'Dịch vụ phần mềm',
+      'Software services provide flexible and efficient solutions, helping businesses optimize operational processes and enhance user experience.': 'Dịch vụ phần mềm cung cấp các giải pháp linh hoạt và hiệu quả, giúp doanh nghiệp tối ưu hóa quy trình hoạt động và nâng cao trải nghiệm của người dùng.',
+
     }
   }
 };
