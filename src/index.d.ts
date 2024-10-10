@@ -1,4 +1,5 @@
 // https://github.com/tailwindlabs/tailwindcss/issues/6422#issuecomment-1222368084
+/// <reference types="vite/client" />
 declare module 'tailwindcss/resolveConfig' {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   declare function resolveConfig(config: Config): any

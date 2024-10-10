@@ -54,16 +54,8 @@ export const Footer = () => {
       <div className='bg-gray-800 px-[12.5rem] h-12 flex justify-between items-center'>
         <div className='text-white font-lexend'>© {new Date().getFullYear()} Fetek. All Right Reserved.</div>
         <div className='flex gap-6'>
+          <a href="https://www.linkedin.com/company/c%C3%B4ng-ty-tnhh-fetek-vi%E1%BB%87t-nam/"><Image alt='linkdin' height={24} width={24} src={LinkdinIcon} preview={false} className='cursor-pointer' /></a>
           <Image alt='fb' height={24} width={24} src={FacebookIcon} preview={false} className='cursor-pointer' />
-          <Image alt='linkdin' height={24} width={24} src={LinkdinIcon} preview={false} className='cursor-pointer' />
-          <Image
-            alt='instagram'
-            height={24}
-            width={24}
-            src={InstagramIcon}
-            preview={false}
-            className='cursor-pointer'
-          />
         </div>
       </div>
     </>

@@ -6,6 +6,7 @@ import { Image } from 'antd'
 
 export const AboutFetek = () => {
   const { isMobile } = useScreen()
+  console.log(import.meta.env.VITE_EMAIL_JS_PRIVATE_KEY)
   return (
     <div
       id={PAGE_KEYS.ABOUT_FETEK}
