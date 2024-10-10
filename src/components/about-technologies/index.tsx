@@ -5,12 +5,13 @@ import { TECHNOLOGIES, technologyList, technologyTabs } from './constants'
 
 import { PAGE_KEYS } from '@/layout/constants'
 import { Col, Row } from 'antd'
+import { useTranslation } from 'react-i18next'
 
 const MAX_ELEMENT_PER_ROW = 5
 
 export const TechnologyList = () => {
   const [activeKey, setActiveKey] = useState(TECHNOLOGIES.LANGUAGE)
-
+  const { t } = useTranslation()
   const onChangeActiveKey = (key: TECHNOLOGIES) => {
     setActiveKey(key)
   }
@@ -29,13 +30,14 @@ export const TechnologyList = () => {
       <Row>
         <Col xl={12} xs={24}>
           <div className='text-primary-700 text-5xl leading-[3.75rem] font-medium xl:w-[23.625rem] xs:w-[22rem]'>
-            Technologies we're experts in
+            {t('We are experts in these technologies')}
           </div>
         </Col>
         <Col xl={12} xs={24} className='flex justify-end'>
           <div className='text-gray-50 text-base font-light w-[31.875rem] py-3'>
-            From scratch to execution, Fetek always applies advanced and cutting-edge technologies to deliver your ideas
-            into impactful and scalable products.
+            {t(
+              'From scratch to execution, Fetek always applies advanced and cutting-edge technologies to deliver your ideas into impactful and scalable products.'
+            )}
           </div>
         </Col>
       </Row>
@@ -49,7 +51,7 @@ export const TechnologyList = () => {
               activeKey === item ? 'active-tab bg-primary-800' : ''
             } relative h-[3.75rem] uppercase text-base text-white text-center flex items-center justify-center font-inter cursor-pointer center`}
           >
-            {item}
+            {t(item)}
           </div>
         ))}
       </div>

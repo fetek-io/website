@@ -43,10 +43,10 @@ export const Header = () => {
 
   return (
     <>
-      <AntdHeader className='sticky top-0 z-10 w-full h-[81px] flex justify-between layout-header px-0 border-x-0 border-t-0 border-b border-solid border-green-caribbean'>
+      <AntdHeader className='sticky top-0 z-10 w-full h-[81px] flex justify-between layout-header px-0 border-x-0 border-t-0 border-b border-solid border-green-caribbean bg-slate-50'>
         {isMobile ? (
           <>
-            <div className='flex items-center w-40 h-[81px] border-y-0 border-l-0 border-green-caribbean'>
+            <div className=' flex items-center w-40 h-[81px] border-y-0 border-l-0 border-green-caribbean'>
               <Image alt='logo' src={Logo} preview={false} className='pl-3' />
             </div>
             <span
@@ -55,24 +55,24 @@ export const Header = () => {
                 setIsShowNavBar(true)
               }}
             >
-              <MenuOutlined style={{ color: 'white', fontSize: '20px' }} />
+              <MenuOutlined style={{ color: 'rgb(52,203,158)', fontSize: '20px' }} />
             </span>
           </>
         ) : (
           <>
-            <div className='flex justify-center items-center w-40 h-[81px] border-y-0 border-l-0 border-r border-solid border-green-caribbean'>
+            <a href='/' className=' flex justify-center items-center w-40 h-[81px] '>
               <Image alt='logo' src={Logo} preview={false} />
-            </div>
-            <div className='flex flex-1 justify-center'>
+            </a>
+            <div className='flex flex-1 justify-center '>
               <Menu
-                theme='dark'
                 mode='horizontal'
                 selectedKeys={[]}
                 items={menuItems}
                 onClick={(e) => handleNavigateTo(e.key)}
-                className='flex flex-1 items-center justify-center uppercase text-gray-50 text-base !leading-[1.875rem] font-lexend'
+                className='bg-slate-50 flex flex-1 items-center justify-center uppercase text-gray-800 text-base !leading-[1.875rem] font-lexend'
               />
             </div>
+
             <LanguageSelection />
           </>
         )}

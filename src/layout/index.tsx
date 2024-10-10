@@ -11,7 +11,7 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <AntdLayout className='fetek-layout relative'>
+    <AntdLayout className='fetek-layout relative bg-slate-50'>
       <Header />
       {children}
       <Footer />
