@@ -88,8 +88,8 @@ const resources = {
       "About FETEK": "Về FETEK",
       "Services": "Dịch vụ",
        "Technologies": "Công nghệ",
-       "Process": "Quá trình",
-       "Portfolio": "Danh mục đầu tư",
+       "Process": "Quy trình",
+       "Portfolio": "Dịch vụ",
        "Data Services": "Dịch vụ dữ liệu",
        "Software Services": "Dịch vụ phần mềm",
       //  Banner

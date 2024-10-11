@@ -1,0 +1,44 @@
+﻿
+const Email = {
+  send: function (a: any): Promise<any> {
+    return new Promise(function (resolve) {
+      a.nocache = Math.floor(1e6 * Math.random() + 1);
+      a.Action = 'Send';
+      const t = JSON.stringify(a);
+      Email.ajaxPost('https://smtpjs.com/v3/smtpjs.aspx?', t, function (response: any) {
+        resolve(response);
+      });
+    });
+  },
+
+  ajaxPost: function (url: string, data: any, callback: Function | null): void {
+    const xhr = Email.createCORSRequest('POST', url);
+    if (xhr) {
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhr.onload = function () {
+        const response = xhr.responseText;
+        if (callback) callback(response);
+      };
+      xhr.send(data);
+    }
+  },
+
+  ajax: function (url: string, callback: Function | null): void {
+    const xhr = Email.createCORSRequest('GET', url);
+    if (xhr) {
+      xhr.onload = function () {
+        const response = xhr.responseText;
+        if (callback) callback(response);
+      };
+      xhr.send();
+    }
+  },
+
+  createCORSRequest: function (method: string, url: string): XMLHttpRequest | null {
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url, true); // Asynchronous request
+    return xhr;
+  }
+};
+
+export default Email;
