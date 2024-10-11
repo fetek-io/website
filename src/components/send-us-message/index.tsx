@@ -1,11 +1,11 @@
 import './style.sass'
 // import { message } from 'antd'
 import { Image } from 'antd'
-// import emailjs from '@emailjs/browser'
 import LogoIcon from '@/assets/images/logo.svg'
 import { PAGE_KEYS } from '@/layout/constants'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+// import Email from '@/smtp'
 
 export const SendUsMessage = () => {
   const { t } = useTranslation()
@@ -27,27 +27,9 @@ export const SendUsMessage = () => {
   //     content: 'You have not sent the message successfully.'
   //   })
   // }
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
 
-    // emailjs
-    //   .sendForm('service_8qglzi5', 'template_lordib4', form.current, {
-    //     publicKey: '-2L4J3ExT7EaWkUnD'
-    //   })
-    //   .then(
-    //     () => {
-    //       handleMessageSuccess()
-    //       setCustName('')
-    //       setCustEmail('')
-    //       setCustPhoneNumber('')
-    //       setCustMessage('')
-    //       console.log('SUCCESS!')
-    //     },
-    //     (error) => {
-    //       handleMessageFail()
-    //       console.log('FAILED...', error.text)
-    //     }
-    //   )
+  const handleSubmit = async (e: any) => {
+    e.preventDefault()
   }
   return (
     <>
